@@ -1,0 +1,60 @@
+@font-face {
+    font-family: SovMod;
+    src: url("/fonts/SovMod.otf"),
+    url("/fonts/SovMod.ttf");
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --color: #23373C;
+
+    --background-color: white;
+    --accent-background-color: #23373C;
+
+    --menu-height: 60px;
+
+    --header-font: SovMod, sans-serif;
+
+    background-color: white;
+    color: var(--color);
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+body {
+    line-height: 125%;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+.hidden-toggle {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
