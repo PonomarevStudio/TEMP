@@ -1,0 +1,95 @@
+.plans {
+    --padding: var(--horizontal-padding);
+    padding: var(--padding) 0;
+}
+
+.plans h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--header-font);
+    padding: 0 var(--padding);
+}
+
+.plans .variants {
+    display: flex;
+    overflow-x: scroll;
+    /*width: calc(100% - var(--padding));*/
+    /*padding: 20px 0 20px var(--padding);*/
+    padding: 20px var(--padding);
+    scroll-snap-type: x mandatory;
+}
+
+.plans .variants:after {
+    content: '';
+    display: block;
+    min-width: var(--padding);
+    height: 1px;
+}
+
+.plans .card {
+    box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
+    background-color: var(--background-color);
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-right: 32px;
+    scroll-snap-align: center;
+}
+
+.plans .card:last-of-type {
+    margin-right: unset;
+}
+
+.plans .card h3 {
+    margin-bottom: var(--padding);
+}
+
+.plans .card p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.plans .card a {
+    padding: 20px 0;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 105.19%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background-color: var(--accent-background-color);
+}
+
+@media (min-width: 1025px), (orientation: landscape) {
+    .plans .card {
+        width: 380px;
+        min-width: 380px;
+        scroll-snap-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .plans .header {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .plans h2 {
+        font-size: 36px;
+    }
+
+    .plans hr {
+        border: none;
+        height: 2px;
+        margin-left: calc(var(--padding) * -1);
+        background-color: var(--accent-background-color);
+    }
+
+    .plans .variants {
+        margin: 45px 0;
+    }
+
+}

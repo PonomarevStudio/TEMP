@@ -34,10 +34,10 @@
     font-family: var(--header-font);
     font-size: 24px;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
 .hero > .content p {
+    margin-top: 10px;
     line-height: 1.105em;
 }
 
@@ -108,10 +108,10 @@
 
     .hero > .content h1 {
         font-size: 56px;
-        margin-bottom: 50px;
     }
 
     .hero > .content p {
+        margin-top: 50px;
         font-size: 32px;
     }
 }

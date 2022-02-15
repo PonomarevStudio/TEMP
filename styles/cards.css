@@ -1,0 +1,123 @@
+.cards {
+    --padding: var(--horizontal-padding);
+    --inner-margin: 10px;
+    --cards-gap: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.cards .card {
+
+}
+
+.cards .card img {
+    margin: 23px 0;
+}
+
+.cards .card h2 {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+}
+
+.cards .card hr {
+    border: none;
+    height: 2px;
+    margin: var(--inner-margin) 0;
+    margin-left: calc(var(--padding) * -1);
+    background-color: var(--accent-background-color);
+}
+
+.cards .card p {
+    font-size: 12px;
+}
+
+.cards .card:nth-child(4n+3) img {
+    border-bottom-right-radius: 100vw;
+}
+
+.cards .card:nth-child(even) hr {
+    margin-left: initial;
+    margin-right: calc(var(--padding) * -1);
+}
+
+@media (min-width: 1025px) {
+    .cards {
+        --hr-margin: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .cards .card {
+        margin: 90px 0;
+    }
+
+    .cards .card div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards .card h2 {
+        font-size: 54px;
+    }
+
+    .cards .card hr {
+        height: 3px;
+        margin-left: initial;
+        width: calc(100% + var(--padding));
+        margin-right: calc(var(--padding) * -1);
+    }
+
+    .cards .card p {
+        font-size: 24px;
+    }
+
+    .cards .card:nth-child(4n+1),
+    .cards .card:nth-child(4n+2) {
+        width: calc((100% - var(--cards-gap)) / 2);
+    }
+
+    .cards .card:nth-child(4n+3),
+    .cards .card:nth-child(4n+4) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cards .card:nth-child(4n+3) {
+        align-items: flex-end;
+    }
+
+    .cards .card:nth-child(4n+4) {
+        flex-direction: row-reverse;
+    }
+
+    .cards .card:nth-child(4n+3) img,
+    .cards .card:nth-child(4n+4) img {
+        width: calc((100% - var(--cards-gap)) / 2);
+    }
+
+    .cards .card:nth-child(4n+3) div,
+    .cards .card:nth-child(4n+4) div {
+        width: calc((100% - var(--cards-gap)) / 2);
+    }
+
+    .cards .card:nth-child(4n+4) div {
+        margin-top: 105px;
+    }
+
+    .cards .card:nth-child(4n+1) div,
+    .cards .card:nth-child(4n+4) div {
+        align-items: flex-end;
+    }
+
+    .cards .card:nth-child(4n+1) hr,
+    .cards .card:nth-child(4n+4) hr {
+        margin-right: initial;
+        margin-left: calc(var(--padding) * -1);
+    }
+}
