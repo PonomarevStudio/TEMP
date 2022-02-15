@@ -1,6 +1,10 @@
 .form {
     --padding: var(--horizontal-padding);
-    padding: var(--padding);
+    padding: var(--padding) 0;
+}
+
+.form .content {
+    padding: 0 var(--padding);
 }
 
 .form h2 {
@@ -28,7 +32,7 @@
 .form .line {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .form input, .form textarea {
@@ -65,9 +69,13 @@
     background-color: var(--accent-background-color);
 }
 
+.form .line label:not(:last-child) {
+    margin-right: 2em;
+}
+
 .form label input {
     margin: 0;
-    margin-right: 1em;
+    margin-right: .5em;
 }
 
 .form button {
@@ -83,4 +91,46 @@
 
 .form .policy {
     font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+    .form {
+        /*padding: var(--padding);*/
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .form img,
+    .form .content {
+        padding: initial;
+    }
+
+    .form img {
+        width: 100%;
+    }
+
+    .form .content {
+        padding-left: min(100px, var(--padding));
+        padding-right: var(--padding);
+    }
+
+    .form h2 {
+        font-size: 28px;
+    }
+
+    .form hr {
+        margin-right: calc(var(--padding) * -1);
+    }
+
+    .form p, .form input, .form textarea {
+        font-size: 20px;
+    }
+
+    .form .policy {
+        font-size: 18px;
+    }
+
+    .form button {
+        font-size: 24px;
+    }
 }

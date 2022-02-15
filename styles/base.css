@@ -6,6 +6,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    line-height: 1.25em;
 }
 
 * {
@@ -35,8 +36,8 @@ html, body {
 }
 
 body {
-    line-height: 125%;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 img, picture, video, canvas, svg {

@@ -61,3 +61,54 @@ footer nav a.phone:before {
 footer nav a.email:before {
     background-image: url("/images/email.png");
 }
+
+@media (min-width: 1025px) {
+    footer {
+        --inner-vertical-padding: 60px;
+        padding: var(--padding);
+        padding-top: max(var(--padding), var(--inner-vertical-padding));
+        align-items: flex-start;
+    }
+
+    footer .logo {
+        width: 100%;
+    }
+
+    footer .logo img {
+        height: 33px;
+    }
+
+    footer nav {
+        justify-content: space-between;
+        margin-bottom: max(var(--padding), var(--inner-vertical-padding));
+    }
+
+    footer nav a:first-child {
+        margin-top: unset;
+    }
+
+    footer nav a.email {
+        text-decoration: underline;
+    }
+
+    footer, footer .column, footer .row {
+        flex-direction: row;
+    }
+
+    footer .column {
+        flex-direction: column;
+    }
+
+    footer .group {
+        padding: initial;
+    }
+
+    footer .group.double {
+        justify-content: space-between;
+        width: 66%;
+    }
+
+    footer .bordered {
+        border-top: initial;
+    }
+}

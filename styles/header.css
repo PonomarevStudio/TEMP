@@ -2,10 +2,14 @@ header {
     --mobile-menu-width: 233px;
     --padding: var(--horizontal-padding);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: var(--background-color);
     height: var(--menu-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 header a {
@@ -51,7 +55,7 @@ header .call-phone-button {
 
 header .logo {
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -96,7 +100,7 @@ header .menu .close-menu-layer {
     position: absolute;
 }
 
-#headerMenuState:checked ~ header .menu {
+#headerMenuState:checked ~ .menu {
     display: initial;
 }
 
