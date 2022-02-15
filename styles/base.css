@@ -14,8 +14,9 @@
 
 :root {
     --color: #23373C;
+    --accent-color: #FEFEFE;
 
-    --background-color: white;
+    --background-color: #FEFEFE;
     --accent-background-color: #23373C;
 
     --menu-height: 60px;
@@ -47,6 +48,10 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+a {
+    color: var(--color);
 }
 
 .hidden-toggle {

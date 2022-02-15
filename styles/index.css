@@ -1,0 +1,77 @@
+.cards {
+    --padding: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.cards .card {
+
+}
+
+.cards .card img {
+    margin: 23px 0;
+}
+
+.cards .card h2 {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.cards .card hr {
+    border: none;
+    height: 2px;
+    background-color: var(--accent-background-color);
+    margin-left: calc(var(--padding) * -1);
+}
+
+.cards .card p {
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+
+.plans {
+    --padding: 19px;
+    padding: var(--padding);
+}
+
+.plans h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--header-font);
+}
+
+.plans .variants {
+    margin: var(--padding) 0;
+}
+
+.plans .card {
+    box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
+    background-color: var(--background-color);
+    padding: var(--padding);
+    display: block;
+}
+
+.plans .card h3 {
+    margin-bottom: var(--padding);
+}
+
+.plans .card p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.plans .card a {
+    padding: 20px 0;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 105.19%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background-color: var(--accent-background-color);
+}

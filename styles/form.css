@@ -1,0 +1,85 @@
+.form {
+    --padding: 12px;
+    padding: var(--padding);
+}
+
+.form h2 {
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.form hr {
+    border: none;
+    height: 1px;
+    background-color: var(--accent-background-color);
+}
+
+.form p {
+    margin: 10px 0;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form input, .form textarea {
+    -webkit-appearance: none;
+    outline: none;
+    padding: 16px;
+    margin: 10px 0;
+    border: 1px solid #CEDCDF;
+}
+
+.form input[type="checkbox"], .form input:focus, .form textarea:focus {
+    border: 1px solid #304B52;
+}
+
+.form input[type="checkbox"] {
+    --size: 20px;
+    cursor: pointer;
+    padding: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+}
+
+.form input[type="checkbox"]:checked:before {
+    --size: 12px;
+    content: '';
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accent-background-color);
+}
+
+.form label input {
+    margin: 0;
+    margin-right: 1em;
+}
+
+.form button {
+    border: none;
+    padding: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background-color: var(--accent-background-color);
+}
+
+.form .policy {
+    font-size: 12px;
+}
