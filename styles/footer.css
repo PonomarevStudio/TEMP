@@ -63,7 +63,7 @@ footer nav a.email:before {
 }
 
 .float-widget-button {
-    --size: 120px;
+    --size: 100px;
     font-size: 12px;
     right: var(--horizontal-padding);
     bottom: var(--horizontal-padding);
@@ -86,7 +86,7 @@ footer nav a.email:before {
 }
 
 .float-widget-button img {
-    height: 36px;
+    height: 26px;
 }
 
 @media (min-width: 1025px) {
@@ -137,5 +137,13 @@ footer nav a.email:before {
 
     footer .bordered {
         border-top: initial;
+    }
+
+    .float-widget-button {
+        --size: 120px;
+    }
+
+    .float-widget-button img {
+        height: 36px;
     }
 }

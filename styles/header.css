@@ -56,8 +56,10 @@ header .call-phone-button {
 header .logo {
     z-index: -1;
     width: 100%;
+    height: 100%;
     display: flex;
     position: absolute;
+    align-items: center;
     justify-content: center;
 }
 
@@ -85,9 +87,36 @@ header .menu nav {
     background: var(--background-color);
 }
 
-header .menu nav a {
+header .menu nav a, header .menu nav .sub-menu .label {
     padding: 16px;
     border-bottom: 1px solid #E2DCEB;
+}
+
+header .menu nav .sub-menu {
+
+}
+
+header .menu nav .sub-menu .label {
+    cursor: pointer;
+    color: var(--color);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center right 8px;
+    background-image: url("/images/menu.arrow.svg");
+}
+
+header .menu nav .sub-menu:focus .label {
+    background: #90A4A8;
+}
+
+header .menu nav .sub-menu .content {
+    display: none;
+    flex-direction: column;
+    background: #E5EAF0;
+}
+
+header .menu nav .sub-menu:focus .content {
+    display: flex;
 }
 
 header .menu .close-menu-layer {
@@ -142,11 +171,28 @@ header .menu .close-menu-layer {
         height: 100%;
     }
 
-    header .menu nav a, header .call-phone-button {
+    header .menu nav a, header .menu nav .sub-menu .label, header .call-phone-button {
         border: initial;
         padding: 0 30px;
         display: inline-flex;
         align-items: center;
         height: 100%;
+    }
+
+    header .menu nav .sub-menu:hover .label {
+        background: #90A4A8;
+    }
+
+    header .menu nav .sub-menu .content {
+        position: absolute;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    header .menu nav .sub-menu:hover .content {
+        display: flex;
+    }
+
+    header .menu nav .sub-menu .content a {
+        height: var(--menu-height);
     }
 }
