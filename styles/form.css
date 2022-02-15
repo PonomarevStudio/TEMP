@@ -37,6 +37,7 @@
     padding: 16px;
     margin: 10px 0;
     border: 1px solid #CEDCDF;
+    border-radius: unset;
 }
 
 .form input[type="checkbox"], .form input:focus, .form textarea:focus {
