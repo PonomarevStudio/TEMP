@@ -78,3 +78,15 @@ a {
         display: none;
     }
 }
+
+@media (min-width: 1200px) {
+    :root {
+        --horizontal-padding: 80px;
+    }
+}
+
+@media (min-width: 1521px) {
+    :root {
+        --horizontal-padding: calc((100vw - 1520px) / 2);
+    }
+}

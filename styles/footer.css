@@ -65,8 +65,8 @@ footer nav a.email:before {
 .float-widget-button {
     --size: 100px;
     font-size: 12px;
-    right: var(--horizontal-padding);
-    bottom: var(--horizontal-padding);
+    right: min(var(--horizontal-padding), calc(var(--size) / 2));
+    bottom: min(var(--horizontal-padding), calc(var(--size) / 2));
     padding: 20px;
     font-family: Helvetica, sans-serif;
     color: inherit;
@@ -92,8 +92,8 @@ footer nav a.email:before {
 @media (min-width: 1025px) {
     footer {
         --inner-vertical-padding: 60px;
-        padding: var(--padding);
-        padding-top: max(var(--padding), var(--inner-vertical-padding));
+        padding: min(90px, var(--padding)) var(--padding);
+        padding-top: var(--inner-vertical-padding);
         align-items: flex-start;
     }
 
@@ -107,7 +107,7 @@ footer nav a.email:before {
 
     footer nav {
         justify-content: space-between;
-        margin-bottom: max(var(--padding), var(--inner-vertical-padding));
+        margin-bottom: var(--inner-vertical-padding);
     }
 
     footer nav a:first-child {

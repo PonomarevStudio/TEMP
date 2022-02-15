@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты — ЖК Темп</title>
+    <meta name="theme-color" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/styles/imports.css">
+    <script src="https://esm.run/@github/include-fragment-element" type="module"></script>
+</head>
+<body>
+<include-fragment src="/fragments/header.html"></include-fragment>
+<include-fragment src="/fragments/contacts/hero.html"></include-fragment>
+<main class="text">
+    <p>
+        Позвоните по телефону +7 (343) 288 55 66<br>
+        или оставьте заявку, и мы перезвоним сами.
+    </p>
+    <br>
+    <p>
+        Приходите в офис продаж:<br>
+        Екатеринбург, ул. Ткачей, 25,<br>
+        демонстрационный павильон на набережной.
+    </p>
+    <br>
+    <p>
+        Режим работы:<br>
+        пн. – чт. с 10:00 до 20:00;<br>
+        пт. с 10:00 до 19:00;<br>
+        сб. – вс. с 11:00 до 17:00.
+    </p>
+</main>
+<section class="map">
+    <div style="align-self: flex-start;">
+        <h2>Схема проезда</h2>
+        <hr>
+    </div>
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8209800f1a347a47d24f416bfd0083410c1655cef9d34004773d9e4c9b1a4520&amp;width=1111&amp;height=621&amp;lang=ru_RU&amp;scroll=true"></script>
+</section>
+<include-fragment src="/fragments/form.html"></include-fragment>
+<include-fragment src="/fragments/footer.html"></include-fragment>
+</body>
+</html>

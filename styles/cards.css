@@ -34,9 +34,14 @@
     border-bottom-right-radius: 100vw;
 }
 
-.cards:not(.slider) .card:nth-child(even) hr {
+.cards .card:nth-child(even) hr {
     margin-left: initial;
     margin-right: calc(var(--padding) * -1);
+}
+
+.cards.slider .card:nth-child(even) hr {
+    margin-left: initial;
+    margin-right: initial;
 }
 
 @media (max-width: 1024px) {
@@ -72,6 +77,7 @@
 @media (min-width: 1025px) {
     .cards {
         --hr-margin: 40px;
+        padding: min(100px, var(--padding)) var(--padding);
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -145,5 +151,10 @@
     .cards .card:nth-child(4n+4) hr {
         margin-right: initial;
         margin-left: calc(var(--padding) * -1);
+    }
+
+    .cards .card:nth-child(1),
+    .cards .card:nth-child(2) {
+        margin-top: unset;
     }
 }

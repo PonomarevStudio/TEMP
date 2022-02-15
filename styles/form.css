@@ -95,7 +95,7 @@
 
 @media (min-width: 1025px) {
     .form {
-        /*padding: var(--padding);*/
+        padding: min(100px, var(--padding)) 0;
         justify-content: space-between;
         display: flex;
     }

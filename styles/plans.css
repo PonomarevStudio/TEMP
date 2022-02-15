@@ -7,7 +7,7 @@
     font-size: 20px;
     text-transform: uppercase;
     font-family: var(--header-font);
-    padding: 0 var(--padding);
+    padding-left: var(--padding);
 }
 
 .plans .variants {
@@ -43,7 +43,7 @@
 }
 
 .plans .card h3 {
-    margin-bottom: var(--padding);
+    margin-bottom: min(20px, var(--padding));
 }
 
 .plans .card p {
@@ -72,6 +72,10 @@
 }
 
 @media (min-width: 1025px) {
+    .plans {
+        padding: min(100px, var(--padding)) 0;
+    }
+
     .plans .header {
         display: inline-flex;
         flex-direction: column;
@@ -90,6 +94,10 @@
 
     .plans .variants {
         margin: 45px 0;
+    }
+
+    .plans .card {
+        padding: min(20px, var(--padding));
     }
 
 }

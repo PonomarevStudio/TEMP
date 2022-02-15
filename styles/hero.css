@@ -91,7 +91,7 @@
     }
 
     .hero > .content {
-        top: 0;
+        top: var(--menu-height);
         width: 45%;
         height: 100%;
         display: flex;
@@ -113,5 +113,17 @@
     .hero > .content p {
         margin-top: 50px;
         font-size: 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero > .content {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1521px) {
+    .hero > .content {
+        width: calc(1520px * 0.45);
     }
 }
