@@ -1,17 +1,19 @@
-<input type="checkbox" class="hidden-toggle" id="menuState">
+<input type="checkbox" class="hidden-toggle" id="headerMenuState">
 <header>
-    <label for="menuState" class="open-menu-button"></label>
+    <label for="headerMenuState" class="open-menu-button hide-on-desktop" title="Открыть меню"></label>
     <figure class="logo">
         <img src="/images/logo.svg" alt="ЖК Темп">
     </figure>
-    <nav class="menu">
-        <a href="/">Описание ЖК</a>
-        <a href="/">Планировки</a>
-        <a href="/">Как купить</a>
-        <a href="/">Контакты</a>
-    </nav>
-
+    <div class="menu">
+        <nav>
+            <a href="/">Описание ЖК</a>
+            <a href="/">Планировки</a>
+            <a href="/">Как купить</a>
+            <a href="/">Контакты</a>
+        </nav>
+        <a href="/" class="open-widget-button hide-on-desktop">Выбрать квартиру</a>
+        <label for="headerMenuState" class="close-menu-layer hide-on-desktop" title="Закрыть меню"></label>
+    </div>
     <a href="/" class="call-phone-button"><span class="hide-on-mobile">+7 343 311 03 60</span></a>
-    <a href="/" class="open-widget-button">Выбрать квартиру</a>
-
+    <a href="/" class="open-widget-button hide-on-mobile">Выбрать квартиру</a>
 </header>

@@ -23,6 +23,8 @@
 
     --header-font: SovMod, sans-serif;
 
+    --horizontal-padding: 20px;
+
     background-color: white;
     color: var(--color);
 }
@@ -58,8 +60,19 @@ a {
     display: none;
 }
 
-@media (max-width: 1023px) {
-    .hide-on-mobile {
+@media (max-width: 1024px) {
+    :root .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --menu-height: 79px;
+        --horizontal-padding: 40px;
+    }
+
+    :root .hide-on-desktop {
         display: none;
     }
 }

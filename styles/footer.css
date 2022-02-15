@@ -1,5 +1,5 @@
 footer {
-    --padding: 20px;
+    --padding: var(--horizontal-padding);
     color: var(--accent-color);
     background-color: var(--accent-background-color);
     padding: var(--padding) 0;
@@ -24,7 +24,7 @@ footer nav a {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    margin: 15px;
+    margin: 15px 0;
     word-break: break-word;
 }
 

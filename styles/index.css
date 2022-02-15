@@ -1,5 +1,5 @@
 .cards {
-    --padding: 12px;
+    --padding: var(--horizontal-padding);
     display: flex;
     flex-direction: column;
     padding: var(--padding);
@@ -34,7 +34,7 @@
 
 
 .plans {
-    --padding: 19px;
+    --padding: var(--horizontal-padding);
     padding: var(--padding);
 }
 
