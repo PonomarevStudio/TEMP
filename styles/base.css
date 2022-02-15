@@ -33,6 +33,7 @@
 html, body {
     height: 100%;
     font-family: 'Tenor Sans', sans-serif;
+    touch-action: pan-y pan-x;
 }
 
 body {
