@@ -1,12 +1,13 @@
 @font-face {
     font-family: SovMod;
-    src: url("/fonts/SovMod.otf"),
-    url("/fonts/SovMod.ttf");
+    src: url("/fonts/SovMod.ttf");
+    font-display: block;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     line-height: 1.25em;
+    font-family: 'Tenor Sans', SovMod, sans-serif;
 }
 
 * {
@@ -22,7 +23,7 @@
 
     --menu-height: 60px;
 
-    --header-font: SovMod, sans-serif;
+    --header-font: SovMod, 'Tenor Sans', sans-serif;
 
     --horizontal-padding: 20px;
 
@@ -32,7 +33,6 @@
 
 html, body {
     height: 100%;
-    font-family: 'Tenor Sans', sans-serif;
     touch-action: pan-y pan-x;
 }
 
