@@ -5,6 +5,7 @@
     --content-vertical-padding: 15vh;
     position: relative;
     display: flex;
+    justify-content: flex-end;
     overflow: hidden;
     height: var(--height);
     /*max-height: var(--max-height);*/
@@ -42,12 +43,11 @@
 }
 
 .hero > img {
-    height: var(--height);
-    /*max-height: var(--max-height);*/
-    width: 100vw;
     z-index: 1;
+    width: 100vw;
     object-fit: cover;
-    object-position: center;
+    height: var(--height);
+    object-position: right center;
     clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 30% 100%);
 }
 
