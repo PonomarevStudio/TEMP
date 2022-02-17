@@ -22,7 +22,7 @@ header .open-menu-button {
     display: block;
     cursor: pointer;
     width: calc(var(--size) + (var(--padding) * 2));
-    background-image: url("/images/header.menu.button.svg");
+    background-image: url("../images/header.menu.button.svg");
     background-position: center left var(--padding);
     background-size: var(--size);
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ header .call-phone-button {
     height: 100%;
     width: calc(var(--size) + (var(--padding) * 2));
     background-color: var(--accent-background-color);
-    background-image: url("/images/phone.svg");
+    background-image: url("../images/phone.svg");
     background-position: center;
     background-size: var(--size);
     background-repeat: no-repeat;
@@ -102,7 +102,7 @@ header .menu nav .sub-menu .label {
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: center right 8px;
-    background-image: url("/images/menu.arrow.svg");
+    background-image: url("../images/menu.arrow.svg");
 }
 
 header .menu nav .sub-menu:focus .label {

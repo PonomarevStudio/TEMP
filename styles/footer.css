@@ -38,7 +38,7 @@ footer nav a:before {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("/images/nav.png");
+    background-image: url("../images/nav.png");
 }
 
 footer .row, footer .column {
@@ -55,11 +55,11 @@ footer .group {
 }
 
 footer nav a.phone:before {
-    background-image: url("/images/phone.png");
+    background-image: url("../images/phone.png");
 }
 
 footer nav a.email:before {
-    background-image: url("/images/email.png");
+    background-image: url("../images/email.png");
 }
 
 .float-widget-button {
