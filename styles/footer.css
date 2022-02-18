@@ -140,10 +140,20 @@ footer nav a.email:before {
     }
 
     .float-widget-button {
-        --size: 120px;
+        --size: 6.5vw;
+        right: 4vw;
+        bottom: 7.2vw;
+        padding: 0.5vw;
+        justify-content: center;
+        box-shadow: 0 0 0 .25vw rgba(206, 220, 223, 0.5);
     }
 
     .float-widget-button img {
-        height: 36px;
+        height: 1.95vw;
+        margin-bottom: .4vw;
+    }
+
+    .float-widget-button span {
+        font-size: 0.8vw;
     }
 }

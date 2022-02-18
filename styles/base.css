@@ -6,6 +6,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+    font-size: .9375vw;
     line-height: 1.25em;
     font-family: 'Tenor Sans', Helvetica, sans-serif;
 }
@@ -70,8 +71,8 @@ a {
 
 @media (min-width: 1025px) {
     :root {
-        --menu-height: 79px;
-        --horizontal-padding: 40px;
+        --menu-height: 4.1vw;
+        --horizontal-padding: 10.45vw;
     }
 
     :root .hide-on-desktop {
@@ -79,6 +80,7 @@ a {
     }
 }
 
+/*
 @media (min-width: 1200px) {
     :root {
         --horizontal-padding: 80px;
@@ -89,4 +91,4 @@ a {
     :root {
         --horizontal-padding: calc((100vw - 1520px) / 2);
     }
-}
+}*/

@@ -10,6 +10,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
+    top: 0;
 }
 
 header a {
@@ -140,22 +141,29 @@ header .menu .close-menu-layer {
 
     header .logo {
         all: initial;
+        display: flex;
+        justify-content: flex-start;
     }
 
     header .logo img {
-        height: 40px;
+        height: 2.168vw;
+        flex-basis: max-content;
+        /*margin-top: -0.02vw;*/
     }
 
     header .call-phone-button {
         width: initial;
         height: initial;
         background: initial;
-        font-size: 20px;
     }
 
     header .open-widget-button {
         position: initial;
         height: 100%;
+        width: 8.3vw;
+        line-height: 1.150em;
+        text-align: center;
+        flex-basis: max-content;
     }
 
     header .menu {
@@ -173,10 +181,15 @@ header .menu .close-menu-layer {
 
     header .menu nav a, header .menu nav .sub-menu .label, header .call-phone-button {
         border: initial;
-        padding: 0 30px;
+        padding: 0 3vw;
         display: inline-flex;
         align-items: center;
         height: 100%;
+        font-size: .8vw;
+    }
+
+    header .call-phone-button span {
+        font-size: 1.05vw;
     }
 
     header .menu nav .sub-menu:hover .label {
