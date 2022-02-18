@@ -6,7 +6,6 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-size: .9375vw;
     line-height: 1.25em;
     font-family: 'Tenor Sans', Helvetica, sans-serif;
 }
@@ -70,6 +69,10 @@ a {
 }
 
 @media (min-width: 1025px) {
+    *, *::before, *::after {
+        font-size: .9375vw;
+    }
+
     :root {
         --menu-height: 4.1vw;
         --horizontal-padding: 10.45vw;
