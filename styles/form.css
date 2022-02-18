@@ -106,7 +106,10 @@
     }
 
     .form img {
-        width: 100%;
+        width: 60vw;
+        display: block;
+        object-fit: cover;
+        object-position: center;
     }
 
     .form .content {
