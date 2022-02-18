@@ -163,7 +163,6 @@ header .menu .close-menu-layer {
         width: 8.3vw;
         line-height: 1.150em;
         text-align: center;
-        flex-basis: max-content;
     }
 
     header .menu {
