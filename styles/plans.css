@@ -82,7 +82,7 @@
     }
 
     .plans h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .plans hr {
@@ -100,4 +100,10 @@
         padding: min(20px, var(--padding));
     }
 
+}
+
+@media (min-width: 1521px) {
+    .plans h2 {
+        font-size: 36px;
+    }
 }

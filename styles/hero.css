@@ -2,7 +2,7 @@
     --height: 100vh /*calc(100vh - var(--menu-height))*/;
     --padding: var(--horizontal-padding);
     --max-height: 636px;
-    --content-vertical-padding: 15vh;
+    --content-vertical-padding: 10vh;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -14,7 +14,7 @@
 
 .hero:after {
     background-color: #58737A;
-    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 90% 100%);
     height: var(--height);
     position: absolute;
     display: block;
@@ -24,7 +24,7 @@
 }
 
 .hero > .content {
-    width: 40%;
+    width: calc(52% - var(--padding));
     left: var(--padding);
     top: calc(var(--content-vertical-padding) + var(--menu-height));
     z-index: 2;
@@ -40,15 +40,16 @@
 .hero > .content p {
     margin-top: 10px;
     line-height: 1.105em;
+    max-width: 90%;
 }
 
 .hero > img {
     z-index: 1;
-    width: 100vw;
+    width: 85vw;
     object-fit: cover;
     height: var(--height);
-    object-position: right center;
-    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 30% 100%);
+    object-position: right;
+    clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .hero .open-widget-button {
@@ -83,7 +84,8 @@
     }
 
     .hero > img {
-        clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 45% 100%);
+        width: 55vw;
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     .hero .open-widget-button {
@@ -93,7 +95,7 @@
     .hero > .content {
         top: var(--menu-height);
         width: 45%;
-        height: 100%;
+        height: calc(var(--height) - (var(--menu-height) * 2));
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -103,16 +105,17 @@
 @media (min-width: 1025px) {
     .hero > .content {
         width: 40%;
-        left: calc(var(--padding) + 40px);
+        /*left: calc(var(--padding) + 40px);*/
     }
 
     .hero > .content h1 {
-        font-size: 56px;
+        font-size: 38px;
     }
 
     .hero > .content p {
         margin-top: 50px;
-        font-size: 32px;
+        font-size: 20px;
+        max-width: initial;
     }
 }
 
@@ -125,5 +128,9 @@
 @media (min-width: 1521px) {
     .hero > .content {
         width: calc(1520px * 0.45);
+    }
+
+    .hero > .content h1 {
+        font-size: 56px;
     }
 }
