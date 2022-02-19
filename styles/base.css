@@ -4,41 +4,50 @@
     font-display: block;
 }
 
+:root {
+    --design-units: calc(100vw / 1920);
+    --desktop-viewport-min-width: 1024px;
+    --text-font: 'Tenor Sans', Helvetica, sans-serif;
+    --header-font: SovMod, Helvetica, sans-serif;
+    --background-color: #E5E5E5;
+    --text-color: #58737A;
+    --header-color: #23373C;
+    --accent-color: #304B52;
+    --accent-background-color: #FEFEFE;
+    --inverted-accent-color: var(--accent-background-color);
+    --inverted-accent-background-color: var(--accent-color);
+    --header-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    --header-background-color: white;
+    --header-submenu-background-color: #E5EAF0;
+    --hero-background-color: #EBE5D5;
+    --hero-decoration-color: var(--text-color);
+    --mobile-menu-width: 233px;
+    --horizontal-padding: 16px;
+
+    scroll-behavior: smooth;
+    color: var(--text-color);
+    font-family: var(--text-font);
+    background-color: var(--background-color);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
-    line-height: 1.25em;
-    font-family: 'Tenor Sans', Helvetica, sans-serif;
 }
 
 * {
     margin: 0;
 }
 
-:root {
-    --color: #23373C;
-    --accent-color: #FEFEFE;
-
-    --background-color: #FEFEFE;
-    --accent-background-color: #23373C;
-
-    --menu-height: 60px;
-
-    --header-font: SovMod, Helvetica, sans-serif;
-
-    --horizontal-padding: 20px;
-
-    background-color: white;
-    color: var(--color);
-}
-
 html, body {
     height: 100%;
-    touch-action: pan-y pan-x;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
+    overflow: auto;
+    position: static;
+    line-height: 125%;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 img, picture, video, canvas, svg {
@@ -50,48 +59,46 @@ input, button, textarea, select {
     font: inherit;
 }
 
+a {
+    color: inherit;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    font-weight: normal;
 }
 
-a {
-    color: var(--color);
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: var(--header-font);
 }
 
-.hidden-toggle {
+:root .hide {
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+    body.disable-scroll {
+        position: sticky;
+        overflow: hidden;
+    }
+
     :root .hide-on-mobile {
         display: none;
     }
 }
 
-@media (min-width: 1025px) {
-    *, *::before, *::after {
-        font-size: .9375vw;
+@media (min-width: 1024px) {
+    :root {
+        font-size: var(--design-units);
+        --horizontal-padding: 200rem;
     }
 
-    :root {
-        --menu-height: 4.1vw;
-        --horizontal-padding: 10.45vw;
+    body {
+        font-size: 16rem;
     }
 
     :root .hide-on-desktop {
         display: none;
     }
 }
-
-/*
-@media (min-width: 1200px) {
-    :root {
-        --horizontal-padding: 80px;
-    }
-}
-
-@media (min-width: 1521px) {
-    :root {
-        --horizontal-padding: calc((100vw - 1520px) / 2);
-    }
-}*/

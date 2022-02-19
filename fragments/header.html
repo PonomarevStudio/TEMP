@@ -1,19 +1,20 @@
 <header>
-    <input type="checkbox" class="hidden-toggle" id="headerMenuState">
-    <label for="headerMenuState" class="open-menu-button hide-on-desktop" title="Открыть меню"></label>
+    <input class="hide" id="headerMenuState" onchange="document.body.classList.toggle('disable-scroll', this.checked)"
+           type="checkbox">
+    <label class="header-button open-menu-button hide-on-desktop" for="headerMenuState" title="Открыть меню"></label>
     <a class="logo" href="index.html">
         <img alt="ЖК Темп" height="41" loading="eager" src="images/logo.svg">
     </a>
-    <div class="menu">
+    <div class="menu hide-on-mobile">
         <nav>
-            <div class="sub-menu" tabindex="0">
-                <div class="label">Описание ЖК</div>
+            <details>
+                <summary class="label">Описание ЖК</summary>
                 <div class="content">
                     <a href="apartments.html">Квартиры</a>
                     <a href="infrastructure.html">Инфраструктура</a>
                     <a href="space.html">Дворы и общественное пространство</a>
                 </div>
-            </div>
+            </details>
             <a href="#">Планировки</a>
             <a href="#">Как купить</a>
             <a href="contacts.html">Контакты</a>
@@ -21,6 +22,7 @@
         <a class="open-widget-button hide-on-desktop" href="#">Выбрать квартиру</a>
         <label for="headerMenuState" class="close-menu-layer hide-on-desktop" title="Закрыть меню"></label>
     </div>
-    <a href="tel:+7 343 311 03 60" class="call-phone-button"><span class="hide-on-mobile">+7 343 311 03 60</span></a>
+    <a class="header-button call-phone-button" href="tel:+7 343 311 03 60"><span
+            class="hide-on-mobile">+7 343 311 03 60</span></a>
     <a class="open-widget-button hide-on-mobile" href="#">Выбрать<br>квартиру</a>
 </header>

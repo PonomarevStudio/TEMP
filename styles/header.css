@@ -1,64 +1,35 @@
 header {
-    --mobile-menu-width: 233px;
-    --padding: var(--horizontal-padding);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    background-color: var(--background-color);
-    height: var(--menu-height);
-    display: flex;
+    --height: 60px;
+    --mobile-open-widget-button-height: 75px;
+    box-shadow: var(--header-box-shadow);
+    background-color: var(--header-background-color);
     justify-content: space-between;
+    color: var(--accent-color);
+    height: var(--height);
     align-items: center;
+    max-width: 100vw;
     position: fixed;
-    width: 100%;
+    display: flex;
     z-index: 10;
+    right: 0;
+    left: 0;
     top: 0;
-    color: #304B52;
+}
+
+header > * {
+    height: 100%;
 }
 
 header a {
     text-decoration: none;
 }
 
-header .open-menu-button {
-    --size: 44px;
-    height: 100%;
-    display: block;
-    cursor: pointer;
-    width: calc(var(--size) + (var(--padding) * 2));
-    background-image: url("../images/header.menu.button.svg");
-    background-position: center left var(--padding);
-    background-size: var(--size);
-    background-repeat: no-repeat;
-}
-
-header .open-widget-button {
-    left: 0;
-    bottom: 0;
-    height: 75px;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    color: var(--accent-color);
-    width: var(--mobile-menu-width);
-    background-color: var(--accent-background-color);
-}
-
-header .call-phone-button {
-    --size: 29px;
-    height: 100%;
-    width: calc(var(--size) + (var(--padding) * 2));
-    background-color: var(--accent-background-color);
-    background-image: url("../images/phone.svg");
-    background-position: center;
-    background-size: var(--size);
-    background-repeat: no-repeat;
-}
-
 header .logo {
     z-index: -1;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     position: absolute;
     align-items: center;
@@ -69,7 +40,52 @@ header .logo img {
     height: 29px;
 }
 
+header .header-button {
+    --size: var(--height);
+    display: block;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: var(--size);
+    width: calc(var(--size) + (var(--horizontal-padding) * 2));
+}
+
+header .open-menu-button {
+    --size: 44px;
+    background-image: url("../images/header.menu.button.svg");
+}
+
+header .call-phone-button {
+    --size: 29px;
+    background-color: var(--header-color);
+    background-image: url("../images/phone.svg");
+}
+
+header .open-widget-button {
+    left: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: var(--mobile-menu-width);
+    color: var(--inverted-accent-color);
+    background-color: var(--header-color);
+    height: var(--mobile-open-widget-button-height);
+}
+
+header .menu .close-menu-layer {
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
 header .menu {
+    --padding: 16px;
     display: none;
     top: 0;
     left: 0;
@@ -82,130 +98,65 @@ header .menu {
 
 header .menu nav {
     z-index: 11;
-    height: 100%;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
+    overscroll-behavior-y: contain;
     width: var(--mobile-menu-width);
-    background: var(--background-color);
+    -webkit-overflow-scrolling: touch;
+    background: var(--accent-background-color);
+    height: calc(100% - var(--mobile-open-widget-button-height));
 }
 
-header .menu nav a, header .menu nav .sub-menu .label {
-    padding: 16px;
+header .menu nav a, header .menu nav details summary {
     border-bottom: 1px solid #E2DCEB;
+    padding: var(--padding);
 }
 
-header .menu nav .sub-menu {
-
+header summary::-webkit-details-marker {
+    display: none;
 }
 
-header .menu nav .sub-menu .label {
+header .menu nav details summary {
+    --icon-color: var(--accent-color);
+    display: flex;
     cursor: pointer;
-    color: var(--color);
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center right 8px;
-    background-image: url("../images/menu.arrow.svg");
+    position: relative;
+    align-items: center;
 }
 
-header .menu nav .sub-menu:focus .label {
+header .menu nav details summary:after {
+    --image: url("../images/menu.arrow.svg");
+    --size: 1em;
+    content: '';
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    right: var(--padding);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-image: var(--image);
+    -webkit-mask-image: var(--image);
+    background-color: var(--icon-color);
+}
+
+header .menu nav details[open] summary {
+    --icon-color: var(--inverted-accent-color);
     background: #90A4A8;
 }
 
-header .menu nav .sub-menu .content {
-    display: none;
-    flex-direction: column;
-    background: #E5EAF0;
-}
-
-header .menu nav .sub-menu:focus .content {
+header .menu nav details .content {
     display: flex;
-}
-
-header .menu .close-menu-layer {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    position: absolute;
+    flex-direction: column;
+    background: var(--header-submenu-background-color);
 }
 
 #headerMenuState:checked ~ .menu {
     display: initial;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     header {
-        padding: 0 var(--horizontal-padding);
-    }
-
-    header .logo {
-        all: initial;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    header .logo img {
-        height: 2.168vw;
-        flex-basis: max-content;
-        /*margin-top: -0.02vw;*/
-    }
-
-    header .call-phone-button {
-        width: initial;
-        height: initial;
-        background: initial;
-    }
-
-    header .open-widget-button {
-        position: initial;
-        height: 100%;
-        width: 8.3vw;
-        line-height: 1.150em;
-        text-align: center;
-    }
-
-    header .menu {
-        all: initial;
-        height: 100%;
-    }
-
-    header .menu nav {
-        width: initial;
-        z-index: initial;
-        background: initial;
-        flex-direction: row;
-        height: 100%;
-    }
-
-    header .menu nav a, header .menu nav .sub-menu .label, header .call-phone-button {
-        border: initial;
-        padding: 0 3vw;
-        display: inline-flex;
-        align-items: center;
-        height: 100%;
-        font-size: .8vw;
-    }
-
-    header .call-phone-button span {
-        font-size: 1.05vw;
-    }
-
-    header .menu nav .sub-menu:hover .label {
-        background: #90A4A8;
-    }
-
-    header .menu nav .sub-menu .content {
-        position: absolute;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    header .menu nav .sub-menu:hover .content {
-        display: flex;
-    }
-
-    header .menu nav .sub-menu .content a {
-        height: var(--menu-height);
+        height: 79rem;
     }
 }
