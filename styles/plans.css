@@ -1,0 +1,131 @@
+.plans {
+    /*--padding: var(--horizontal-padding);*/
+    padding: 29px 0;
+}
+
+.plans h2 {
+    font-size: 20px;
+    color: var(--accent-color);
+    padding-left: var(--horizontal-padding);
+}
+
+.plans .variants {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: var(--horizontal-padding);
+}
+
+.plans .variants:after {
+    content: '';
+    height: 1px;
+    display: block;
+    min-width: var(--horizontal-padding);
+}
+
+.plans .card {
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    scroll-snap-align: center;
+    justify-content: space-between;
+    padding: var(--horizontal-padding);
+    background-color: var(--background-color);
+    box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
+    margin-right: calc(var(--horizontal-padding) * 2);
+}
+
+.plans .card:last-of-type {
+    margin-right: unset;
+}
+
+.plans .card h3, .plans .card p {
+    color: var(--accent-color);
+}
+
+.plans .card h3 {
+    text-transform: capitalize;
+    font-family: var(--text-font);
+    margin-bottom: var(--horizontal-padding);
+}
+
+.plans .card p {
+    font-size: 20px;
+    margin-top: var(--horizontal-padding);
+}
+
+.plans .card a {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 105.19%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--inverted-accent-color);
+    padding: var(--horizontal-padding) 0;
+    margin-top: var(--horizontal-padding);
+    background-color: var(--inverted-accent-background-color);
+}
+
+@media (orientation: landscape) {
+    .plans .card {
+        width: 380px;
+        min-width: 380px;
+        scroll-snap-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .plans {
+        padding: 354rem 0;
+    }
+
+    .plans .header {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .plans h2 {
+        font-size: 36rem;
+    }
+
+    .plans hr {
+        border: none;
+        height: 3rem;
+        margin-top: 33rem;
+        background-color: var(--header-color);
+        margin-left: calc(var(--horizontal-padding) * -1);
+    }
+
+    .plans .variants {
+        padding: 66rem var(--horizontal-padding);
+    }
+
+    .plans .card {
+        width: 380rem;
+        min-width: 380rem;
+        margin-right: 32rem;
+        padding: 20rem 27rem;
+    }
+
+    .plans .card h3,
+    .plans .card p {
+        font-size: 24rem;
+    }
+
+    .plans .card h3 {
+        margin-bottom: 8rem;
+        max-width: 160rem;
+    }
+
+    .plans .card p {
+        margin-top: 10rem;
+    }
+
+    .plans .card a {
+        font-size: 14rem;
+        padding: 18rem 0;
+        margin-top: 36rem;
+    }
+
+}

@@ -163,11 +163,6 @@
         margin-left: calc(var(--horizontal-padding) * -1);
     }
 
-    .cards .card:nth-child(4n+3) hr,
-    .cards .card:nth-child(4n+4) hr {
-        height: 2rem;
-    }
-
     .cards .card:nth-child(4n+2) hr {
         --width: calc(100% + 163rem);
         margin-right: 0;
@@ -176,6 +171,11 @@
     .cards .card:nth-child(4n+3) hr {
         --width: calc(100% + 105rem);
         margin-right: 0;
+    }
+
+    .cards .card:nth-child(4n+3) hr,
+    .cards .card:nth-child(4n+4) hr {
+        height: 2rem;
     }
 
     .cards .card:nth-child(4n+4) hr {
