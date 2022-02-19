@@ -1,5 +1,6 @@
 header {
     --height: 60px;
+    --padding: 16px;
     --mobile-open-widget-button-height: 75px;
     box-shadow: var(--header-box-shadow);
     background-color: var(--header-background-color);
@@ -68,6 +69,7 @@ header .open-widget-button {
     position: absolute;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
     width: var(--mobile-menu-width);
     color: var(--inverted-accent-color);
     background-color: var(--header-color);
@@ -85,7 +87,6 @@ header .menu .close-menu-layer {
 }
 
 header .menu {
-    --padding: 16px;
     display: none;
     top: 0;
     left: 0;
@@ -117,6 +118,10 @@ header summary::-webkit-details-marker {
     display: none;
 }
 
+header .menu nav details {
+    position: relative;
+}
+
 header .menu nav details summary {
     --icon-color: var(--accent-color);
     display: flex;
@@ -135,6 +140,7 @@ header .menu nav details summary:after {
     right: var(--padding);
     mask-position: center;
     mask-repeat: no-repeat;
+    mask-size: var(--size);
     mask-image: var(--image);
     -webkit-mask-image: var(--image);
     background-color: var(--icon-color);
@@ -142,6 +148,7 @@ header .menu nav details summary:after {
 
 header .menu nav details[open] summary {
     --icon-color: var(--inverted-accent-color);
+    color: var(--inverted-accent-color);
     background: #90A4A8;
 }
 
@@ -157,6 +164,75 @@ header .menu nav details .content {
 
 @media (min-width: 1024px) {
     header {
+        --padding: 48rem;
         height: 79rem;
+        padding: 0 var(--horizontal-padding);
+    }
+
+    header .logo {
+        all: initial;
+    }
+
+    header .logo img {
+        height: 40rem;
+    }
+
+    header .header-button {
+        width: initial;
+    }
+
+    header .menu {
+        all: initial;
+        height: 100%;
+        color: inherit;
+    }
+
+    header .menu nav {
+        all: initial;
+        height: 100%;
+        display: flex;
+        color: inherit;
+        flex-direction: row;
+    }
+
+    header .menu nav a, header .menu nav details summary, header .header-button {
+        height: 100%;
+        border: initial;
+        padding: 0 var(--padding);
+        font-size: 16rem;
+        align-items: center;
+        display: inline-flex;
+    }
+
+    header .call-phone-button {
+        font-size: 20rem;
+        background: initial;
+    }
+
+    header .open-widget-button {
+        height: 100%;
+        width: 150rem;
+        font-size: 18rem;
+        position: initial;
+        text-align: center;
+        line-height: 105.19%;
+    }
+
+    header .menu nav details summary:after {
+        right: calc(var(--padding) - (var(--size) * 2));
+    }
+
+    header .menu nav details .content {
+        --inner-vertical-padding: calc(var(--height) / 4);
+        box-shadow: var(--header-box-shadow);
+        position: absolute;
+        display: flex;
+        max-width: 100%;
+        /*padding: var(--inner-vertical-padding) 0;*/
+    }
+
+    header .menu nav details .content a {
+        /*height: calc(var(--height) / 2);*/
+        padding: var(--inner-vertical-padding) var(--padding);
     }
 }
