@@ -1,0 +1,102 @@
+.hero {
+    --height: 100vh;
+    --content-vertical-padding: 15vh;
+    color: var(--header-color);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    height: var(--height);
+    background: var(--hero-background-color);
+}
+
+.hero:after {
+    background-color: var(--hero-decoration-color);
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 90% 100%);
+    height: var(--height);
+    position: absolute;
+    display: block;
+    width: 100%;
+    content: '';
+    z-index: 0;
+}
+
+.hero > .content {
+    z-index: 2;
+    position: absolute;
+    left: var(--horizontal-padding);
+    width: calc(52% - var(--horizontal-padding));
+    top: calc(var(--content-vertical-padding) + var(--header-height));
+}
+
+.hero > .content h1 {
+    font-size: 24px;
+}
+
+.hero > .content p {
+    line-height: 110.5%;
+    margin-top: 10px;
+    max-width: 90%;
+}
+
+.hero > img {
+    z-index: 1;
+    width: 85vw;
+    object-fit: cover;
+    height: var(--height);
+    object-position: right;
+    clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 1024px), (orientation: landscape) {
+    .hero:after {
+        clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 55% 100%);
+    }
+
+    .hero > img {
+        width: 55vw;
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hero > .content {
+        top: var(--header-height);
+        width: 45%;
+        height: calc(100% - var(--header-height));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        --height: 655rem;
+        margin-top: var(--header-height);
+    }
+
+    .hero:after {
+        clip-path: polygon(45% 0%, 100% 0%, 100% 100%, 53.9% 100%);
+    }
+
+    .hero > img {
+        width: 985rem;
+        clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hero > .content {
+        top: 175rem;
+        height: auto;
+        left: 186rem;
+        width: 711rem;
+    }
+
+    .hero > .content h1 {
+        font-size: 56rem;
+    }
+
+    .hero > .content p {
+        margin-top: 46rem;
+        font-size: 1.7vw;
+        max-width: initial;
+    }
+}

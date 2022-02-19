@@ -1,5 +1,5 @@
 header {
-    --height: 60px;
+    --height: var(--header-height);
     --padding: 16px;
     --mobile-open-widget-button-height: 75px;
     box-shadow: var(--header-box-shadow);
@@ -165,7 +165,6 @@ header .menu nav details .content {
 @media (min-width: 1024px) {
     header {
         --padding: 48rem;
-        height: 79rem;
         padding: 0 var(--horizontal-padding);
     }
 

@@ -17,6 +17,7 @@
     --inverted-accent-color: var(--accent-background-color);
     --inverted-accent-background-color: var(--accent-color);
     --header-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    --header-height: 60px;
     --header-background-color: white;
     --header-submenu-background-color: #E5EAF0;
     --hero-background-color: #EBE5D5;
@@ -36,6 +37,7 @@
 
 * {
     margin: 0;
+    line-height: 125%;
 }
 
 html, body {
@@ -92,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     :root {
         font-size: var(--design-units);
         --horizontal-padding: 200rem;
+        --header-height: 79rem;
     }
 
     body {
