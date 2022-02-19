@@ -1,0 +1,211 @@
+header {
+    --mobile-menu-width: 233px;
+    --padding: var(--horizontal-padding);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: var(--background-color);
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    color: #304B52;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .open-menu-button {
+    --size: 44px;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    width: calc(var(--size) + (var(--padding) * 2));
+    background-image: url("../images/header.menu.button.svg");
+    background-position: center left var(--padding);
+    background-size: var(--size);
+    background-repeat: no-repeat;
+}
+
+header .open-widget-button {
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    width: var(--mobile-menu-width);
+    background-color: var(--accent-background-color);
+}
+
+header .call-phone-button {
+    --size: 29px;
+    height: 100%;
+    width: calc(var(--size) + (var(--padding) * 2));
+    background-color: var(--accent-background-color);
+    background-image: url("../images/phone.svg");
+    background-position: center;
+    background-size: var(--size);
+    background-repeat: no-repeat;
+}
+
+header .logo {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    height: 29px;
+}
+
+header .menu {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+header .menu nav {
+    z-index: 11;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: var(--mobile-menu-width);
+    background: var(--background-color);
+}
+
+header .menu nav a, header .menu nav .sub-menu .label {
+    padding: 16px;
+    border-bottom: 1px solid #E2DCEB;
+}
+
+header .menu nav .sub-menu {
+
+}
+
+header .menu nav .sub-menu .label {
+    cursor: pointer;
+    color: var(--color);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center right 8px;
+    background-image: url("../images/menu.arrow.svg");
+}
+
+header .menu nav .sub-menu:focus .label {
+    background: #90A4A8;
+}
+
+header .menu nav .sub-menu .content {
+    display: none;
+    flex-direction: column;
+    background: #E5EAF0;
+}
+
+header .menu nav .sub-menu:focus .content {
+    display: flex;
+}
+
+header .menu .close-menu-layer {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+
+#headerMenuState:checked ~ .menu {
+    display: initial;
+}
+
+@media (min-width: 1025px) {
+    header {
+        padding: 0 var(--horizontal-padding);
+    }
+
+    header .logo {
+        all: initial;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header .logo img {
+        height: 2.168vw;
+        flex-basis: max-content;
+        /*margin-top: -0.02vw;*/
+    }
+
+    header .call-phone-button {
+        width: initial;
+        height: initial;
+        background: initial;
+    }
+
+    header .open-widget-button {
+        position: initial;
+        height: 100%;
+        width: 8.3vw;
+        line-height: 1.150em;
+        text-align: center;
+    }
+
+    header .menu {
+        all: initial;
+        height: 100%;
+    }
+
+    header .menu nav {
+        width: initial;
+        z-index: initial;
+        background: initial;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    header .menu nav a, header .menu nav .sub-menu .label, header .call-phone-button {
+        border: initial;
+        padding: 0 3vw;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        font-size: .8vw;
+    }
+
+    header .call-phone-button span {
+        font-size: 1.05vw;
+    }
+
+    header .menu nav .sub-menu:hover .label {
+        background: #90A4A8;
+    }
+
+    header .menu nav .sub-menu .content {
+        position: absolute;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    header .menu nav .sub-menu:hover .content {
+        display: flex;
+    }
+
+    header .menu nav .sub-menu .content a {
+        height: var(--menu-height);
+    }
+}
