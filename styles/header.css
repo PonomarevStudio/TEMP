@@ -142,6 +142,9 @@ header .menu nav details summary:after {
     mask-repeat: no-repeat;
     mask-size: var(--size);
     mask-image: var(--image);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: var(--size);
     -webkit-mask-image: var(--image);
     background-color: var(--icon-color);
 }
