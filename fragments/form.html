@@ -4,20 +4,20 @@
         <h2>Остались вопросы ?</h2>
         <hr>
         <p>Напишите нам</p>
-        <form action="">
-            <input name="name" placeholder="Как к вам обращаться ?">
-            <input name="phone" type="tel" placeholder="Телефон">
-            <input name="email" type="email" placeholder="E-mail">
+        <form action="/">
+            <input name="name" placeholder="Как к вам обращаться ?" required>
+            <input name="phone" placeholder="Телефон" required type="tel">
+            <input name="email" placeholder="E-mail" required type="email">
             <p>Какой тип недвижимости интересует ?</p>
             <div class="line">
                 <label class="line"><input type="checkbox"> Жилая</label>
                 <label class="line"><input type="checkbox"> Коммерческая</label>
             </div>
-            <textarea name="question" placeholder="Ваш вопрос"></textarea>
-            <label class="policy"><input type="checkbox">
+            <textarea name="question" placeholder="Ваш вопрос" required></textarea>
+            <label class="policy"><input required type="checkbox">
                 Согласен на обработку персональных данных. <a href="#">Политика конфиденциальности</a>
             </label>
-            <button>Отправить заявку</button>
+            <button type="submit">Отправить заявку</button>
         </form>
     </div>
 </section>
