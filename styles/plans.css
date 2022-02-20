@@ -13,7 +13,13 @@
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    padding: var(--horizontal-padding);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: calc(var(--horizontal-padding) * 2) var(--horizontal-padding);
+}
+
+.plans .variants::-webkit-scrollbar {
+    display: none;
 }
 
 .plans .variants:after {
