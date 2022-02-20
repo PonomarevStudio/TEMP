@@ -20,6 +20,7 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
         this.nextButton.addEventListener('click', this.nextSlide.bind(this, true))
 
         this.play()
+        this.preloadImages()
     }
 
     disconnectedCallback() {
@@ -61,6 +62,10 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
 
     async loadSlides() {
         return this.slides = (await fetch(this.dataURL).then(r => r.json())) || []
+    }
+
+    preloadImages() {
+        this.slides.forEach(({img}) => new Image().src = img)
     }
 
     appendInitialSlide() {

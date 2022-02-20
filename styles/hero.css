@@ -1,5 +1,6 @@
 .hero {
     --height: 100vh;
+    --height: -moz-available;
     --height: -webkit-fill-available;
     --content-vertical-padding: 15vh;
     --navigation-vertical-padding: var(--content-vertical-padding);
@@ -51,6 +52,8 @@
 }
 
 .hero .navigation {
+    user-select: none;
+    -webkit-user-select: none;
     top: calc(var(--navigation-vertical-padding) + var(--header-height));
     z-index: 3;
     display: flex;
