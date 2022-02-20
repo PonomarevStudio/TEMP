@@ -60,7 +60,7 @@ footer nav a.email:before {
 .float-widget-button {
     --size: 100px;
     font-size: 12px;
-    right: min(var(--horizontal-padding), calc(var(--size) / 2));
+    right: var(--horizontal-padding);
     /*bottom: min(var(--horizontal-padding), calc(var(--size) / 2));*/
     bottom: 70px;
     padding: 20px;
