@@ -71,7 +71,11 @@
 @media (min-width: 1024px) {
     .hero {
         --height: 655rem;
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
         margin-top: var(--header-height);
+        background-image: url("../images/hero.pattern.svg");
     }
 
     .hero:after {

@@ -89,6 +89,22 @@ footer nav a.email:before {
         /*--inner-vertical-padding: 60rem;*/
         padding: 95rem 312rem 37rem var(--horizontal-padding);
         align-items: flex-start;
+        position: relative;
+    }
+
+    footer:after{
+        z-index: -1;
+        content: '';
+        top: -166rem;
+        left: 0;
+        width: 218rem;
+        height: 351rem;
+        display: block;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-image: url("../images/footer.pattern.svg");
     }
 
     footer .logo {

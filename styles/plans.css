@@ -77,7 +77,7 @@
 
 @media (min-width: 1024px) {
     .plans {
-        padding: 354rem 0;
+        margin: 354rem 0;
     }
 
     .plans .header {
