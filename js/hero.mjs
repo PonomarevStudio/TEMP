@@ -9,10 +9,10 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
     }
 
     async connectedCallback() {
-        this.text = this.querySelector('[data-slider="text"]')
         this.img = this.querySelector('[data-slider="img"]')
-        this.prevButton = this.querySelector('.navigation>button:first-of-type')
+        this.text = this.querySelector('[data-slider="text"]')
         this.nextButton = this.querySelector('.navigation>button:last-of-type')
+        this.prevButton = this.querySelector('.navigation>button:first-of-type')
 
         await this.loadingChain.then(this.appendInitialSlide.bind(this))
 
@@ -25,8 +25,8 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
 
     disconnectedCallback() {
         this.pause()
-        this.prevButton.removeEventListener('click', this.prevSlide.bind(this))
-        this.nextButton.removeEventListener('click', this.nextSlide.bind(this))
+        this.prevButton.removeEventListener('click', this.prevSlide.bind(this, true))
+        this.nextButton.removeEventListener('click', this.nextSlide.bind(this, true))
     }
 
     prevSlide(resetInterval) {
@@ -60,8 +60,8 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
         return true;
     }
 
-    async loadSlides() {
-        return this.slides = (await fetch(this.dataURL).then(r => r.json())) || []
+    async loadSlides(url = this.dataURL) {
+        return this.slides = (await fetch(url).then(r => r.json().catch())) || []
     }
 
     preloadImages() {

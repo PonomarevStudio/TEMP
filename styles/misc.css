@@ -1,0 +1,130 @@
+.text {
+    padding: 0 var(--horizontal-padding);
+    margin: 30px 0;
+}
+
+.map {
+    margin: 50px 0;
+    color: var(--accent-color);
+}
+
+.map div {
+    padding: 0 var(--horizontal-padding);
+}
+
+.map h2 {
+    font-size: 20px;
+}
+
+.map hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 12px 0 30px;
+    margin-left: calc(var(--horizontal-padding) * -1);
+    background-color: var(--header-color);
+}
+
+.steps {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    margin: 30px 0 70px;
+}
+
+.steps:after {
+    content: '';
+    height: 1px;
+    display: block;
+    min-width: var(--horizontal-padding);
+}
+
+.steps .step {
+    width: 100%;
+    min-width: 250px;
+    padding: 0 var(--horizontal-padding);
+    scroll-snap-align: start;
+}
+
+.steps .step:first-of-type {
+    scroll-snap-align: center;
+}
+
+.steps .step:last-of-type {
+    padding-right: 0;
+}
+
+.steps .step img {
+    --size: 115px;
+    width: var(--size);
+    height: var(--size);
+}
+
+.steps .step h2 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+@media (min-width: 1025px) {
+    .text {
+        margin-top: 97rem;
+        margin-bottom: 114rem;
+        font-size: 32rem;
+    }
+
+    .map {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 360rem;
+    }
+
+    .map h2 {
+        font-size: 60rem;
+    }
+
+    .map hr {
+        height: 3rem;
+        margin-top: 40rem;
+        margin-bottom: 170rem;
+    }
+
+    .steps {
+        color: var(--accent-color);
+        padding: 0 var(--horizontal-padding);
+        margin: 200rem 0 400rem;
+        overflow-x: initial;
+        flex-direction: column;
+        scroll-snap-type: none;
+    }
+
+    .steps:after {
+        display: none;
+    }
+
+    .steps .step {
+        padding: 0;
+        display: flex;
+        margin: 50rem 0;
+        align-items: flex-start;
+    }
+
+    .steps .step div {
+        max-width: 830rem;
+    }
+
+    .steps .step img {
+        --size: 130rem;
+        margin-right: 116rem;
+    }
+
+    .steps .step h2 {
+        font-size: 60rem;
+        margin: 0;
+    }
+
+    .steps .step p {
+        font-size: 24rem;
+        margin-top: 20rem;
+    }
+}

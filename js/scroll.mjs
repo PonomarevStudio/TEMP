@@ -11,18 +11,18 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
     }
 
     connectedCallback() {
-        this.addEventListener('mousedown', this.mousedown);
-        this.addEventListener('mouseleave', this.mouseleave);
         this.addEventListener('mouseup', this.mouseup);
         this.addEventListener('mousemove', this.mousemove);
+        this.addEventListener('mousedown', this.mousedown);
+        this.addEventListener('mouseleave', this.mouseleave);
         this.addEventListener('wheel', this.cancelMomentumTracking);
     }
 
     disconnectedCallback() {
-        this.removeEventListener('mousedown', this.mousedown);
-        this.removeEventListener('mouseleave', this.mouseleave);
         this.removeEventListener('mouseup', this.mouseup);
+        this.removeEventListener('mousedown', this.mousedown);
         this.removeEventListener('mousemove', this.mousemove);
+        this.removeEventListener('mouseleave', this.mouseleave);
         this.removeEventListener('wheel', this.cancelMomentumTracking);
     }
 
