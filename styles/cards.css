@@ -51,7 +51,8 @@
 
 @media (min-width: 1024px) {
     .cards {
-        padding-top: 180rem;
+        padding: 180rem var(--horizontal-padding) 0;
+        margin-bottom: 465rem;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;

@@ -102,6 +102,7 @@
         height: auto;
         padding: 0;
         display: flex;
+        margin-bottom: 350rem;
         justify-content: space-between;
     }
 
