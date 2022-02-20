@@ -2,6 +2,7 @@
     --height: 100vh;
     --height: -webkit-fill-available;
     --content-vertical-padding: 15vh;
+    --navigation-vertical-padding: var(--content-vertical-padding);
     color: var(--header-color);
     position: relative;
     display: flex;
@@ -47,6 +48,33 @@
     height: var(--height);
     object-position: right;
     clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero .navigation {
+    top: calc(var(--navigation-vertical-padding) + var(--header-height));
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    right: var(--horizontal-padding);
+}
+
+.hero .navigation button {
+    --size: 45px;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    background-size: 7.5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--hero-buttons-color);
+    background-image: url("../images/hero.arrow.svg");
+}
+
+.hero .navigation button:last-of-type {
+    background-image: url("../images/hero.arrow.inverted.svg");
+    margin-left: 5px;
 }
 
 @media (min-width: 1024px), (orientation: landscape) {
@@ -106,5 +134,20 @@
         margin-top: 46rem;
         font-size: 1.7vw;
         max-width: initial;
+    }
+
+    .hero .navigation {
+        top: initial;
+        left: 720rem;
+        bottom: 34rem;
+        right: initial;
+    }
+
+    .hero .navigation button {
+        --size: 56rem;
+    }
+
+    .hero .navigation button:last-of-type {
+        margin-left: 14rem;
     }
 }
