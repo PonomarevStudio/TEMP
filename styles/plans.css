@@ -99,6 +99,12 @@
 
     .plans .variants {
         padding: 66rem var(--horizontal-padding);
+        scroll-snap-type: none;
+        cursor: grab;
+    }
+
+    .plans .variants.active {
+        cursor: grabbing;
     }
 
     .plans .card {
