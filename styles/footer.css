@@ -62,6 +62,7 @@ footer nav a.email:before {
     font-size: 12px;
     right: var(--horizontal-padding);
     /*bottom: min(var(--horizontal-padding), calc(var(--size) / 2));*/
+    cursor: pointer;
     bottom: 70px;
     padding: 20px;
     font-family: Helvetica, sans-serif;
