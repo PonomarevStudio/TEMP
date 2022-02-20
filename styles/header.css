@@ -109,20 +109,21 @@ header .menu nav {
     height: calc(100% - var(--mobile-open-widget-button-height));
 }
 
-header .menu nav a, header .menu nav details summary {
+header .menu nav a,
+header .menu nav .sub-menu .label {
     border-bottom: 1px solid #E2DCEB;
     padding: var(--padding);
 }
 
-header summary::-webkit-details-marker {
+/*header summary::-webkit-details-marker {
     display: none;
-}
+}*/
 
-header .menu nav details {
+header .menu nav .sub-menu {
     position: relative;
 }
 
-header .menu nav details summary {
+header .menu nav .sub-menu .label {
     --icon-color: var(--accent-color);
     display: flex;
     cursor: pointer;
@@ -130,7 +131,7 @@ header .menu nav details summary {
     align-items: center;
 }
 
-header .menu nav details summary:after {
+header .menu nav .sub-menu .label:after {
     --image: url("../images/menu.arrow.svg");
     --size: 1em;
     content: '';
@@ -149,16 +150,20 @@ header .menu nav details summary:after {
     background-color: var(--icon-color);
 }
 
-header .menu nav details[open] summary {
+header .menu nav .sub-menu .content {
+    display: none;
+    flex-direction: column;
+    background: var(--header-submenu-background-color);
+}
+
+header .menu nav .sub-menu input[type="checkbox"]:checked ~ .label {
     --icon-color: var(--inverted-accent-color);
     color: var(--inverted-accent-color);
     background: #90A4A8;
 }
 
-header .menu nav details .content {
+header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     display: flex;
-    flex-direction: column;
-    background: var(--header-submenu-background-color);
 }
 
 #headerMenuState:checked ~ .menu {
@@ -197,7 +202,9 @@ header .menu nav details .content {
         flex-direction: row;
     }
 
-    header .menu nav a, header .menu nav details summary, header .header-button {
+    header .menu nav a,
+    header .menu nav .sub-menu .label,
+    header .header-button {
         height: 100%;
         border: initial;
         padding: 0 var(--padding);
@@ -220,21 +227,30 @@ header .menu nav details .content {
         line-height: 105.19%;
     }
 
-    header .menu nav details summary:after {
+    header .menu nav .sub-menu .label:after {
         right: calc(var(--padding) - (var(--size) * 2));
     }
 
-    header .menu nav details .content {
+    header .menu nav .sub-menu .content {
         --inner-vertical-padding: calc(var(--height) / 4);
         box-shadow: var(--header-box-shadow);
         position: absolute;
-        display: flex;
         max-width: 100%;
         /*padding: var(--inner-vertical-padding) 0;*/
     }
 
-    header .menu nav details .content a {
+    header .menu nav .sub-menu .content a {
         /*height: calc(var(--height) / 2);*/
         padding: var(--inner-vertical-padding) var(--padding);
+    }
+
+    header .menu nav .sub-menu:hover .label {
+        --icon-color: var(--inverted-accent-color);
+        color: var(--inverted-accent-color);
+        background: #90A4A8;
+    }
+
+    header .menu nav .sub-menu:hover .content {
+        display: flex;
     }
 }
