@@ -38,6 +38,7 @@
 * {
     margin: 0;
     line-height: 125%;
+    font-family: var(--text-font);
 }
 
 html, body {
@@ -66,7 +67,7 @@ a {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+    /*overflow-wrap: break-word;*/
     font-weight: normal;
 }
 
@@ -77,6 +78,10 @@ h1, h2, h3, h4, h5, h6 {
 
 :root .hide {
     display: none;
+}
+
+:root .no-break{
+    display: inline-block;
 }
 
 @media (max-width: 1023px) {

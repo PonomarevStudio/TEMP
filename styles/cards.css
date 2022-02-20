@@ -109,7 +109,6 @@
 
     .cards .card:nth-child(4n+3) {
         margin-left: calc(var(--horizontal-padding) * -1);
-        align-items: flex-end;
     }
 
     .cards .card:nth-child(4n+4) {
@@ -129,6 +128,7 @@
 
     .cards .card:nth-child(4n+3) img {
         width: 1080rem;
+        height: 600rem;
     }
 
     .cards .card:nth-child(4n+4) img {
@@ -146,6 +146,7 @@
 
     .cards .card:nth-child(4n+3) div {
         margin-right: 105rem;
+        margin-top: 270rem;
     }
 
     .cards .card:nth-child(4n+4) div {
@@ -157,6 +158,11 @@
     .cards .card:nth-child(4n+1) h2,
     .cards .card:nth-child(4n+4) h2 {
         text-align: right;
+    }
+
+    .cards .card:nth-child(4n+1) h2 {
+        width: calc(100% + var(--horizontal-padding));
+        margin-left: calc(var(--horizontal-padding) * -1);
     }
 
     .cards .card:nth-child(4n+1) hr,

@@ -1,5 +1,6 @@
 .hero {
     --height: 100vh;
+    --height: -webkit-fill-available;
     --content-vertical-padding: 15vh;
     color: var(--header-color);
     position: relative;
@@ -83,15 +84,18 @@
     }
 
     .hero > img {
-        width: 985rem;
+        width: 987rem;
         clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     .hero > .content {
-        top: 175rem;
-        height: auto;
-        left: 186rem;
+        top: 0;
+        height: 100%;
+        left: 246rem;
         width: 711rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .hero > .content h1 {
