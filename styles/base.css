@@ -76,11 +76,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
 }
 
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    text-transform: uppercase;
+    font-family: var(--header-font);
+}
+
 :root .hide {
     display: none;
 }
 
-:root .no-break{
+:root .no-break {
     display: inline-block;
 }
 
