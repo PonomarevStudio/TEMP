@@ -101,6 +101,8 @@
         position: relative;
         height: auto;
         padding: 0;
+        padding-right: var(--horizontal-padding);
+        width: 100%;
         display: flex;
         margin-bottom: 350rem;
         justify-content: space-between;
@@ -135,8 +137,12 @@
     }
 
     .form .content {
-        padding-left: 90rem;
-        padding-right: var(--horizontal-padding);
+        /*--padding: calc((100% - 400rem) / 2);*/
+        width: 400rem;
+        min-width: 400rem;
+        /*margin: 0 var(--horizontal-padding);*/
+        /*padding-left: 90rem;*/
+        /*padding-right: var(--horizontal-padding);*/
     }
 
     .form h2 {
