@@ -7,6 +7,7 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
         this.momentumID;
         this._scrollLeft;
         this.isDown = false;
+        this.mediaQuery = "(min-width: 1024px)"
     }
 
     connectedCallback() {
@@ -26,11 +27,13 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
     }
 
     mousedown(e) {
-        this.isDown = true;
-        this.classList.toggle('active', true);
-        this.startX = e.pageX - this.offsetLeft;
-        this._scrollLeft = this.scrollLeft;
-        this.cancelMomentumTracking();
+        if (window.matchMedia(this.mediaQuery).matches) {
+            this.isDown = true;
+            this.classList.toggle('active', true);
+            this.startX = e.pageX - this.offsetLeft;
+            this._scrollLeft = this.scrollLeft;
+            this.cancelMomentumTracking();
+        }
     }
 
     mouseleave(e) {

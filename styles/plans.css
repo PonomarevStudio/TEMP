@@ -107,6 +107,10 @@
         cursor: grabbing;
     }
 
+    .plans .variants.active > * {
+        pointer-events: none;
+    }
+
     .plans .card {
         width: 380rem;
         min-width: 380rem;
