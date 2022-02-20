@@ -50,6 +50,7 @@ body {
     overflow: auto;
     position: static;
     line-height: 125%;
+    touch-action: manipulation;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
