@@ -6,6 +6,7 @@
 
 .cards .card {
     margin: 15px 0;
+    text-decoration: none;
     --color: var(--header-color)
 }
 
@@ -55,6 +56,7 @@
         margin-bottom: 465rem;
         flex-wrap: wrap;
         flex-direction: row;
+        align-items: flex-start;
         justify-content: space-between;
     }
 

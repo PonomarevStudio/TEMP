@@ -118,6 +118,7 @@
     }
 
     .plans .card {
+        -webkit-user-drag: none;
         width: 380rem;
         min-width: 380rem;
         margin-right: 32rem;
@@ -132,6 +133,10 @@
     .plans .card h3 {
         margin-bottom: 8rem;
         max-width: 160rem;
+    }
+
+    .plans .card img {
+        pointer-events: none;
     }
 
     .plans .card p {
