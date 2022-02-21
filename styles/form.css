@@ -137,12 +137,11 @@
     }
 
     .form .content {
-        /*--padding: calc((100% - 400rem) / 2);*/
         width: 400rem;
+        display: flex;
         min-width: 400rem;
-        /*margin: 0 var(--horizontal-padding);*/
-        /*padding-left: 90rem;*/
-        /*padding-right: var(--horizontal-padding);*/
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .form h2 {
