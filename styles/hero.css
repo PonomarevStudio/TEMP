@@ -129,6 +129,11 @@
         justify-content: center;
     }
 
+    .hero > .content.fixed-padding {
+        top: calc(var(--header-height) + 122rem);
+        height: auto;
+    }
+
     .hero > .content h1 {
         font-size: 56rem;
     }
