@@ -2,7 +2,7 @@
     --height: 100vh;
     --height: -moz-available;
     --height: -webkit-fill-available;
-    --content-vertical-padding: 15vh;
+    --content-vertical-padding: 10vh;
     --navigation-vertical-padding: var(--content-vertical-padding);
     color: var(--header-color);
     position: relative;
@@ -26,10 +26,14 @@
 
 .hero > .content {
     z-index: 2;
+    display: flex;
     position: absolute;
+    flex-direction: column;
+    justify-content: center;
     left: var(--horizontal-padding);
     width: calc(52% - var(--horizontal-padding));
     top: calc(var(--content-vertical-padding) + var(--header-height));
+    height: auto;
 }
 
 .hero > .content h1 {
@@ -39,7 +43,7 @@
 .hero > .content p {
     line-height: 110.5%;
     margin-top: 10px;
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .hero > img {
@@ -91,8 +95,8 @@
     }
 
     .hero > .content {
-        top: var(--header-height);
         width: 45%;
+        top: var(--header-height);
         height: calc(100% - var(--header-height));
         display: flex;
         flex-direction: column;

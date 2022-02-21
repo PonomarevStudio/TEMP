@@ -13,6 +13,7 @@
     --width: calc(var(--viewport-unit) * 642);
     --left: calc((var(--x) * 1%) - (var(--width) / 2));
     --top: calc((var(--y) * 1%) - (var(--height) / 2));
+    outline: none;
     justify-content: center;
     height: var(--height);
     width: var(--width);
@@ -50,19 +51,24 @@
     background-image: url("../images/overview.pin.png");
 }
 
-.overview .polygon:hover:before {
+.overview .polygon:hover:before,
+.overview .polygon:focus:before {
     opacity: .3;
 }
 
 .overview .polygon:active:before {
     opacity: .5;
+    transition: opacity .1s;
 }
 
 .overview .polygon .content {
     --filter: blur(15px);
     z-index: 1;
-    display: none;
+    opacity: 0;
+    display: block;
     position: absolute;
+    pointer-events: none;
+    transition: opacity .2s;
     backdrop-filter: var(--filter);
     padding: var(--horizontal-padding);
     color: var(--inverted-accent-color);
@@ -74,7 +80,8 @@
 }
 
 .overview .polygon:focus .content {
-    display: block;
+    opacity: 1;
+    pointer-events: initial;
 }
 
 .overview .polygon .content h3 {
