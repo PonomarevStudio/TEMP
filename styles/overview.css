@@ -6,11 +6,11 @@
 }
 
 .overview .polygon {
-    --x: 56;
-    --y: 53;
+    --x: 51.1;
+    --y: 52.9;
     --viewport-unit: calc(100vw / 1920);
     --height: calc(var(--viewport-unit) * 702);
-    --width: calc(var(--viewport-unit) * 452.5);
+    --width: calc(var(--viewport-unit) * 642);
     --left: calc((var(--x) * 1%) - (var(--width) / 2));
     --top: calc((var(--y) * 1%) - (var(--height) / 2));
     justify-content: center;
