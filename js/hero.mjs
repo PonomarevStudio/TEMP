@@ -3,7 +3,7 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
         super();
         this.slides = [];
         this.currentSlide = 0;
-        this.autoplayInterval = 3000;
+        this.autoplayInterval = 5000;
         this.dataURL = 'data/index.hero.json';
         this.loadingChain = this.loadSlides();
     }
