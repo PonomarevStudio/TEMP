@@ -65,6 +65,24 @@
     margin: 20px 0;
 }
 
+.disable-pattern:after {
+    content: none;
+}
+
+:root .hide {
+    display: none;
+}
+
+:root .no-break {
+    display: inline-block;
+}
+
+@media (max-width: 1023px) {
+    :root .hide-on-mobile {
+        display: none;
+    }
+}
+
 @media (min-width: 1024px) {
     .text {
         margin-top: 97rem;
@@ -126,5 +144,9 @@
     .steps .step p {
         font-size: 24rem;
         margin-top: 20rem;
+    }
+
+    :root .hide-on-desktop {
+        display: none;
     }
 }

@@ -83,22 +83,10 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     font-family: var(--header-font);
 }
 
-:root .hide {
-    display: none;
-}
-
-:root .no-break {
-    display: inline-block;
-}
-
 @media (max-width: 1023px) {
     body.disable-scroll {
         position: sticky;
         overflow: hidden;
-    }
-
-    :root .hide-on-mobile {
-        display: none;
     }
 }
 
@@ -111,9 +99,5 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 
     body {
         font-size: 16rem;
-    }
-
-    :root .hide-on-desktop {
-        display: none;
     }
 }
