@@ -201,9 +201,9 @@
         margin-top: unset;
     }
 
-    .cards .card:nth-child(3):after,
-    .cards .card:nth-child(4):after,
-    .cards .card:nth-child(8):after {
+    .cards .card:nth-child(4n+3):after,
+    .cards .card:nth-child(4n+6):after,
+    .cards .card:nth-child(4n+4):last-of-type:after {
         right: 0;
         z-index: -1;
         content: '';
@@ -218,15 +218,14 @@
         background-image: url("../images/cards.pattern.1.svg");
     }
 
-    .cards .card:nth-child(4):after {
-        top: initial;
-        bottom: -218rem;
+    .cards .card:nth-child(4n+6):after {
+        top: -533rem;
         width: 1627rem;
         height: 436rem;
         background-image: url("../images/cards.pattern.2.svg");
     }
 
-    .cards .card:nth-child(8):after {
+    .cards .card:nth-child(4n+4):last-of-type:after {
         top: initial;
         right: initial;
         left: 267rem;
