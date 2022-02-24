@@ -84,6 +84,12 @@
     pointer-events: initial;
 }
 
+.overview .polygon .content:after {
+    content: 'Нажмите чтобы ознакомится с вариантами квартир';
+    display: inline-block;
+    margin-top: 20px;
+}
+
 .overview .polygon .content h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -98,9 +104,53 @@
 
 .tabs {
     display: flex;
-    opacity: 0;
     overflow-x: scroll;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    color: var(--header-color);
+    padding: 0 var(--horizontal-padding);
+    scroll-snap-type: x mandatory;
+}
+
+.tabs:after {
+    content: '';
+    height: 1px;
+    display: block;
+    min-width: var(--horizontal-padding);
+}
+
+.tabs .tab {
+    width: 195px;
+    min-width: 195px;
+    height: 100%;
+    display: block;
+    margin-right: 30px;
+    scroll-snap-align: center;
+}
+
+.tabs .tab img {
+    --size: 100px;
+    width: var(--size);
+    height: var(--size);
+    margin-bottom: 7px;
+}
+
+.tabs .tab h2 {
+    font-family: var(--text-font);
+    text-transform: initial;
+    font-size: initial;
+}
+
+.tabs .tab h2 span {
+    font-family: var(--text-font);
+    font-weight: 400;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.tabs .tab .details {
+    margin-top: 15px;
+    font-size: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -122,6 +172,79 @@
     }
 
     .tabs {
-        margin-bottom: 400rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 400rem;
+        overflow: initial;
+        scroll-snap-type: initial;
+    }
+
+    .tabs:after {
+        content: none;
+    }
+
+    .tabs .tab {
+        width: 100%;
+        margin: initial;
+        position: relative;
+    }
+
+    .tabs .tab .label {
+        display: flex;
+        height: 181rem;
+        padding: 36rem;
+        cursor: pointer;
+        min-width: 300rem;
+        position: relative;
+        padding-right: 15rem;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: var(--background-color);
+    }
+
+    .tabs .tab:hover .label {
+        box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
+    }
+
+    .tabs .tab:focus .label {
+        background: var(--hero-background-color);
+        box-shadow: inset 0px 8px 16px rgba(46, 60, 80, 0.15);
+    }
+
+    .tabs .tab img {
+        --size: 100rem;
+        margin-right: 15rem;
+        margin-bottom: 0;
+    }
+
+    .tabs .tab h2 {
+        font-size: 16rem;
+        width: 100%;
+    }
+
+    .tabs .tab h2 span {
+        font-size: 32rem;
+    }
+
+    .tabs .tab .details {
+        position: absolute;
+        display: none;
+        bottom: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+        padding: 36rem 75rem;
+        width: 606rem;
+    }
+
+    .tabs .tab:last-of-type .details {
+        left: initial;
+        right: 0;
+    }
+
+    .tabs .tab:focus .details {
+        display: initial;
     }
 }
