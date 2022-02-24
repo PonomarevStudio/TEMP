@@ -3,6 +3,13 @@
     margin: 30px 0;
 }
 
+.documentation-text {
+    margin: 30px 0;
+    font-size: 12px;
+    color: var(--header-color);
+    padding: 0 var(--horizontal-padding);
+}
+
 .map {
     margin: 50px 0;
     color: var(--accent-color);
@@ -88,6 +95,16 @@
         margin-top: 97rem;
         margin-bottom: 114rem;
         font-size: 32rem;
+    }
+
+    .documentation-text {
+        font-size: 24rem;
+        margin-top: 200rem;
+        margin-bottom: 180rem;
+    }
+
+    .documentation-text a span {
+        font-size: 16rem;
     }
 
     .map {
