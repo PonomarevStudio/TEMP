@@ -10,6 +10,51 @@
     padding: 0 var(--horizontal-padding);
 }
 
+.qna {
+    font-size: 12px;
+    margin: 34px var(--horizontal-padding);
+    background-color: var(--background-color);
+    box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
+}
+
+.qna details {
+    --horizontal-padding: 20px;
+    --vertical-padding: 14px;
+    --icon-padding: 11px;
+    --icon-size: 15px;
+    border-bottom: 1px solid #E2DCEB;
+}
+
+.qna details[open] {
+    border-bottom: none;
+}
+
+.qna details > summary {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    color: var(--accent-color);
+    background-repeat: no-repeat;
+    background-size: var(--icon-size);
+    background-image: url("/images/arrow.down.svg");
+    background-position: center right var(--icon-padding);
+    padding: var(--vertical-padding) var(--horizontal-padding);
+    padding-right: calc(var(--horizontal-padding) + var(--icon-size));
+}
+
+.qna details[open] > summary {
+    background-image: url("/images/arrow.up.svg");
+}
+
+.qna details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.qna details .content {
+    background-color: #F5F9FE;
+    padding: var(--vertical-padding) var(--horizontal-padding);
+}
+
 .map {
     margin: 50px 0;
     color: var(--accent-color);
@@ -105,6 +150,31 @@
 
     .documentation-text a span {
         font-size: 16rem;
+    }
+
+    .qna {
+        font-size: 24rem;
+        margin: 185rem var(--horizontal-padding);
+    }
+
+    .qna details {
+        --horizontal-padding: 53rem;
+        --vertical-padding: 32rem;
+        --icon-padding: 35rem;
+        --icon-size: 37rem;
+        border: 1px solid #CEDCDF;
+    }
+
+    .qna details:not(:last-of-type) {
+        border-bottom: none;
+    }
+
+    .qna details > summary {
+        font-size: 32rem;
+    }
+
+    .qna details .content {
+        background-color: initial;
     }
 
     .map {
