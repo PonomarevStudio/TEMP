@@ -281,6 +281,10 @@
         max-width: calc((100% - var(--gap)) / 2);
     }
 
+    .plans-container article .variants .variant:not(:last-of-type) {
+        margin-bottom: 200rem;
+    }
+
     .plans-container article .variant .title {
         font-size: 36rem;
     }
@@ -291,6 +295,7 @@
 
     .plans-container article .content {
         font-size: 36rem;
+        max-width: 990rem;
     }
 
     .plans-container article a {
@@ -298,6 +303,65 @@
         margin-top: 30rem;
         padding: 20rem 26rem;
         display: inline-block;
+    }
+
+    .plans-container article.single .wrapper,
+    .plans-container article.column .wrapper {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    .plans-container article.single .variants,
+    .plans-container article.column .variants {
+        display: inline-block;
+        max-width: 100%;
+        float: left;
+    }
+
+    .plans-container article.single .variants .variant,
+    .plans-container article.column .variants .variant {
+        position: relative;
+        max-width: 100%;
+        padding-right: 45rem;
+        flex-direction: row-reverse;
+    }
+
+    .plans-container article.single .variant .title,
+    .plans-container article.column .variant .title {
+        --left-margin: 0;
+        position: absolute;
+        left: calc(100% + (var(--left-margin) * 1rem));
+        width: 408rem;
+        width: max-content;
+    }
+
+    .plans-container article.single .variant img,
+    .plans-container article.column .variant img {
+        max-height: 735rem;
+        max-width: 870rem;
+        margin: 0;
+    }
+
+    .plans-container article.single .content,
+    .plans-container article.column .content {
+        --left-margin: 0;
+        bottom: 0;
+        width: auto;
+        display: inline;
+        max-width: initial;
+        position: absolute;
+        margin-left: calc(var(--left-margin) * 1rem);
+        /*padding-left: 40rem;*/
+    }
+
+    .plans-container article.column {
+
+    }
+
+    .plans-container article.column .variant img {
+        max-height: 622rem;
+        max-width: 1005rem;
     }
 
     .map {
