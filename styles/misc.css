@@ -248,7 +248,7 @@
     .plans-container article {
         display: block;
         padding: 0 var(--horizontal-padding);
-        scroll-margin-top: var(--header-height);
+        scroll-margin-top: calc(var(--header-height) + 50rem);
         margin-bottom: 182rem;
     }
 
