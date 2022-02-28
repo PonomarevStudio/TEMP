@@ -384,7 +384,7 @@
     .steps {
         color: var(--accent-color);
         padding: 0 var(--horizontal-padding);
-        margin: 200rem 0 400rem;
+        margin: 50rem 0 400rem;
         overflow-x: initial;
         flex-direction: column;
         scroll-snap-type: none;
