@@ -55,6 +55,69 @@
     padding: var(--vertical-padding) var(--horizontal-padding);
 }
 
+.plans-container {
+    padding: var(--horizontal-padding) 0;
+}
+
+.plans-header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: var(--header-height);
+    padding: var(--horizontal-padding) var(--horizontal-padding) 0;
+    background-color: white;
+    border-bottom: 1px solid var(--header-submenu-background-color);
+}
+
+.plans-header .title {
+    color: var(--header-color);
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.plans-header #plans-switcher {
+    -webkit-appearance: none;
+    border: none;
+    color: inherit;
+    background: none;
+    width: 100%;
+    padding: var(--horizontal-padding) 0;
+}
+
+.plans-container article {
+    display: none;
+    padding: var(--horizontal-padding);
+    scroll-margin-top: calc(var(--header-height) + 91px);
+}
+
+.plans-container article:target {
+    display: block;
+}
+
+.plans-container article .variants .variant:not(:last-of-type) {
+    margin-bottom: 30px;
+}
+
+.plans-container article .variant img {
+    margin: var(--horizontal-padding) 0;
+}
+
+.plans-container article .content {
+    font-size: 12px;
+}
+
+.plans-container article a {
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--inverted-accent-color);
+    background-color: var(--inverted-accent-background-color);
+}
+
 .map {
     margin: 50px 0;
     color: var(--accent-color);
@@ -175,6 +238,66 @@
 
     .qna details .content {
         background-color: initial;
+    }
+
+    .plans-container {
+        padding: 0;
+        margin-top: 265rem;
+    }
+
+    .plans-container article {
+        display: block;
+        padding: 0 var(--horizontal-padding);
+        scroll-margin-top: var(--header-height);
+        margin-bottom: 182rem;
+    }
+
+    .plans-container article:before {
+        content: 'Планировки квартир';
+        font-family: var(--header-font);
+        color: var(--header-color);
+        text-transform: uppercase;
+        margin-bottom: 24rem;
+        line-height: 125%;
+        font-size: 60rem;
+        display: block;
+    }
+
+    .plans-container article h2 {
+        font-family: var(--text-font);
+        text-transform: capitalize;
+        font-size: 36rem;
+    }
+
+    .plans-container article .variants {
+        --gap: 150rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 65rem;
+        column-gap: var(--gap);
+    }
+
+    .plans-container article .variants .variant {
+        max-width: calc((100% - var(--gap)) / 2);
+    }
+
+    .plans-container article .variant .title {
+        font-size: 36rem;
+    }
+
+    .plans-container article .variant img {
+        margin: 40rem 0;
+    }
+
+    .plans-container article .content {
+        font-size: 36rem;
+    }
+
+    .plans-container article a {
+        font-size: 20rem;
+        margin-top: 30rem;
+        padding: 20rem 26rem;
+        display: inline-block;
     }
 
     .map {
