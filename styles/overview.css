@@ -245,6 +245,7 @@
         right: 0;
     }
 
+    .tabs .tab:hover .details,
     .tabs .tab:focus .details {
         display: initial;
     }

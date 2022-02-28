@@ -1,12 +1,14 @@
 const switcher = document.getElementById('plans-switcher'),
     updateHash = () => location.hash = switcher.value,
+    preventScroll = state => document.body.classList.toggle('scroll-targets-to-top', state),
     getHashValue = () => location.hash ? location.hash.substring(1) : undefined,
     isOption = value => [...switcher.options].map(({value}) => value).includes(value),
-    updateSwitcher = (value = getHashValue()) => isOption(value) ? switcher.value = value : null
+    updateSwitcher = (e, value = getHashValue()) => updateHash(isOption(value) ? switcher.value = value : null)
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
+    preventScroll(true)
     updateSwitcher()
-    updateHash()
+    preventScroll(false)
     switcher.addEventListener('change', updateHash)
     window.addEventListener('hashchange', updateSwitcher)
 })

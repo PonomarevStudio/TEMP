@@ -118,6 +118,10 @@
     background-color: var(--inverted-accent-background-color);
 }
 
+.scroll-targets-to-top .plans-container article {
+    scroll-margin-top: 10000vh;
+}
+
 .map {
     margin: 50px 0;
     color: var(--accent-color);
