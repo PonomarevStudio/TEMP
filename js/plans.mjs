@@ -5,7 +5,7 @@ const switcher = document.getElementById('plans-switcher'),
     isOption = value => [...switcher.options].map(({value}) => value).includes(value),
     updateSwitcher = (e, value = getHashValue()) => updateHash(isOption(value) ? switcher.value = value : null)
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('load', () => {
     preventScroll(true)
     updateSwitcher()
     preventScroll(false)
