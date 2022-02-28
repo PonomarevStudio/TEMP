@@ -79,6 +79,7 @@
     left: calc((var(--x) * -1vw) + (var(--width) / 2) + var(--horizontal-padding));
 }
 
+.overview .polygon:hover .content,
 .overview .polygon:focus .content {
     opacity: 1;
     pointer-events: initial;
