@@ -84,6 +84,21 @@
     margin-left: 5px;
 }
 
+@media (max-width: 1023px) and (orientation: portrait) {
+    .hero {
+        --content-vertical-padding: 5vh;
+    }
+
+    .hero:after {
+        clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 40% 100%)
+    }
+
+    .hero > img {
+        width: 100vw;
+        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
 @media (min-width: 1024px), (orientation: landscape) {
     .hero:after {
         clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 55% 100%);
