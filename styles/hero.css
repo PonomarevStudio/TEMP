@@ -97,6 +97,13 @@
         width: 100vw;
         clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
+
+    .hero .navigation {
+        bottom: var(--navigation-vertical-padding);
+        left: var(--horizontal-padding);
+        right: unset;
+        top: unset;
+    }
 }
 
 .hero.compact:after {
