@@ -51,7 +51,7 @@
     width: 85vw;
     object-fit: cover;
     height: var(--height);
-    object-position: right;
+    object-position: top left;
     clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
