@@ -86,7 +86,7 @@
 }
 
 .overview .polygon .content:after {
-    content: 'Нажмите чтобы ознакомится с вариантами квартир';
+    content: 'Нажмите, чтобы ознакомиться';
     display: inline-block;
     margin-top: 20px;
 }
