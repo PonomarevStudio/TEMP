@@ -104,14 +104,14 @@
         right: unset;
         top: unset;
     }
-}
 
-.hero.compact:after {
-    clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 60% 100%)
-}
+    .hero.compact:after {
+        clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 60% 100%)
+    }
 
-.hero.compact > img {
-    clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 0% 100%);
+    .hero.compact > img {
+        clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 @media (min-width: 1024px), (orientation: landscape) {
