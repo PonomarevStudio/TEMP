@@ -1,7 +1,9 @@
 class Offers {
-    constructor({url = 'api/offers.php', groupBy = 'rooms', fields = ['price', 'rooms']} = {}) {
+    constructor({url = 'api/offers.php', groupBy = ['studio', 'rooms'], fields = ['price', 'rooms', 'studio']} = {}) {
         this.options = {url, groupBy, fields}
         this.selectors = {price: 'price value'}
+        this.groupKeys = {_default: 'binary', rooms: 'numeric'}
+        this.groupRules = {binary: (key) => key, numeric: (key, value) => parseInt(value)}
         this.loading = this.loadOffers().then(() => this)
     }
 
@@ -23,12 +25,16 @@ class Offers {
     groupOffers(offers = this.list, groupBy = this.options.groupBy) {
         const groups = {}
         offers.forEach(offer => {
-            const id = offer[groupBy]
+            const id = this.getOfferGroupKey(offer, groupBy)
             const group = groups[id] || (groups[id] = {count: 0, prices: []})
             group.prices.push(offer.price)
             group.count++
         })
         return groups;
+    }
+
+    getOfferGroupKey(offer, groupBy) {
+        return groupBy.map(key => offer[key] ? this.applyGroupRule(key, offer[key]) : null).filter(Boolean).shift()
     }
 
     saveCache() {
@@ -42,6 +48,10 @@ class Offers {
 
     getSelector(field) {
         return this.selectors[field] || field
+    }
+
+    applyGroupRule(key, value) {
+        return this.groupRules[this.groupKeys[key] || this.groupKeys._default](key, value)
     }
 
     async get(group) {
