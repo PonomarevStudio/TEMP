@@ -1,6 +1,7 @@
 class Offers {
-    constructor({url = 'api/offers.php', groupBy = 'rooms'} = {}) {
-        this.options = {url, groupBy}
+    constructor({url = 'api/offers.php', groupBy = 'rooms', fields = ['price', 'rooms']} = {}) {
+        this.options = {url, groupBy, fields}
+        this.selectors = {price: 'price value'}
         this.loading = this.loadOffers().then(() => this)
     }
 
@@ -8,13 +9,15 @@ class Offers {
         if (sessionStorage.getItem('offers')) return this.loadCache()
         this.xml = await fetch(url, {mode: 'cors'}).then(r => r.text())
             .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        this.list = [...offers.xml.querySelectorAll('offer')].map(offer => ({
-            price: parseInt(offer.querySelector('price value').textContent),
-            rooms: parseInt(offer.querySelector('rooms').textContent)
-        }))
+        this.list = [...offers.xml.querySelectorAll('offer')].map(this.fetchOfferFields.bind(this))
         this.groups = Object.fromEntries(Object.entries(this.groupOffers()).map(([name, group]) =>
             [name, {price: Math.min(...group.prices), ...group}]))
         return this.saveCache()
+    }
+
+    fetchOfferFields(offer) {
+        return Object.fromEntries(this.options.fields.map(field =>
+            [field, parseInt(offer.querySelector(this.getSelector(field)).textContent)]))
     }
 
     groupOffers(offers = this.list, groupBy = this.options.groupBy) {
@@ -35,6 +38,10 @@ class Offers {
 
     loadCache() {
         Object.assign(this, JSON.parse(sessionStorage.getItem('offers')))
+    }
+
+    getSelector(field) {
+        return this.selectors[field] || field
     }
 
     async get(group) {
