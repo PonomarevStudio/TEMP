@@ -55,6 +55,10 @@
     margin-bottom: var(--horizontal-padding);
 }
 
+.plans .card img {
+    max-height: 200px;
+}
+
 .plans .card p {
     font-size: 20px;
     margin-top: var(--horizontal-padding);
