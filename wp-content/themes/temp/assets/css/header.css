@@ -240,7 +240,7 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
         box-shadow: var(--header-box-shadow);
         position: absolute;
         max-width: 100%;
-        /*padding: var(--inner-vertical-padding) 0;*/
+        width: 100%;
     }
 
     header .menu nav .sub-menu .content a {

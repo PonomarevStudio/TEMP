@@ -1,4 +1,4 @@
-<a class="float-widget-button" href="overview.html">
+<a class="float-widget-button" href="/overview">
     <img alt="" loading="eager" src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
     <span>Планировки и цены</span>
 </a>
@@ -9,16 +9,23 @@
     <div class="column">
         <nav class="row">
             <div class="row group double">
-                <div class="column">
-                    <!--<a href="#">Новости</a>-->
-                    <a href="#">О проекте</a>
-                    <a href="qna.html">Вопрос-ответ</a>
-                </div>
-                <div class="column">
-                    <a href="documentation.html">Документы</a>
-                    <!--<a href="stages.html">Ход стройки</a>-->
-                    <a href="privacy-policy.html">Политика конфиденциальности</a>
-                </div>
+				<?php
+				$menu_content = '';
+				$menu_name    = 'footer';
+				$locations    = get_nav_menu_locations();
+				if ( $locations && isset( $locations[ $menu_name ] ) ) {
+					$menu_items  = wp_get_nav_menu_items( $locations[ $menu_name ] );
+					$menu_groups = array_chunk( (array) $menu_items, round( count( $menu_items ) / 2 ), true );
+					foreach ( $menu_groups as $group => $group_item ) {
+						$menu_content .= '<div class="column">';
+						foreach ( $group_item as $key => $menu_item ) {
+							$menu_content .= '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+						}
+						$menu_content .= '</div>';
+					}
+					echo $menu_content;
+				}
+				?>
             </div>
             <div class="column bordered group">
                 <a class="phone" href="tel:+7 (343) 288 55 66">+7 (343) 288 55 66</a>

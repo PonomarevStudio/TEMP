@@ -6,11 +6,16 @@
 
 .cards .card {
     margin: 15px 0;
+    display: initial;
     --color: var(--header-color)
 }
 
 .cards .card:nth-child(even) {
     --color: var(--accent-color)
+}
+
+.cards .card div {
+    padding: initial;
 }
 
 .cards .card a {
