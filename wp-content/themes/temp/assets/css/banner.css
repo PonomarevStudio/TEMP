@@ -16,7 +16,7 @@
     position: absolute;
     background-size: cover;
     background-position: center;
-    background-image: url("https://cdn.statically.io/img/temp.static.ponomarev.studio/f=auto,w=1024/images/apartments.banner.png");
+    background-image: url("../images/apartments.banner.png");
 }
 
 .banner a {

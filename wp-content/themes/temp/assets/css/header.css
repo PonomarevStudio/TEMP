@@ -176,6 +176,10 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
         padding: 0 var(--horizontal-padding);
     }
 
+    .admin-bar header {
+        top: 32px;
+    }
+
     header .logo {
         all: initial;
     }

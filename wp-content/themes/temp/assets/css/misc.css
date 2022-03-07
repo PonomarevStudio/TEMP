@@ -36,14 +36,14 @@
     color: var(--accent-color);
     background-repeat: no-repeat;
     background-size: var(--icon-size);
-    background-image: url("/images/arrow.down.svg");
+    background-image: url("../images/arrow.down.svg");
     background-position: center right var(--icon-padding);
     padding: var(--vertical-padding) var(--horizontal-padding);
     padding-right: calc(var(--horizontal-padding) + var(--icon-size));
 }
 
 .qna details[open] > summary {
-    background-image: url("/images/arrow.up.svg");
+    background-image: url("../images/arrow.up.svg");
 }
 
 .qna details > summary::-webkit-details-marker {
