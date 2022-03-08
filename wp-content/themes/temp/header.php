@@ -11,8 +11,6 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
 
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-
 	<?php wp_head(); ?>
 
 </head>
