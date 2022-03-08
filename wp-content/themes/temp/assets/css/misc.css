@@ -10,6 +10,10 @@
     padding: 0 var(--horizontal-padding);
 }
 
+.documentation-text p {
+    margin: revert;
+}
+
 .qna {
     font-size: 12px;
     margin: 34px var(--horizontal-padding);
