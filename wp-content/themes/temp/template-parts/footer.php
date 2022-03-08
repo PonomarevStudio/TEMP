@@ -3,7 +3,7 @@
     <span>Планировки и цены</span>
 </a>
 <footer>
-    <a class="logo" href="/">
+    <a class="logo" href="<?php bloginfo( 'url' ); ?>">
         <img alt="ЖК Темп" src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.inverted.svg">
     </a>
     <div class="column">
