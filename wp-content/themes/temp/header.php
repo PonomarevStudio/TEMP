@@ -10,7 +10,6 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
-    <link rel="mask-icon" href="/favicon.svg" color="#C2A36C">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
