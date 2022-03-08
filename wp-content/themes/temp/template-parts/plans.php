@@ -26,7 +26,7 @@
                 можно организовать кабинет или место для отдыха.
             </div>
         </div>
-        <a href="overview.html">Каталог квартир</a>
+        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
     </article>
     <article id="1rooms">
         <h2 class="hide-on-mobile">1-комнатные квартиры</h2>
@@ -59,7 +59,7 @@
                 рабочий кабинет или место для отдыха.
             </div>
         </div>
-        <a href="overview.html">Каталог квартир</a>
+        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
     </article>
     <article class="column" id="2rooms">
         <h2 class="hide-on-mobile">2-комнатные квартиры</h2>
@@ -90,7 +90,7 @@
                 делам с комфортом.
             </div>
         </div>
-        <a href="overview.html">Каталог квартир</a>
+        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
     </article>
     <article class="single" id="3rooms">
         <h2 class="hide-on-mobile">3-комнатные квартиры</h2>
@@ -113,7 +113,7 @@
                 комнат от шкафов.
             </div>
         </div>
-        <a href="overview.html">Каталог квартир</a>
+        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
     </article>
     <article class="single" id="4rooms">
         <h2 class="hide-on-mobile">4-комнатные квартиры</h2>
@@ -131,6 +131,6 @@
 
             </div>
         </div>
-        <a href="overview.html">Каталог квартир</a>
+        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
     </article>
 </main>

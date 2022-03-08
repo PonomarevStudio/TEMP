@@ -2,7 +2,7 @@
     <input class="hide" id="headerMenuState" onchange="document.body.classList.toggle('disable-scroll', this.checked)"
            type="checkbox">
     <label class="header-button open-menu-button hide-on-desktop" for="headerMenuState" title="Открыть меню"></label>
-    <a class="logo" href="/">
+    <a class="logo" href="<?php bloginfo( 'url' ); ?>">
         <img alt="ЖК Темп" height="41" loading="eager"
              src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.svg">
     </a>
@@ -38,10 +38,10 @@
 			}
 			?>
         </nav>
-        <a class="open-widget-button hide-on-desktop" href="/overview">Выбрать квартиру</a>
+        <a class="open-widget-button hide-on-desktop" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать квартиру</a>
         <label for="headerMenuState" class="close-menu-layer hide-on-desktop" title="Закрыть меню"></label>
     </div>
     <a class="header-button call-phone-button" href="tel:+7 (343) 288 55 66"><span
                 class="hide-on-mobile">+7 (343) 288 55 66</span></a>
-    <a class="open-widget-button hide-on-mobile" href="/overview">Выбрать<br>квартиру</a>
+    <a class="open-widget-button hide-on-mobile" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать<br>квартиру</a>
 </header>
