@@ -7,6 +7,7 @@ add_theme_support( 'html5', 'script' );
 add_action( 'init', 'temp_register_menus' );
 add_action( 'wp_enqueue_scripts', 'temp_register_styles' );
 add_action( 'wp_enqueue_scripts', 'temp_register_scripts' );
+add_action( 'customize_register', 'temp_customize_register' );
 add_action( 'get_template_part_template-parts/plans', 'temp_plans_switcher_script' );
 add_action( 'get_template_part_template-parts/overview', 'temp_profitbase_scripts' );
 add_action( 'get_template_part_template-parts/overview', 'temp_plans_offers_script' );
@@ -66,4 +67,36 @@ function temp_register_menus() {
 		'header' => __( 'Верхнее меню' ),
 		'footer' => __( 'Нижнее меню' )
 	) );
+}
+
+function temp_customize_register( $wp_customize ) {
+	$wp_customize->add_section(
+		'data_contacts_section',
+		array(
+			'title'       => 'Контакты на сайте',
+			'capability'  => 'edit_theme_options',
+			'description' => "Настраивайте номер телефона и email в верхнем и нижнем меню сайта"
+		)
+	);
+	$wp_customize->add_setting( 'site_email', array( 'default' => '', 'type' => 'option' ) );
+	$wp_customize->add_control(
+		'site_email_control',
+		array(
+			'type'     => 'email',
+			'label'    => "Email",
+			'section'  => 'data_contacts_section',
+			'settings' => 'site_email'
+		)
+	);
+	$wp_customize->add_setting( 'site_phone', array( 'default' => '', 'type' => 'option' ) );
+	$wp_customize->add_control(
+		'site_phone_control',
+		array(
+			'type'        => 'text',
+			'label'       => "Номер телефона",
+			'description' => "В формате +7 (999) 999 99 99",
+			'section'     => 'data_contacts_section',
+			'settings'    => 'site_phone'
+		)
+	);
 }

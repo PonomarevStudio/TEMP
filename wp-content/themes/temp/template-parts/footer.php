@@ -1,3 +1,7 @@
+<?php
+$email = get_option( 'site_email' );
+$phone = get_option( 'site_phone' );
+?>
 <a class="float-widget-button" href="<?php bloginfo( 'url' ); ?>/overview">
     <img alt="" loading="eager" src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
     <span>Планировки и цены</span>
@@ -28,8 +32,8 @@
 				?>
             </div>
             <div class="column bordered group">
-                <a class="phone" href="tel:+7 (343) 288 55 66">+7 (343) 288 55 66</a>
-                <a href="mailto:info@domtemp.life" class="email">info@domtemp.life</a>
+                <a class="phone" href="tel:+<?= preg_replace( '/\D+/', '', $phone ) ?>"><?= $phone ?></a>
+                <a href="mailto:<?= $email ?>" class="email"><?= $email ?></a>
                 <div class="row"></div>
             </div>
         </nav>

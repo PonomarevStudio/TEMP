@@ -1,3 +1,4 @@
+<?php $phone = get_option( 'site_phone' ) ?>
 <header>
     <input class="hide" id="headerMenuState" onchange="document.body.classList.toggle('disable-scroll', this.checked)"
            type="checkbox">
@@ -41,7 +42,8 @@
         <a class="open-widget-button hide-on-desktop" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать квартиру</a>
         <label for="headerMenuState" class="close-menu-layer hide-on-desktop" title="Закрыть меню"></label>
     </div>
-    <a class="header-button call-phone-button" href="tel:+7 (343) 288 55 66"><span
-                class="hide-on-mobile">+7 (343) 288 55 66</span></a>
+    <a class="header-button call-phone-button" href="tel:+<?= preg_replace( '/\D+/', '', $phone ) ?>">
+        <span class="hide-on-mobile"><?= $phone ?></span>
+    </a>
     <a class="open-widget-button hide-on-mobile" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать<br>квартиру</a>
 </header>
