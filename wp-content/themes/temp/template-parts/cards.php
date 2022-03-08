@@ -7,6 +7,5 @@ if ( have_posts() ) {
 			<?php the_content(); ?>
         </main>
 		<?php
-		edit_post_link( null, '<br><br>' );
 	}
 }
