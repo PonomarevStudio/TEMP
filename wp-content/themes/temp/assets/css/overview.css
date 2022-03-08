@@ -40,7 +40,7 @@
     opacity: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../images/overview.polygon.1.svg");
+    background-image: url("/images/overview/overview.polygon.1.svg");
 }
 
 .overview .polygon:after {
