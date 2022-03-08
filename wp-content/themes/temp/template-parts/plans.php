@@ -6,6 +6,7 @@
             <option value="1rooms">1-комнатные квартиры</option>
             <option value="2rooms">2-комнатные квартиры</option>
             <option value="3rooms">3-комнатные квартиры</option>
+            <option value="4rooms">4-комнатные квартиры</option>
         </select>
     </div>
     <article class="single" id="studios">
@@ -17,7 +18,7 @@
                         <p>Студия.</p>
                         <p>Площадь — 32,4 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.1.jpg">
+                    <img alt="" src="/images/plans/plan.1.svg">
                 </div>
             </div>
             <div class="content">
@@ -37,14 +38,14 @@
                         <p>Вариант 1.</p>
                         <p>Площадь - 51,3 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.2.1.jpg">
+                    <img alt="" src="/images/plans/plan.2.1.svg">
                 </div>
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 2.</p>
                         <p>Площадь - 46,6 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.2.2.jpg">
+                    <img alt="" src="/images/plans/plan.2.2.svg">
                 </div>
             </div>
             <div class="content">
@@ -77,7 +78,7 @@
                         <p>Вариант 2.</p>
                         <p>Площадь — 75,4 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.3.2.jpg">
+                    <img alt="" src="/images/plans/plan.3.2.svg">
                 </div>
             </div>
             <div class="content" style="--left-margin: -217">
@@ -101,7 +102,7 @@
                         <p>Вариант 1.</p>
                         <p>Площадь — 92,7 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.4.jpg">
+                    <img alt="" src="/images/plans/plan.4.svg">
                 </div>
             </div>
             <div class="content">
@@ -124,7 +125,7 @@
                         <p>Вариант 1.</p>
                         <p>Площадь — 120,41 кв. м.</p>
                     </div>
-                    <img alt="" src="/images/plans/plan.5.png">
+                    <img alt="" src="/images/plans/plan.5.svg">
                 </div>
             </div>
             <div class="content">
