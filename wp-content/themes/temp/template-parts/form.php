@@ -1,5 +1,6 @@
 <section class="form">
     <img alt="" loading="lazy" src="<?php bloginfo( 'template_url' ); ?>/assets/images/form.1.jpg">
+    <img alt="" loading="lazy" src="<?= get_theme_mod( 'feedback_form_image' ) ?>">
     <div class="content">
         <h2>Остались вопросы?</h2>
         <hr>

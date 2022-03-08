@@ -78,9 +78,9 @@ function temp_customize_register( $wp_customize ) {
 			'description' => "Настраивайте номер телефона и email в верхнем и нижнем меню сайта"
 		)
 	);
-	$wp_customize->add_setting( 'site_email', array( 'default' => '', 'type' => 'option' ) );
+	$wp_customize->add_setting( 'site_email', array( 'default' => 'info@domtemp.life', 'type' => 'option' ) );
 	$wp_customize->add_control(
-		'site_email_control',
+		'email',
 		array(
 			'type'     => 'email',
 			'label'    => "Email",
@@ -88,9 +88,9 @@ function temp_customize_register( $wp_customize ) {
 			'settings' => 'site_email'
 		)
 	);
-	$wp_customize->add_setting( 'site_phone', array( 'default' => '', 'type' => 'option' ) );
+	$wp_customize->add_setting( 'site_phone', array( 'default' => '+7 (343) 288 55 66', 'type' => 'option' ) );
 	$wp_customize->add_control(
-		'site_phone_control',
+		'text',
 		array(
 			'type'        => 'text',
 			'label'       => "Номер телефона",
@@ -98,5 +98,19 @@ function temp_customize_register( $wp_customize ) {
 			'section'     => 'data_contacts_section',
 			'settings'    => 'site_phone'
 		)
+	);
+
+	$wp_customize->add_section( 'data_feedback_form_section',
+		array( 'title' => 'Форма обратной связи', 'capability' => 'edit_theme_options', ) );
+	$wp_customize->add_setting( 'feedback_form_image', array(
+		'default' => get_bloginfo( 'template_url' ) . '/assets/images/form.1.jpg',
+		'type'    => 'theme_mod'
+	) );
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control( $wp_customize, 'feedback_form_image', [
+			'label'    => 'Изображение рядом с формой обратной связи',
+			'settings' => 'feedback_form_image',
+			'section'  => 'data_feedback_form_section'
+		] )
 	);
 }
