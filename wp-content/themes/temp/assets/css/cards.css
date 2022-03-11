@@ -16,6 +16,7 @@
 
 .cards .card div {
     padding: initial;
+    align-self: revert;
 }
 
 .cards .card a {
@@ -30,6 +31,10 @@
     font-size: 20px;
     margin: 23px 0 10px;
     color: var(--color);
+}
+
+.cards .card h2 kbd {
+    display: inline-block;
 }
 
 .cards .card hr {
@@ -72,6 +77,7 @@
         --width: 100%;
         margin: 0;
         width: var(--width);
+        max-width: var(--width);
         position: relative;
     }
 
@@ -142,7 +148,7 @@
     }
 
     .cards .card:nth-child(4n+4) img {
-        width: 962rem;
+        width: 950rem;
     }
 
     .cards .card:nth-child(4n+1) div,
