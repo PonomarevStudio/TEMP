@@ -44,9 +44,9 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
 
     renderSlide(slide = this.currentSlide) {
         const data = this.slides[slide];
-        this.imgMobile.srcset = data.imgMobile || '';
-        this.text.innerText = data.text || '';
-        this.img.src = data.img || '';
+        if (this.imgMobile) this.imgMobile.srcset = data.imgMobile || '';
+        if (this.text) this.text.innerText = data.text || '';
+        if (this.img) this.img.src = data.img || '';
         return data;
     }
 
@@ -72,6 +72,10 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
     }
 
     appendInitialSlide() {
-        return this.slides.unshift({text: this.text.innerText, img: this.img.src, imgMobile: this.imgMobile.srcset})
+        const data = {}
+        if (this.img && this.img.src) data.img = this.img.src
+        if (this.text && this.text.innerText) data.text = this.text.innerText
+        if (this.imgMobile && this.imgMobile.srcset) data.imgMobile = this.img.src
+        return this.slides.unshift(data)
     }
 })
