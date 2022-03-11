@@ -2,6 +2,7 @@
 $email = get_option( 'site_email' );
 $phone = get_option( 'site_phone' );
 ?>
+<?= temp_get_style_link( '/assets/css/footer.css' ) ?>
 <a class="float-widget-button" href="<?php bloginfo( 'url' ); ?>/overview">
     <img alt="" loading="eager" src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
     <span>Планировки и цены</span>

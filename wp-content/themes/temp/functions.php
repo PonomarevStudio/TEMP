@@ -17,8 +17,15 @@ add_action( 'get_template_part_template-parts/plans.slider', 'temp_plans_offers_
 add_action( 'get_template_part_template-parts/plans.slider', 'temp_plans_scroll_script' );
 add_filter( 'script_loader_tag', 'temp_add_async_attribute', 10, 2 );
 
+function temp_get_style_link( $path ) {
+	$url = get_stylesheet_directory_uri() . $path . '?ver=' . wp_get_theme()->get( 'Version' );
+
+	return '<link href="' . $url . '" rel="stylesheet" property="stylesheet">';
+}
+
 function temp_register_styles() {
-	wp_enqueue_style( 'temp-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'temp-base-styles', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'temp-misc-styles', get_stylesheet_directory_uri() . '/assets/css/misc.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
 function temp_register_scripts() {

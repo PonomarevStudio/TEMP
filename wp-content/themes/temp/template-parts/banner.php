@@ -1,3 +1,4 @@
+<?= temp_get_style_link( '/assets/css/banner.css' ) ?>
 <section class="banner">
     <div>
         <h2>ВыбЕРИте подходящую планировку</h2>

@@ -14,7 +14,7 @@
         <div class="wrapper">
             <div class="variants">
                 <div class="variant">
-                    <div class="title" style="--left-margin: -130">
+                    <div class="title" style="--left-margin: -100">
                         <p>Студия.</p>
                         <p>Площадь — 32,4 кв. м.</p>
                     </div>

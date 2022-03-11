@@ -1,5 +1,6 @@
+<?= temp_get_style_link( '/assets/css/form.css' ) ?>
 <section class="form">
-    <img alt="" loading="lazy" src="<?= get_theme_mod( 'feedback_form_image' ) ?>">
+    <img alt="" src="<?= get_theme_mod( 'feedback_form_image' ) ?>">
     <div class="content">
         <h2>Остались вопросы?</h2>
         <hr>

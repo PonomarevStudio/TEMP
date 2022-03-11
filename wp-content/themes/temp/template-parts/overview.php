@@ -1,5 +1,6 @@
+<?= temp_get_style_link( '/assets/css/overview.css' ) ?>
 <div class="overview">
-    <img alt="" src="/images/overview/overview.jpg">
+    <img alt="" src="/new/wp-content/uploads/overview.jpg">
     <div class="polygon" tabindex="0">
         <div class="content" onclick="pb_front_widget.show();">
             <h3>1 Очередь</h3>
