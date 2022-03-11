@@ -11,6 +11,7 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
     async connectedCallback() {
         this.img = this.querySelector('[data-slider="img"]')
         this.text = this.querySelector('[data-slider="text"]')
+        this.imgMobile = this.querySelector('[data-slider="img_mobile"]')
         this.nextButton = this.querySelector('.navigation>button:last-of-type')
         this.prevButton = this.querySelector('.navigation>button:first-of-type')
 
@@ -43,8 +44,9 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
 
     renderSlide(slide = this.currentSlide) {
         const data = this.slides[slide];
-        this.text.innerText = data.text;
-        this.img.src = data.img;
+        this.imgMobile.srcset = data.imgMobile || '';
+        this.text.innerText = data.text || '';
+        this.img.src = data.img || '';
         return data;
     }
 
@@ -65,10 +67,11 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
     }
 
     preloadImages() {
-        this.slides.forEach(({img}) => new Image().src = img)
+        this.slides.flatMap(({img, imgMobile}) => [img, imgMobile]).filter(Boolean)
+            .forEach(img => new Image().src = img)
     }
 
     appendInitialSlide() {
-        return this.slides.unshift({text: this.text.innerText, img: this.img.src})
+        return this.slides.unshift({text: this.text.innerText, img: this.img.src, imgMobile: this.imgMobile.srcset})
     }
 })
