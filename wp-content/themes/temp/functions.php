@@ -29,7 +29,6 @@ function temp_register_styles() {
 }
 
 function temp_register_scripts() {
-	wp_enqueue_script( 'temp-webcomponents', 'https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'temp-integrations', get_template_directory_uri() . '/assets/js/integrations.mjs', array(), wp_get_theme()->get( 'Version' ), true );
 }
 
