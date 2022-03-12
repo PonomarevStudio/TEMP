@@ -16,6 +16,26 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
         this.addEventListener('mousedown', this.mousedown);
         this.addEventListener('mouseleave', this.mouseleave);
         this.addEventListener('wheel', this.cancelMomentumTracking);
+        this.addEventListener('scroll', this.scroll, {passive: true});
+
+        this.childItem = this.querySelector('.card')
+        this.prevButton = this.querySelector('.scroll-button[data-scroll="prev"]')
+        this.nextButton = this.querySelector('.scroll-button[data-scroll="next"]')
+
+        if (this.prevButton) {
+            this.prevButton.addEventListener('click', this.scrollToPrevNode.bind(this))
+            this.prevButton.addEventListener('mouseleave', this.cancelEvent)
+            this.prevButton.addEventListener('mousedown', this.cancelEvent)
+            this.prevButton.addEventListener('mouseup', this.leaveEvent.bind(this))
+        }
+        if (this.nextButton) {
+            this.nextButton.addEventListener('click', this.scrollToNextNode.bind(this))
+            this.nextButton.addEventListener('mouseleave', this.cancelEvent)
+            this.nextButton.addEventListener('mousedown', this.cancelEvent)
+            this.nextButton.addEventListener('mouseup', this.leaveEvent.bind(this))
+        }
+
+        this.scroll()
     }
 
     disconnectedCallback() {
@@ -73,5 +93,38 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
         if (Math.abs(this.velX) > 0.5) {
             this.momentumID = requestAnimationFrame(this.momentumLoop.bind(this));
         } else this.classList.toggle('animation', false);
+    }
+
+    getScrollWidth() {
+        return this.childItem ? (this.childItem.clientWidth + parseInt(window.getComputedStyle(this.childItem).marginRight)) : 0
+    }
+
+    scrollToPrevNode() {
+        this.scrollTo({left: this.scrollLeft - this.getScrollWidth(), behavior: 'smooth'})
+    }
+
+    scrollToNextNode() {
+        this.scrollTo({left: this.scrollLeft + this.getScrollWidth(), behavior: 'smooth'})
+    }
+
+    scroll() {
+        if (this.scrollLeft <= 0) {
+            if (!this.prevButton.classList.contains('hide')) this.prevButton.classList.toggle('hide', true)
+        } else if (this.prevButton.classList.contains('hide')) this.prevButton.classList.toggle('hide', false)
+        if (this.scrollWidth - this.clientWidth - this.scrollLeft <= 0) {
+            if (!this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', true)
+        } else if (this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', false)
+    }
+
+    leaveEvent(e) {
+        this.cancelEvent(e);
+        this.isDown = false;
+        this.classList.toggle('active', false);
+    }
+
+    cancelEvent(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
     }
 })

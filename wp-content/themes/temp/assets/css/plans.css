@@ -31,14 +31,15 @@
 
 .plans .card {
     display: flex;
-    min-width: 100%;
+    width: 100%;
+    min-width: calc(80vw - (var(--horizontal-padding) * 2));
     flex-direction: column;
     scroll-snap-align: center;
     justify-content: space-between;
     padding: var(--horizontal-padding);
     background-color: var(--background-color);
     box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
-    margin-right: calc(var(--horizontal-padding) * 2);
+    margin-right: calc(var(--horizontal-padding) * 1);
 }
 
 .plans .card:last-of-type {
@@ -75,6 +76,33 @@
     padding: var(--horizontal-padding) 0;
     margin-top: var(--horizontal-padding);
     background-color: var(--inverted-accent-background-color);
+}
+
+.plans .variants .scroll-button {
+    --size: 50px;
+    opacity: 0;
+    border: none;
+    margin: unset;
+    padding: unset;
+    cursor: pointer;
+    position: absolute;
+    align-self: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    pointer-events: none;
+    left: calc(var(--size) / 3);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(var(--size) / 4);
+    background-color: var(--hero-buttons-color);
+    background-image: url("../images/hero.arrow.svg");
+}
+
+.plans .variants .scroll-button[data-scroll="next"] {
+    left: unset;
+    right: calc(var(--size) / 3);
+    background-image: url("../images/hero.arrow.inverted.svg");
 }
 
 @media (orientation: landscape) {
@@ -117,7 +145,7 @@
         cursor: grabbing;
     }
 
-    .plans .variants.active > * {
+    .plans .variants.active > *:not(.scroll-button) {
         pointer-events: none;
     }
 
@@ -152,6 +180,12 @@
         font-size: 14rem;
         padding: 18rem 0;
         margin-top: 36rem;
+    }
+
+    .plans .variants .scroll-button {
+        --size: 100rem;
+        opacity: initial;
+        pointer-events: initial;
     }
 
 }
