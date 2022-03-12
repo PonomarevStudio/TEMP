@@ -16,22 +16,6 @@ try {
     console.error(e)
 }
 try {
-    (function (w, d, s, h, id) {
-        w.roistatProjectId = id;
-        w.roistatHost = h;
-        var p = d.location.protocol == "https:" ? "https://" : "http://";
-        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/" + id + "/init?referrer=" + encodeURIComponent(d.location.href);
-        var js = d.createElement(s);
-        js.charset = "UTF-8";
-        js.async = 1;
-        js.src = p + h + u;
-        var js2 = d.getElementsByTagName(s)[0];
-        js2.parentNode.insertBefore(js, js2);
-    })(window, document, 'script', 'cloud.roistat.com', '8420d8a36ef1e7439d1879178dbd1db2');
-} catch (e) {
-    console.error(e)
-}
-try {
     (function (d, w, k) {
         w.morekit_callback = function () {
             try {
@@ -50,3 +34,21 @@ try {
 } catch (e) {
     console.error(e)
 }
+window.addEventListener('load', () => setTimeout(() => {
+    try {
+        (function (w, d, s, h, id) {
+            w.roistatProjectId = id;
+            w.roistatHost = h;
+            var p = d.location.protocol == "https:" ? "https://" : "http://";
+            var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/" + id + "/init?referrer=" + encodeURIComponent(d.location.href);
+            var js = d.createElement(s);
+            js.charset = "UTF-8";
+            js.async = 1;
+            js.src = p + h + u;
+            var js2 = d.getElementsByTagName(s)[0];
+            js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com', '8420d8a36ef1e7439d1879178dbd1db2');
+    } catch (e) {
+        console.error(e)
+    }
+}, 1))
