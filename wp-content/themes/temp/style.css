@@ -1,7 +1,7 @@
 /*
 Theme Name: Temp
 Text Domain: temp
-Version: 1.0.6
+Version: 1.0.7
 Tested up to: 5.9
 Requires at least: 5.9
 Requires PHP: 8.0
@@ -89,7 +89,7 @@ a {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: initial;
+    overflow-wrap: initial !important;
     word-break: initial;
     font-weight: normal;
 }
@@ -584,6 +584,10 @@ header .menu nav a:active {
 }
 
 @media (min-width: 768px), (orientation: landscape) {
+    .hero {
+        --horizontal-padding: 16px;
+    }
+
     .hero:after {
         clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 55% 100%);
     }
@@ -1057,14 +1061,6 @@ header .menu nav a:active {
 .plans .variants .scroll-button:active {
     transform: scale(.95);
 }
-
-/*@media (orientation: landscape) {
-    .plans .card {
-        width: 380px;
-        min-width: 380px;
-        scroll-snap-align: center;
-    }
-}*/
 
 @media (min-width: 768px), (orientation: landscape) {
     .plans {
@@ -1842,6 +1838,12 @@ footer nav a:active {
     transform: scale(.95);
 }
 
+@media (max-width: 767px) {
+    .float-widget-button {
+        --horizontal-padding: 16px;
+    }
+}
+
 @media (min-width: 768px), (orientation: landscape) {
     footer {
         padding: 95rem 312rem 37rem var(--horizontal-padding);
@@ -1917,7 +1919,7 @@ footer nav a:active {
         --size: 80px;
         font-size: 10px;
         padding: 15px;
-        bottom: calc(var(--horizontal-padding) / 2);
+        bottom: var(--horizontal-padding);
     }
 
     .float-widget-button img {
@@ -1967,6 +1969,7 @@ footer nav a:active {
 
 .documentation-text h1 {
     word-break: break-word;
+    margin-top: calc(var(--header-height) * 2);
 }
 
 .documentation-text p {
