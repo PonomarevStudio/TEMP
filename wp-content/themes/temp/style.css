@@ -449,6 +449,8 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
 
 .hero .navigation {
     user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
     top: calc(var(--navigation-vertical-padding) + var(--header-height));
     z-index: 3;
@@ -925,14 +927,18 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     margin: unset;
     padding: unset;
     cursor: pointer;
+    user-select: none;
     position: absolute;
     align-self: center;
     width: var(--size);
     height: var(--size);
     border-radius: 100%;
-    left: var(--horizontal-padding);
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
     background-position: center;
     background-repeat: no-repeat;
+    left: var(--horizontal-padding);
     background-size: calc(var(--size) / 4);
     background-color: var(--hero-buttons-color);
     background-image: url("./assets/images/hero.arrow.svg");
@@ -1125,6 +1131,8 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     height: 100vw;
     user-select: none;
     position: relative;
+    -ms-user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
 }
 
