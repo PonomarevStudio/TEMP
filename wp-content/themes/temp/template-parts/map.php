@@ -1,5 +1,5 @@
 <section class="map">
-    <div style="align-self: flex-start;">
+    <div>
         <h2>Схема проезда</h2>
         <hr>
     </div>

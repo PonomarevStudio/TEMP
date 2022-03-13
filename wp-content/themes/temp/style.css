@@ -1,7 +1,7 @@
 /*
 Theme Name: Temp
 Text Domain: temp
-Version: 1.0.7
+Version: 1.0.8
 Tested up to: 5.9
 Requires at least: 5.9
 Requires PHP: 8.0
@@ -607,7 +607,7 @@ header .menu nav a:active {
     }
 }
 
-@media (min-width: 768px) and (min-height: 768px) {
+@media (min-width: 768px) and (min-height: 768px), (min-width: 1024px) {
     .hero {
         --height: 655rem;
         font-size: inherit;
@@ -2104,6 +2104,7 @@ footer nav a:active {
 
 .map div {
     padding: 0 var(--horizontal-padding);
+    align-self: flex-start;
 }
 
 .map h2 {
