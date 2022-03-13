@@ -1,7 +1,7 @@
 <?php
 $title        = get_post_custom_values( 'hero_title' )[0] ?? get_the_title();
 $description  = get_post_custom_values( 'hero_description' )[0];
-$image        = get_post_custom_values( 'hero_image' )[0] ?? get_the_post_thumbnail_url( null, 'large' );
+$image        = get_post_custom_values( 'hero_image' )[0] ?? get_the_post_thumbnail_url( null, 'full' );
 $mobile_image = get_post_custom_values( 'hero_image_mobile' )[0];
 ?>
 <?= temp_get_style_link( '/assets/css/hero.css' ) ?>
