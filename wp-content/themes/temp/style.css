@@ -30,6 +30,7 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
     --text-color: #58737A;
     --header-color: #23373C;
     --accent-color: #304B52;
+    --second-color: #CEDCDF;
     --accent-background-color: var(--background-color);
     --inverted-accent-color: var(--accent-background-color);
     --inverted-accent-background-color: var(--accent-color);
@@ -39,6 +40,7 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
     --header-submenu-background-color: #E5EAF0;
     --hero-background-color: #EBE5D5;
     --hero-buttons-color: #998F6E;
+    --hero-buttons-accent-color: #5e5944;
     --hero-decoration-color: var(--text-color);
     --mobile-menu-width: 233px;
     --horizontal-padding: 16px;
@@ -174,6 +176,11 @@ header .header-button {
     width: calc(var(--size) + (var(--horizontal-padding) * 2));
 }
 
+header .header-button:hover {
+    color: var(--inverted-accent-color);
+    background: var(--inverted-accent-background-color);
+}
+
 header .open-menu-button {
     --size: 44px;
     background-image: url("./assets/images/header.menu.button.svg");
@@ -197,6 +204,15 @@ header .open-widget-button {
     color: var(--inverted-accent-color);
     background-color: var(--header-color);
     height: var(--mobile-open-widget-button-height);
+}
+
+header .open-widget-button:hover {
+    color: var(--accent-color);
+    background-color: var(--second-color);
+}
+
+header .open-widget-button:active {
+    background-color: var(--header-background-color);
 }
 
 header .menu .close-menu-layer {
@@ -236,11 +252,25 @@ header .menu nav a,
 header .menu nav .sub-menu .label {
     border-bottom: 1px solid #E2DCEB;
     padding: var(--padding);
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
-/*header summary::-webkit-details-marker {
-    display: none;
-}*/
+header .menu nav a:hover,
+header .menu nav .sub-menu .label:hover {
+    color: var(--inverted-accent-color);
+    background: var(--second-color);
+}
+
+header .menu nav a:hover {
+    background: var(--inverted-accent-background-color);
+}
+
+header .menu nav a:active {
+    background: var(--header-color);
+}
 
 header .menu nav .sub-menu {
     position: relative;
@@ -249,7 +279,6 @@ header .menu nav .sub-menu {
 header .menu nav .sub-menu .label {
     --icon-color: var(--accent-color);
     display: flex;
-    cursor: pointer;
     position: relative;
     align-items: center;
 }
@@ -279,18 +308,20 @@ header .menu nav .sub-menu .content {
     background: var(--header-submenu-background-color);
 }
 
-header .menu nav .sub-menu input[type="checkbox"]:checked ~ .label {
-    --icon-color: var(--inverted-accent-color);
-    color: var(--inverted-accent-color);
-    background: #90A4A8;
-}
-
-header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
-    display: flex;
-}
-
 #headerMenuState:checked ~ .menu {
     display: initial;
+}
+
+@media (max-width: 1023px) {
+    header .menu nav .sub-menu input[type="checkbox"]:checked ~ .label {
+        --icon-color: var(--inverted-accent-color);
+        color: var(--inverted-accent-color);
+        background: #90A4A8;
+    }
+
+    header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
+        display: flex;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -467,10 +498,19 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     width: var(--size);
     height: var(--size);
     background-size: 7.5px;
+    transition: .1s transform;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--hero-buttons-color);
     background-image: url("./assets/images/hero.arrow.svg");
+}
+
+.hero .navigation button:hover {
+    background-color: var(--hero-buttons-accent-color);
+}
+
+.hero .navigation button:active {
+    transform: scale(.95);
 }
 
 .hero .navigation button:last-of-type {
@@ -609,8 +649,12 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     align-self: revert;
 }
 
-.cards .card a {
+.cards .card a:not(:hover) {
     text-decoration: none;
+}
+
+.cards .card a:active {
+    color: var(--text-color)
 }
 
 .cards .card img {
@@ -915,10 +959,20 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     line-height: 105.19%;
     text-decoration: none;
     text-transform: uppercase;
+    transition: .1s transform;
     color: var(--inverted-accent-color);
     padding: var(--horizontal-padding) 0;
     margin-top: var(--horizontal-padding);
     background-color: var(--inverted-accent-background-color);
+}
+
+.plans .card a:hover {
+    color: var(--accent-color);
+    background-color: var(--second-color);
+}
+
+.plans .card a:active {
+    transform: scale(.95);
 }
 
 .plans .variants .scroll-button {
@@ -1248,7 +1302,6 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
 .tabs .tab {
     outline: none;
     display: block;
-    cursor: pointer;
     margin: calc(var(--horizontal-padding) * 2) 0;
 }
 
@@ -1292,8 +1345,10 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     display: none;
 }
 
-.tabs .tab:focus .details {
-    display: block;
+@media (max-width: 1023px) {
+    .tabs .tab:focus .details {
+        display: block;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -1358,7 +1413,6 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     .tabs .tab .label {
         height: 181rem;
         padding: 36rem;
-        cursor: pointer;
         min-width: 300rem;
         position: relative;
         padding-right: 15rem;
@@ -1366,10 +1420,6 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     }
 
     .tabs .tab:hover .label {
-        box-shadow: 0px 8px 16px rgba(46, 60, 80, 0.15);
-    }
-
-    .tabs .tab:focus .label {
         background: var(--hero-background-color);
         box-shadow: inset 0px 8px 16px rgba(46, 60, 80, 0.15);
     }
@@ -1406,8 +1456,7 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
         right: 0;
     }
 
-    .tabs .tab:hover .details,
-    .tabs .tab:focus .details {
+    .tabs .tab:hover .details {
         display: initial;
     }
 }
@@ -1450,7 +1499,7 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     outline: none;
     margin: 10px 0;
     border-radius: unset;
-    border: 1px solid #CEDCDF;
+    border: 1px solid var(--second-color);
     padding: var(--horizontal-padding);
 }
 
@@ -1496,8 +1545,18 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
     cursor: pointer;
     font-size: 20px;
     text-transform: uppercase;
+    transition: .1s transform;
     color: var(--inverted-accent-color);
     background-color: var(--inverted-accent-background-color);
+}
+
+.form button:hover {
+    color: var(--accent-color);
+    background-color: var(--second-color);
+}
+
+.form button:active {
+    transform: scale(.95);
 }
 
 .form .policy {
@@ -1623,10 +1682,17 @@ footer nav {
 
 footer nav a {
     word-break: break-word;
-    text-decoration: none;
     display: inline-flex;
     align-items: center;
     margin: 15px 0;
+}
+
+footer nav a:not(:hover) {
+    text-decoration: none;
+}
+
+footer nav a:active {
+    color: var(--second-color);
 }
 
 footer nav a:before {
@@ -1684,12 +1750,22 @@ footer nav a.email:before {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 100%;
-    background: #CEDCDF;
+    transition: .1s transform;
+    background: var(--second-color);
     box-shadow: 0 0 0 calc(var(--size) / 25) rgba(206, 220, 223, 0.5);
+}
+
+.float-widget-button:hover {
+    background: var(--header-background-color);
+}
+
+.float-widget-button:active {
+    transform: scale(.95);
 }
 
 .float-widget-button img {
     height: 26px;
+    pointer-events: none;
 }
 
 @media (min-width: 1024px) {
@@ -1916,8 +1992,18 @@ footer nav a.email:before {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    transition: .1s transform;
     color: var(--inverted-accent-color);
     background-color: var(--inverted-accent-background-color);
+}
+
+.plans-container article a:hover {
+    color: var(--accent-color);
+    background-color: var(--second-color);
+}
+
+.plans-container article a:active {
+    transform: scale(.95);
 }
 
 .scroll-targets-to-top .plans-container article {
@@ -2012,7 +2098,7 @@ footer nav a.email:before {
         --vertical-padding: 32rem;
         --icon-padding: 35rem;
         --icon-size: 37rem;
-        border: 1px solid #CEDCDF;
+        border: 1px solid var(--second-color);
     }
 
     .qna details:not(:last-of-type) {
