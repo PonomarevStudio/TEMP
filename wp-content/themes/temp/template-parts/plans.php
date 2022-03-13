@@ -90,7 +90,7 @@
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 1.</p>
-                        <p>Площадь — 92,7 кв. м.</p>
+                        <p>Площадь — 92,8 кв. м.</p>
                     </div>
                     <img alt="" src="/images/plans/plan.4.svg">
                 </div>
