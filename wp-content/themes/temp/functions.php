@@ -9,6 +9,7 @@ add_action( 'init', 'temp_register_menus' );
 add_action( 'wp_enqueue_scripts', 'temp_register_styles' );
 add_action( 'wp_enqueue_scripts', 'temp_register_scripts' );
 add_action( 'customize_register', 'temp_customize_register' );
+add_action( 'get_template_part_template-parts/plans', 'temp_profitbase_scripts' );
 add_action( 'get_template_part_template-parts/plans', 'temp_plans_switcher_script' );
 add_action( 'get_template_part_template-parts/overview', 'temp_profitbase_scripts' );
 add_action( 'get_template_part_template-parts/overview', 'temp_plans_offers_script' );

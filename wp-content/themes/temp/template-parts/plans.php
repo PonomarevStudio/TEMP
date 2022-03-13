@@ -27,7 +27,7 @@
                 фитнеса, и палисадниками, которые станут приватным пространством для отдыха и встреч с друзьями.
             </div>
         </div>
-        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
+        <a onclick="pb_front_widget.show();">Каталог квартир</a>
     </article>
     <article id="1rooms">
         <h2 class="hide-on-mobile">1-комнатные квартиры</h2>
@@ -53,7 +53,7 @@
                 место для отдыха и приема гостей, а выделенная гардеробная позволит не перегружать комнаты шкафами.
             </div>
         </div>
-        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
+        <a onclick="pb_front_widget.show();">Каталог квартир</a>
     </article>
     <article class="column" id="2rooms">
         <h2 class="hide-on-mobile">2-комнатные квартиры</h2>
@@ -81,7 +81,7 @@
                 Увеличенная прихожая позволит собираться по делам с комфортом и хранить всю необходимую одежду.
             </div>
         </div>
-        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
+        <a onclick="pb_front_widget.show();">Каталог квартир</a>
     </article>
     <article class="single" id="3rooms">
         <h2 class="hide-on-mobile">3-комнатные квартиры</h2>
@@ -103,7 +103,7 @@
                 пространство комнат от шкафов.
             </div>
         </div>
-        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
+        <a onclick="pb_front_widget.show();">Каталог квартир</a>
     </article>
     <article class="single" id="4rooms">
         <h2 class="hide-on-mobile">4-комнатные квартиры</h2>
@@ -130,6 +130,6 @@
                 В выделенной гардеробной поместятся вещи всех членов семьи и их гостей.
             </div>
         </div>
-        <a href="<?php bloginfo( 'url' ); ?>/overview">Каталог квартир</a>
+        <a onclick="pb_front_widget.show();">Каталог квартир</a>
     </article>
 </main>
