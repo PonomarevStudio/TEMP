@@ -42,6 +42,7 @@ License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
     --hero-decoration-color: var(--text-color);
     --mobile-menu-width: 233px;
     --horizontal-padding: 16px;
+    --static-viewport-height: 100vh;
 
     scroll-behavior: smooth;
     color: var(--text-color);

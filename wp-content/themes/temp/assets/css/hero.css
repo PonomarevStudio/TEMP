@@ -13,6 +13,11 @@
     background: var(--hero-background-color);
 }
 
+.static-viewport-height .hero {
+    --content-vertical-padding: calc(var(--static-viewport-height) * .1);
+    height: var(--static-viewport-height, var(--height));
+}
+
 .hero:after {
     background-color: var(--hero-decoration-color);
     clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 90% 100%);
