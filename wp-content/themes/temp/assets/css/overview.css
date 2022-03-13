@@ -122,8 +122,17 @@
 }
 
 .tabs .tab {
+    outline: none;
     display: block;
+    cursor: pointer;
     margin: calc(var(--horizontal-padding) * 2) 0;
+}
+
+.tabs .tab:not(:focus):after {
+    content: 'Прочитать подробнее';
+    text-decoration: underline;
+    margin-top: 15px;
+    display: block;
 }
 
 .tabs .tab .label {
@@ -156,6 +165,11 @@
 .tabs .tab .details {
     margin-top: 15px;
     font-size: 12px;
+    display: none;
+}
+
+.tabs .tab:focus .details {
+    display: block;
 }
 
 @media (min-width: 1024px) {
@@ -211,6 +225,10 @@
         width: 100%;
         margin: initial;
         position: relative;
+    }
+
+    .tabs .tab:after {
+        display: none !important;
     }
 
     .tabs .tab .label {
