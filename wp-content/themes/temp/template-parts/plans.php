@@ -27,7 +27,8 @@
                 фитнеса, и палисадниками, которые станут приватным пространством для отдыха и встреч с друзьями.
             </div>
         </div>
-        <a onclick="pb_front_widget.show();">Каталог квартир</a>
+        <a onclick="pb_front_widget.show({url: 'plans?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Каталог
+            квартир</a>
     </article>
     <article id="1rooms">
         <h2 class="hide-on-mobile">1-комнатные квартиры</h2>
@@ -53,7 +54,8 @@
                 место для отдыха и приема гостей, а выделенная гардеробная позволит не перегружать комнаты шкафами.
             </div>
         </div>
-        <a onclick="pb_front_widget.show();">Каталог квартир</a>
+        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:1'});">Каталог
+            квартир</a>
     </article>
     <article class="column" id="2rooms">
         <h2 class="hide-on-mobile">2-комнатные квартиры</h2>
@@ -81,7 +83,8 @@
                 Увеличенная прихожая позволит собираться по делам с комфортом и хранить всю необходимую одежду.
             </div>
         </div>
-        <a onclick="pb_front_widget.show();">Каталог квартир</a>
+        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:2'});">Каталог
+            квартир</a>
     </article>
     <article class="single" id="3rooms">
         <h2 class="hide-on-mobile">3-комнатные квартиры</h2>
@@ -103,7 +106,8 @@
                 пространство комнат от шкафов.
             </div>
         </div>
-        <a onclick="pb_front_widget.show();">Каталог квартир</a>
+        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:3'});">Каталог
+            квартир</a>
     </article>
     <article class="single" id="4rooms">
         <h2 class="hide-on-mobile">4-комнатные квартиры</h2>
@@ -130,6 +134,7 @@
                 В выделенной гардеробной поместятся вещи всех членов семьи и их гостей.
             </div>
         </div>
-        <a onclick="pb_front_widget.show();">Каталог квартир</a>
+        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">Каталог
+            квартир</a>
     </article>
 </main>
