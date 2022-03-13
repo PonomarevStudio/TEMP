@@ -75,7 +75,7 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
         const data = {}
         if (this.img && this.img.src) data.img = this.img.src
         if (this.text && this.text.innerText) data.text = this.text.innerText
-        if (this.imgMobile && this.imgMobile.srcset) data.imgMobile = this.img.src
+        if (this.imgMobile && this.imgMobile.srcset) data.imgMobile = this.imgMobile.srcset
         return this.slides.unshift(data)
     }
 })
