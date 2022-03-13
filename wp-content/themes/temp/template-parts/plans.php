@@ -36,14 +36,14 @@
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 1.</p>
-                        <p>Площадь - 51,3 кв. м.</p>
+                        <p>Площадь - 51,32 кв. м.</p>
                     </div>
                     <img alt="" src="/images/plans/plan.2.1.svg">
                 </div>
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 2.</p>
-                        <p>Площадь - 46,6 кв. м.</p>
+                        <p>Площадь - 46,64 кв. м.</p>
                     </div>
                     <img alt="" src="/images/plans/plan.2.2.svg">
                 </div>
@@ -62,7 +62,7 @@
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 1.</p>
-                        <p>Площадь — 75,2 кв. м.</p>
+                        <p>Площадь — 75,21 кв. м.</p>
                     </div>
                     <img alt="" src="/images/plans/plan.3.1.jpg">
                 </div>
@@ -90,7 +90,7 @@
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 1.</p>
-                        <p>Площадь — 92,8 кв. м.</p>
+                        <p>Площадь — 92,84 кв. м.</p>
                     </div>
                     <img alt="" src="/images/plans/plan.4.svg">
                 </div>
