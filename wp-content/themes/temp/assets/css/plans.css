@@ -80,7 +80,6 @@
 
 .plans .variants .scroll-button {
     --size: 50px;
-    opacity: 0;
     border: none;
     margin: unset;
     padding: unset;
@@ -90,8 +89,7 @@
     width: var(--size);
     height: var(--size);
     border-radius: 100%;
-    pointer-events: none;
-    left: calc(var(--size) / 3);
+    left: var(--horizontal-padding);
     background-position: center;
     background-repeat: no-repeat;
     background-size: calc(var(--size) / 4);
@@ -101,7 +99,7 @@
 
 .plans .variants .scroll-button[data-scroll="next"] {
     left: unset;
-    right: calc(var(--size) / 3);
+    right: var(--horizontal-padding);
     background-image: url("../images/hero.arrow.inverted.svg");
 }
 
@@ -184,8 +182,10 @@
 
     .plans .variants .scroll-button {
         --size: 100rem;
-        opacity: initial;
-        pointer-events: initial;
+        left: calc(var(--size) / 3);
     }
 
+    .plans .variants .scroll-button[data-scroll="next"] {
+        right: calc(var(--size) / 3);
+    }
 }
