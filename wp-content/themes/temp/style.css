@@ -838,6 +838,10 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
 .plans {
     /*--padding: var(--horizontal-padding);*/
     padding: 29px 0;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .plans h2 {
@@ -1829,6 +1833,7 @@ footer nav a.email:before {
     background-image: url("./assets/images/arrow.up.svg");
 }
 
+.qna details > summary::marker,
 .qna details > summary::-webkit-details-marker {
     display: none;
 }
