@@ -2,12 +2,13 @@
 <header>
     <input class="hide" id="headerMenuState" onchange="document.body.classList.toggle('disable-scroll', this.checked)"
            type="checkbox">
-    <label class="header-button open-menu-button hide-on-desktop" for="headerMenuState" title="Открыть меню"></label>
+    <label class="header-button open-menu-button hide-on-desktop-header" for="headerMenuState"
+           title="Открыть меню"></label>
     <a class="logo" href="<?php bloginfo( 'url' ); ?>">
         <img alt="ЖК Темп" height="41" loading="eager"
              src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.svg">
     </a>
-    <div class="menu hide-on-mobile">
+    <div class="menu hide-on-mobile-header">
         <nav>
 			<?php
 			$menu_name = 'header';
@@ -39,11 +40,12 @@
 			}
 			?>
         </nav>
-        <a class="open-widget-button hide-on-desktop" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать квартиру</a>
-        <label for="headerMenuState" class="close-menu-layer hide-on-desktop" title="Закрыть меню"></label>
+        <a class="open-widget-button hide-on-desktop-header" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать
+            квартиру</a>
+        <label for="headerMenuState" class="close-menu-layer hide-on-desktop-header" title="Закрыть меню"></label>
     </div>
     <a class="header-button call-phone-button" href="tel:+<?= preg_replace( '/\D+/', '', $phone ) ?>">
-        <span class="hide-on-mobile"><?= $phone ?></span>
+        <span class="hide-on-mobile-header"><?= $phone ?></span>
     </a>
-    <a class="open-widget-button hide-on-mobile" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать<br>квартиру</a>
+    <a class="open-widget-button hide-on-mobile-header" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать<br>квартиру</a>
 </header>

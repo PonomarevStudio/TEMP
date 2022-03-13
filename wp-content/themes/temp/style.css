@@ -1,7 +1,7 @@
 /*
 Theme Name: Temp
 Text Domain: temp
-Version: 1.0.5
+Version: 1.0.6
 Tested up to: 5.9
 Requires at least: 5.9
 Requires PHP: 8.0
@@ -104,18 +104,17 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     font-family: var(--header-font);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     body.disable-scroll {
         position: sticky;
         overflow: hidden;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     :root {
         font-size: var(--design-units);
         --horizontal-padding: 200rem;
-        --header-height: 79rem;
     }
 
     body {
@@ -123,10 +122,17 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
     }
 }
 
+@media (min-width: 1024px) {
+    :root {
+        --header-height: 79rem;
+    }
+}
+
 header {
     --height: var(--header-height);
     --padding: 16px;
     --mobile-open-widget-button-height: 75px;
+    font-size: initial;
     box-shadow: var(--header-box-shadow);
     background-color: var(--header-background-color);
     justify-content: space-between;
@@ -311,10 +317,21 @@ header .open-widget-button:active {
 }
 
 header .menu nav a:active {
+    color: var(--inverted-accent-color);
     background: var(--header-color);
 }
 
 @media (max-width: 1023px) {
+    header {
+        --horizontal-padding: 16px;
+    }
+
+    header .hide-on-mobile-header {
+        display: none;
+    }
+}
+
+@media (hover: none) {
     header .menu nav .sub-menu input[type="checkbox"]:checked ~ .label {
         --icon-color: var(--inverted-accent-color);
         color: var(--inverted-accent-color);
@@ -326,9 +343,16 @@ header .menu nav a:active {
     }
 }
 
+@media (max-width: 1023px) and (orientation: landscape) {
+    header {
+        position: absolute;
+    }
+}
+
 @media (min-width: 1024px) {
     header {
         --padding: 48rem;
+        font-size: inherit;
         padding: 0 var(--horizontal-padding);
     }
 
@@ -404,6 +428,10 @@ header .menu nav a:active {
         padding: var(--inner-vertical-padding) var(--padding);
     }
 
+    header .hide-on-desktop-header {
+        display: none;
+    }
+
     @media (hover: hover) {
         header .menu nav .sub-menu:hover .label {
             --icon-color: var(--inverted-accent-color);
@@ -424,6 +452,7 @@ header .menu nav a:active {
     --content-vertical-padding: 10vh;
     --navigation-vertical-padding: var(--content-vertical-padding);
     color: var(--header-color);
+    font-size: initial;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -524,7 +553,7 @@ header .menu nav a:active {
     transform: scale(.95);
 }
 
-@media (max-width: 1023px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait) {
     .hero {
         --content-vertical-padding: 5vh;
     }
@@ -554,7 +583,7 @@ header .menu nav a:active {
     }
 }
 
-@media (min-width: 1024px), (orientation: landscape) {
+@media (min-width: 768px), (orientation: landscape) {
     .hero:after {
         clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 55% 100%);
     }
@@ -574,9 +603,10 @@ header .menu nav a:active {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (min-height: 768px) {
     .hero {
         --height: 655rem;
+        font-size: inherit;
         background-size: contain;
         background-position: left;
         background-repeat: no-repeat;
@@ -702,14 +732,14 @@ header .menu nav a:active {
     color: var(--text-color)
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .cards .card:nth-child(even) hr {
         --width: calc((100vw / 320) * 258);
         margin-left: calc((100% - var(--width)) + var(--horizontal-padding));
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     .cards {
         padding: 100rem var(--horizontal-padding) 0;
         margin-bottom: 465rem;
@@ -835,6 +865,7 @@ header .menu nav a:active {
 
     .cards .card:nth-child(4n+2) hr {
         --width: calc(100% + 163rem);
+        margin-left: 0;
         margin-right: 0;
     }
 
@@ -1027,15 +1058,15 @@ header .menu nav a:active {
     transform: scale(.95);
 }
 
-@media (orientation: landscape) {
+/*@media (orientation: landscape) {
     .plans .card {
         width: 380px;
         min-width: 380px;
         scroll-snap-align: center;
     }
-}
+}*/
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     .plans {
         margin: 354rem 0;
     }
@@ -1091,6 +1122,7 @@ header .menu nav a:active {
 
     .plans .card img {
         pointer-events: none;
+        max-height: 200rem;
     }
 
     .plans .card p {
@@ -1163,7 +1195,7 @@ header .menu nav a:active {
     background-color: var(--inverted-accent-background-color);
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px), (orientation: landscape) {
     .banner {
         display: flex;
         margin: 0 0 532rem;
@@ -1377,13 +1409,13 @@ header .menu nav a:active {
     transition: opacity .1s;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .tabs .tab:focus .details {
         display: block;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
 
     .overview-legend {
         font-size: 40rem;
@@ -1605,7 +1637,7 @@ header .menu nav a:active {
     transform: scale(.95);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     .form {
         position: relative;
         height: auto;
@@ -1810,7 +1842,7 @@ footer nav a:active {
     transform: scale(.95);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     footer {
         padding: 95rem 312rem 37rem var(--horizontal-padding);
         align-items: flex-start;
@@ -1882,10 +1914,23 @@ footer nav a:active {
     }
 
     .float-widget-button {
-        --size: 125rem;
-        top: calc(606rem + (var(--size) / 2));
-        right: 73rem;
+        --size: 80px;
+        font-size: 10px;
+        padding: 15px;
+        bottom: calc(var(--horizontal-padding) / 2);
+    }
+
+    .float-widget-button img {
+        height: 25px;
+    }
+}
+
+@media (min-width: 768px) and (min-height: 768px) {
+    .float-widget-button {
+        top: calc(606rem + var(--header-height));
         bottom: initial;
+        --size: 125rem;
+        right: 73rem;
         padding: 12rem;
         justify-content: center;
         box-shadow: 0 0 0 .25vw rgba(206, 220, 223, 0.5);
@@ -1898,6 +1943,12 @@ footer nav a:active {
 
     .float-widget-button span {
         font-size: 0.8vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .float-widget-button {
+        top: calc(606rem + (var(--size) / 2));
     }
 }
 
@@ -2109,13 +2160,13 @@ footer nav a:active {
     transform: scale(.95);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     :root .hide-on-mobile {
         display: none;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px), (orientation: landscape) {
     .text {
         margin-top: 97rem;
         margin-bottom: 114rem;
