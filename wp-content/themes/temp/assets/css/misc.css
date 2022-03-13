@@ -87,11 +87,16 @@
 
 .plans-header #plans-switcher {
     -webkit-appearance: none;
+    outline: none;
+    width: 100%;
     border: none;
     color: inherit;
-    background: none;
-    width: 100%;
+    background-size: 20px;
+    background-color: unset;
+    background-repeat: no-repeat;
+    background-position: right center;
     padding: var(--horizontal-padding) 0;
+    background-image: url("../images/plans.switcher.arrow.svg");
 }
 
 .plans-container article {
