@@ -1,4 +1,5 @@
 <?= temp_get_style_link( '/assets/css/overview.css' ) ?>
+<p class="overview-legend">Выберите секцию на плане ЖК</p>
 <div class="overview">
     <img alt="" src="/new/wp-content/uploads/overview.jpg">
     <div class="polygon" tabindex="0">

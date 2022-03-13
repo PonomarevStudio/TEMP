@@ -1,7 +1,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    padding: 47px var(--horizontal-padding);
+    padding: var(--horizontal-padding);
 }
 
 .cards .card {
@@ -65,7 +65,7 @@
 
 @media (min-width: 1024px) {
     .cards {
-        padding: 180rem var(--horizontal-padding) 0;
+        padding: 100rem var(--horizontal-padding) 0;
         margin-bottom: 465rem;
         flex-wrap: wrap;
         flex-direction: row;

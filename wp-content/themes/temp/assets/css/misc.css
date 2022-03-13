@@ -8,10 +8,16 @@
     font-size: 12px;
     color: var(--header-color);
     padding: 0 var(--horizontal-padding);
+    word-break: break-word;
+}
+
+.documentation-text h1 {
+    word-break: break-word;
 }
 
 .documentation-text p {
     margin: revert;
+    word-break: break-word;
 }
 
 .qna {
@@ -215,7 +221,7 @@
 
     .documentation-text {
         font-size: 24rem;
-        margin-top: 200rem;
+        margin-top: 100rem;
         margin-bottom: 180rem;
     }
 
@@ -225,7 +231,7 @@
 
     .qna {
         font-size: 24rem;
-        margin: 185rem var(--horizontal-padding);
+        margin: 100rem var(--horizontal-padding);
     }
 
     .qna details {
@@ -250,7 +256,7 @@
 
     .plans-container {
         padding: 0;
-        margin-top: 265rem;
+        margin-top: 100rem;
     }
 
     .plans-container article {
@@ -308,7 +314,7 @@
 
     .plans-container article a {
         font-size: 20rem;
-        margin-top: 30rem;
+        margin-top: 50rem;
         padding: 20rem 26rem;
         display: inline-block;
     }

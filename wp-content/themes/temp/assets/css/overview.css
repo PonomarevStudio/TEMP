@@ -1,5 +1,11 @@
+.overview-legend {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
 .overview {
-    margin-top: 30px;
     user-select: none;
     position: relative;
     -webkit-user-select: none;
@@ -155,6 +161,11 @@
 }
 
 @media (min-width: 1024px) {
+
+    .overview-legend {
+        font-size: 40rem;
+        margin: 40rem 0;
+    }
 
     .overview .polygon:after {
         --size: 121rem;
