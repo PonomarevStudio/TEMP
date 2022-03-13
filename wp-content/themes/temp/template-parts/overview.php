@@ -1,6 +1,6 @@
 <p class="overview-legend">Выберите секцию на плане ЖК</p>
 <div class="overview">
-    <img alt="" src="/new/wp-content/uploads/overview.jpg">
+    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg">
     <div class="polygon" tabindex="0">
         <div class="content" onclick="pb_front_widget.show();">
             <h3>1 Очередь</h3>
@@ -49,7 +49,7 @@
 <div class="tabs">
     <div class="tab" tabindex="0">
         <div class="label">
-            <img alt="" src="/images/overview/overview.1.png">
+            <img alt="460 квартир с функциональными планировками" loading="lazy" src="/images/overview/overview.1.png">
             <h2><span>460</span>квартир с функциональными планировками</h2>
         </div>
         <div class="details">
@@ -62,7 +62,7 @@
     </div>
     <div class="tab" tabindex="0">
         <div class="label">
-            <img alt="" src="/images/overview/overview.2.png">
+            <img alt="174 машино-места в подземном паркинге" loading="lazy" src="/images/overview/overview.2.png">
             <h2><span>174</span>машино-места в подземном паркинге</h2>
         </div>
         <div class="details">
@@ -78,7 +78,7 @@
     </div>
     <div class="tab" tabindex="0">
         <div class="label">
-            <img alt="" src="/images/overview/overview.3.png">
+            <img alt="780 кв. м под кладовые и колясочные" loading="lazy" src="/images/overview/overview.3.png">
             <h2><span>780</span>кв. м под кладовые и колясочные</h2>
         </div>
         <div class="details">
@@ -88,7 +88,7 @@
     </div>
     <div class="tab" tabindex="0">
         <div class="label">
-            <img alt="" src="/images/overview/overview.4.png">
+            <img alt="17 детских садов" loading="lazy" src="/images/overview/overview.4.png">
             <h2><span>17</span>детских садов</h2>
         </div>
         <div class="details">
@@ -98,7 +98,7 @@
     </div>
     <div class="tab" tabindex="0">
         <div class="label">
-            <img alt="" src="/images/overview/overview.5.png">
+            <img alt="5 школ поблизости" loading="lazy" src="/images/overview/overview.5.png">
             <h2><span>5</span>школ поблизости</h2>
         </div>
         <div class="details">

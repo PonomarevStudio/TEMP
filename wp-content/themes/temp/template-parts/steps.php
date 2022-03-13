@@ -1,6 +1,6 @@
 <main class="steps">
     <div class="step">
-        <img alt="" src="/images/buy/buy.1.png">
+        <img alt="100% оплата" loading="lazy" src="/images/buy/buy.1.png">
         <div>
             <h2>100% оплата</h2>
             <p>
@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="step">
-        <img alt="" src="/images/buy/buy.2.png">
+        <img alt="Ипотека" loading="lazy" src="/images/buy/buy.2.png">
         <div>
             <h2>Ипотека</h2>
             <p>
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="step">
-        <img alt="" src="/images/buy/buy.3.png">
+        <img alt="Рассрочка" loading="lazy" src="/images/buy/buy.3.png">
         <div>
             <h2>Рассрочка</h2>
             <p>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="step">
-        <img alt="" src="/images/buy/buy.4.png">
+        <img alt="Trade-in" loading="lazy" src="/images/buy/buy.4.png">
         <div>
             <h2>Trade-in</h2>
             <p>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="step">
-        <img alt="" src="/images/buy/buy.5.png">
+        <img alt="Материнский капитал" loading="lazy" src="/images/buy/buy.5.png">
         <div>
             <h2>Материнский капитал</h2>
             <p>

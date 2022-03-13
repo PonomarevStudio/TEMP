@@ -4,7 +4,7 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'align-wide' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', 'script' );
-add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+//add_filter( 'wp_lazy_loading_enabled', '__return_false' );
 add_action( 'init', 'temp_register_menus' );
 add_action( 'wp_enqueue_scripts', 'temp_register_styles' );
 add_action( 'wp_enqueue_scripts', 'temp_register_scripts' );

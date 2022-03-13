@@ -8,7 +8,7 @@ $phone = get_option( 'site_phone' );
 </a>
 <footer>
     <a class="logo" href="<?php bloginfo( 'url' ); ?>">
-        <img alt="ЖК Темп" src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.inverted.svg">
+        <img alt="ЖК Темп" loading="lazy" src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.inverted.svg">
     </a>
     <div class="column">
         <nav class="row">

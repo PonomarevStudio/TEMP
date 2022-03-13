@@ -6,7 +6,7 @@
     <drag-scroll class="variants">
         <div class="card">
             <h3>Студия</h3>
-            <img alt="" src="/images/plans/plan.1.svg">
+            <img alt="Студия" loading="lazy" src="/images/plans/plan.1.svg">
             <p>от
                 <offer-data data-group="studio" data-key="price" data-round="1000000"></offer-data>
                 млн. рублей
@@ -15,7 +15,7 @@
         </div>
         <div class="card">
             <h3>1-комнатная квартира</h3>
-            <img alt="" src="/images/plans/plan.2.1.svg">
+            <img alt="1-комнатная квартира" loading="lazy" src="/images/plans/plan.2.1.svg">
             <p>от
                 <offer-data data-group="1" data-key="price" data-round="1000000"></offer-data>
                 млн. рублей
@@ -24,7 +24,7 @@
         </div>
         <div class="card">
             <h3>2-комнатная квартира</h3>
-            <img alt="" src="/images/plans/plan.3.2.svg">
+            <img alt="2-комнатная квартира" loading="lazy" src="/images/plans/plan.3.2.svg">
             <p>от
                 <offer-data data-group="2" data-key="price" data-round="1000000"></offer-data>
                 млн. рублей
@@ -33,7 +33,7 @@
         </div>
         <div class="card">
             <h3>3-комнатная квартира</h3>
-            <img alt="" src="/images/plans/plan.4.svg">
+            <img alt="3-комнатная квартира" loading="lazy" src="/images/plans/plan.4.svg">
             <p>от
                 <offer-data data-group="3" data-key="price" data-round="1000000"></offer-data>
                 млн. рублей
@@ -42,7 +42,7 @@
         </div>
         <div class="card">
             <h3>4-комнатная квартира</h3>
-            <img alt="" src="/images/plans/plan.5.svg">
+            <img alt="4-комнатная квартира" loading="lazy" src="/images/plans/plan.5.svg">
             <p>от
                 <offer-data data-group="4" data-key="price" data-round="1000000"></offer-data>
                 млн. рублей
