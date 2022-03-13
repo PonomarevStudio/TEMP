@@ -1,5 +1,4 @@
 <?php $phone = get_option( 'site_phone' ) ?>
-<?= temp_get_style_link( '/assets/css/header.css' ) ?>
 <header>
     <input class="hide" id="headerMenuState" onchange="document.body.classList.toggle('disable-scroll', this.checked)"
            type="checkbox">

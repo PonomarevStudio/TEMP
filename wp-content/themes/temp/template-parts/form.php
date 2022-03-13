@@ -1,4 +1,3 @@
-<?= temp_get_style_link( '/assets/css/form.css' ) ?>
 <section class="form">
     <img alt="" src="<?= get_theme_mod( 'feedback_form_image' ) ?>">
     <div class="content">

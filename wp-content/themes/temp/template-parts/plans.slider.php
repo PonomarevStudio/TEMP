@@ -1,4 +1,3 @@
-<?= temp_get_style_link( '/assets/css/plans.css' ) ?>
 <section class="plans">
     <div class="header">
         <h2>ВыбЕРИте подходящую планировку</h2>
