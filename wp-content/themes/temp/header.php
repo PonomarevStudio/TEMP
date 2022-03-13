@@ -11,10 +11,10 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-	<?= temp_get_style_link( '/style.css' ) ?>
+    <style>
+        <?=file_get_contents(get_stylesheet_directory().'/style.css')?>
+    </style>
+	<?= temp_get_style_link( '/style.full.css' ) ?>
 	<?php wp_head(); ?>
 
 </head>
