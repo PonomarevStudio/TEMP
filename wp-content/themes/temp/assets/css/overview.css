@@ -56,7 +56,7 @@
 }
 
 .overview .polygon:after {
-    --size: 40px;
+    --size: 80px;
     width: var(--size);
     height: var(--size);
     will-change: transform;
