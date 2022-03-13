@@ -503,7 +503,7 @@ header .menu nav .sub-menu input[type="checkbox"]:checked ~ .content {
         clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 60% 100%)
     }
 
-    .hero.compact > img {
+    .hero.compact > picture > img {
         clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 0% 100%);
     }
 }
