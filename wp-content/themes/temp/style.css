@@ -307,7 +307,11 @@ header .menu nav .sub-menu .content {
 @media (hover: hover) {
     header .header-button:hover {
         color: var(--inverted-accent-color);
-        background: var(--inverted-accent-background-color);
+        background-color: var(--inverted-accent-background-color);
+    }
+
+    header .open-menu-button:hover {
+        background-color: var(--second-color);
     }
 
     header .open-widget-button:hover {
@@ -317,11 +321,11 @@ header .menu nav .sub-menu .content {
 
     header .menu nav a:hover,
     header .menu nav .sub-menu .label:hover {
-        color: var(--inverted-accent-color);
         background: var(--second-color);
     }
 
     header .menu nav a:hover {
+        color: var(--inverted-accent-color);
         background: var(--inverted-accent-background-color);
     }
 }
@@ -345,7 +349,7 @@ header .menu nav a:active {
     }
 }
 
-@media (hover: none) {
+@media (max-width: 1023px), (hover: none) {
     header .menu nav .sub-menu input[type="checkbox"]:checked ~ .label {
         --icon-color: var(--inverted-accent-color);
         color: var(--inverted-accent-color);
