@@ -28,7 +28,7 @@ function temp_register_styles() {
 }
 
 function temp_register_scripts() {
-	wp_enqueue_script( 'temp-integrations', get_template_directory_uri() . '/assets/js/integrations.mjs', array(), wp_get_theme()->get( 'Version' ), true );
+	// wp_enqueue_script( 'temp-integrations', get_template_directory_uri() . '/assets/js/integrations.mjs', array(), wp_get_theme()->get( 'Version' ), true );
 }
 
 function temp_profitbase_scripts() {
