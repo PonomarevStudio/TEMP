@@ -5,7 +5,7 @@
     <label class="header-button open-menu-button hide-on-desktop-header" for="headerMenuState"
            title="Открыть меню"></label>
     <a class="logo" href="<?php bloginfo( 'url' ); ?>">
-        <img alt="ЖК Темп" height="41" loading="eager"
+        <img alt="ЖК Темп" height="41" loading="eager" decoding="async"
              src="<?php bloginfo( 'template_url' ); ?>/assets/images/logo.svg">
     </a>
     <div class="menu hide-on-mobile-header">

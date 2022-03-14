@@ -12,7 +12,8 @@ $mobile_image = get_post_custom_values( 'hero_image_mobile' )[0];
     <picture>
         <source media="(max-width: 1023px) and (orientation: portrait)" data-slider="img_mobile"
                 srcset="<?= $mobile_image ? esc_url( $mobile_image ) : '' ?>">
-        <img alt="<?= esc_html( $title ) ?>" data-slider="img" loading="eager" src="<?= esc_url( $image ) ?>">
+        <img alt="<?= esc_html( $title ) ?>" data-slider="img" loading="eager" decoding="async"
+             src="<?= esc_url( $image ) ?>">
     </picture>
     <div class="navigation">
         <button></button>
