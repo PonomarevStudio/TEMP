@@ -873,7 +873,14 @@
 }
 
 .form p {
-    margin: 10px 0;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.form span {
+    max-width: 100%;
+    display: inline-block;
 }
 
 .form form {
@@ -890,6 +897,7 @@
     -webkit-appearance: none;
     outline: none;
     margin: 10px 0;
+    max-width: 100%;
     border-radius: unset;
     border: 1px solid var(--second-color);
     padding: var(--horizontal-padding);
@@ -930,10 +938,11 @@
     margin-right: .5em;
 }
 
-.form button {
+.form button, .form input[type="submit"] {
+    width: 100%;
     border: none;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 0 0;
     cursor: pointer;
     font-size: 20px;
     text-transform: uppercase;
@@ -942,14 +951,26 @@
     background-color: var(--inverted-accent-background-color);
 }
 
-.form .policy {
+.form .policy * {
     font-size: 12px;
     color: var(--text-color);
+}
+
+.form .policy span {
+    display: inline;
 }
 
 .form .policy input[type="checkbox"], .form .policy input[type="radio"] {
     font-size: 18.4px;
     margin-right: .3em;
+}
+
+.form .wpcf7-list-item {
+    margin: 0;
+}
+
+.form .wpcf7-spinner {
+    display: none;
 }
 
 @media (hover: hover) {
@@ -1019,11 +1040,6 @@
     .form hr {
         height: max(1rem, 1px);
         margin-right: calc(var(--horizontal-padding) * -1);
-    }
-
-    .form p {
-        margin-top: 8rem;
-        margin-bottom: 25rem;
     }
 
     .form p, .form input, .form textarea, .form label {
