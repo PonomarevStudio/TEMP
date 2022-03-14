@@ -855,6 +855,7 @@
 
 .form {
     color: var(--accent-color);
+    margin-bottom: calc(var(--horizontal-padding) * 2);
 }
 
 .form .content {
@@ -988,6 +989,7 @@
     .form {
         position: relative;
         height: auto;
+        margin: 0;
         padding: 0;
         padding-right: var(--horizontal-padding);
         width: 100%;
@@ -1063,12 +1065,13 @@
         --size: 12rem;
     }
 
-    .form .policy {
+    .form .policy * {
         font-size: 18rem;
     }
 
-    .form button {
+    .form button, .form input[type="submit"] {
         font-size: 24rem;
+        padding: 20rem;
         margin-bottom: 0;
     }
 }
