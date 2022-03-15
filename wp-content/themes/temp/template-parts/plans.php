@@ -4,10 +4,10 @@
         <div class="plans-switcher-section">Выбрано:
             <select id="plans-switcher">
                 <option selected value="studios">Студии</option>
-                <option value="1rooms">1-комнатные квартиры</option>
-                <option value="2rooms">2-комнатные квартиры</option>
-                <option value="3rooms">3-комнатные квартиры</option>
-                <option value="4rooms">4-комнатные квартиры</option>
+                <option value="1rooms">1-к квартиры</option>
+                <option value="2rooms">2-к квартиры</option>
+                <option value="3rooms">3-к квартиры</option>
+                <option value="4rooms">4-к квартиры</option>
             </select>
         </div>
     </div>
