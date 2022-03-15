@@ -1,13 +1,15 @@
 <main class="plans-container">
     <div class="plans-header hide-on-desktop">
         <span class="title">Планировки квартир</span>
-        <select id="plans-switcher">
-            <option selected value="studios">Студии</option>
-            <option value="1rooms">1-комнатные квартиры</option>
-            <option value="2rooms">2-комнатные квартиры</option>
-            <option value="3rooms">3-комнатные квартиры</option>
-            <option value="4rooms">4-комнатные квартиры</option>
-        </select>
+        <div class="plans-switcher-section">Выбрано:
+            <select id="plans-switcher">
+                <option selected value="studios">Студии</option>
+                <option value="1rooms">1-комнатные квартиры</option>
+                <option value="2rooms">2-комнатные квартиры</option>
+                <option value="3rooms">3-комнатные квартиры</option>
+                <option value="4rooms">4-комнатные квартиры</option>
+            </select>
+        </div>
     </div>
     <article class="single" id="studios">
         <h2 class="hide-on-mobile">Студии</h2>
@@ -96,7 +98,7 @@
             <div class="variants">
                 <div class="variant">
                     <div class="title">
-                        <p>Вариант 1.</p>
+                        <p>3-комнатная квартира</p>
                         <p>Площадь — 92,84 кв. м.</p>
                     </div>
                     <img alt="3-комнатные квартира — 92,84 кв. м."
@@ -120,7 +122,7 @@
             <div class="variants">
                 <div class="variant">
                     <div class="title">
-                        <p>Вариант 1.</p>
+                        <p>4-комнатная квартира</p>
                         <p>Площадь — 120,41 кв. м.</p>
                     </div>
                     <img alt="4-комнатные квартира — 120,41 кв. м."

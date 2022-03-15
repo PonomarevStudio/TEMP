@@ -315,7 +315,6 @@
 }
 
 .plans .card h3 {
-    text-transform: capitalize;
     font-family: var(--text-font);
     margin-bottom: var(--horizontal-padding);
 }
@@ -1310,17 +1309,25 @@ footer nav a:active {
     font-size: 18px;
 }
 
+.plans-switcher-section {
+    display: flex;
+    align-items: center;
+}
+
 .plans-header #plans-switcher {
+    --arrow-size: 20px;
     -webkit-appearance: none;
     outline: none;
     width: 100%;
     border: none;
     color: inherit;
-    background-size: 20px;
+    font-weight: 600;
     background-color: unset;
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: var(--arrow-size);
     padding: var(--horizontal-padding) 0;
+    margin-left: calc(var(--horizontal-padding) / 2);
     background-image: url("./assets/images/plans.switcher.arrow.svg");
 }
 
@@ -1490,7 +1497,6 @@ footer nav a:active {
 
     .plans-container article h2 {
         font-family: var(--text-font);
-        text-transform: capitalize;
         font-size: 36rem;
     }
 
