@@ -3,8 +3,7 @@ $email = get_option( 'site_email' );
 $phone = get_option( 'site_phone' );
 ?>
 <a class="float-widget-button" href="<?php bloginfo( 'url' ); ?>/overview">
-    <img alt="Планировки и цены" loading="eager" decoding="async"
-         src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
+    <img alt="Планировки и цены" loading="eager" src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
     <span>Планировки и цены</span>
 </a>
 <footer>
