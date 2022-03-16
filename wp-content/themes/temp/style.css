@@ -692,7 +692,7 @@ header .menu nav a:active {
     right: var(--horizontal-padding);
     /*bottom: min(var(--horizontal-padding), calc(var(--size) / 2));*/
     cursor: pointer;
-    bottom: 70px;
+    bottom: calc(((100vh - var(--size) - var(--header-height)) / 2));
     padding: 20px;
     font-family: Helvetica, sans-serif;
     color: var(--accent-color);
