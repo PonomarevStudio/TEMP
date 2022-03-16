@@ -1,6 +1,6 @@
-<p class="overview-legend">Выберите секцию на плане ЖК</p>
+<p class="overview-legend" id="overview">Выберите свою квартиру на плане ЖК</p>
 <div class="overview">
-    <img alt="Обзор ЖК" loading="eager" decoding="async" src="/new/wp-content/uploads/overview.jpg">
+    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg">
     <div class="polygon" tabindex="0">
         <div class="content" onclick="pb_front_widget.show();">
             <h3>1 Очередь</h3>

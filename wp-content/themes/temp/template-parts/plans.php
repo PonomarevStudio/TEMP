@@ -1,9 +1,10 @@
 <main class="plans-container">
     <div class="plans-header hide-on-desktop">
         <span class="title">Планировки квартир</span>
-        <div class="plans-switcher-section">Выбрано:
+        <div class="plans-switcher-section">Выбрать:
             <select id="plans-switcher">
-                <option selected value="studios">Студии</option>
+                <option selected disabled>Тип квартир</option>
+                <option value="studios">Студии</option>
                 <option value="1rooms">1-к квартиры</option>
                 <option value="2rooms">2-к квартиры</option>
                 <option value="3rooms">3-к квартиры</option>
@@ -24,7 +25,7 @@
                 </div>
             </div>
             <div class="content">
-                Компактная Студия позволит вместить все необходимое благодаря продуманной планировке и выделенными
+                Компактная студия позволит вместить все необходимое благодаря продуманной планировке и выделенными
                 местами под хранение. Студии представлены с теплыми лоджиями, где можно обустроить зону для работы или
                 фитнеса, и палисадниками, которые станут приватным пространством для отдыха и встреч с друзьями.
             </div>

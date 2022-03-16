@@ -2,7 +2,7 @@
 $email = get_option( 'site_email' );
 $phone = get_option( 'site_phone' );
 ?>
-<a class="float-widget-button" href="<?php bloginfo( 'url' ); ?>/overview">
+<a class="float-widget-button" href="<?php bloginfo( 'url' ); ?>/overview#overview">
     <img alt="Планировки и цены" loading="eager" src="<?php bloginfo( 'template_url' ); ?>/assets/images/planes.png">
     <span>Планировки и цены</span>
 </a>
