@@ -601,10 +601,11 @@
     content: '';
     display: block;
     position: absolute;
+    will-change: opacity;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity .1s, width .3s, height .3s;
+    transition: opacity .2s;
 }
 
 .overview .polygon:before {
@@ -632,8 +633,9 @@
     opacity: 0;
     display: block;
     position: absolute;
+    will-change: opacity;
     pointer-events: none;
-    transition: opacity .1s;
+    transition: opacity .2s;
     backdrop-filter: var(--filter);
     padding: var(--horizontal-padding);
     color: var(--inverted-accent-color);

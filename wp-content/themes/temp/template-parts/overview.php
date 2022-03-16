@@ -2,7 +2,7 @@
 <div class="overview">
     <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg">
     <div class="polygon" tabindex="0">
-        <div class="content" onclick="pb_front_widget.show();">
+        <div class="content" onclick="pb_front_widget.show()">
             <h3>1 Очередь</h3>
             <p>Свободно
                 <offers-count></offers-count>
