@@ -1,5 +1,9 @@
 class Offers {
-    constructor({url = 'api/offers.php', groupBy = ['studio', 'rooms'], fields = ['price', 'rooms', 'studio']} = {}) {
+    constructor({
+                    url = '/new/wp-content/themes/temp/data/offers.php',
+                    groupBy = ['studio', 'rooms'],
+                    fields = ['price', 'rooms', 'studio']
+                } = {}) {
         this.options = {url, groupBy, fields}
         this.selectors = {price: 'price value'}
         this.groupKeys = {_default: 'binary', rooms: 'numeric'}
