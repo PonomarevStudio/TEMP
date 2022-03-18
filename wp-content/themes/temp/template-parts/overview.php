@@ -1,48 +1,48 @@
 <p class="overview-legend" id="overview">Выберите свою квартиру на плане ЖК</p>
 <div class="overview">
-    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg">
+    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg" width="2048" height="1086">
     <div class="polygon" tabindex="0">
-        <div class="content" onclick="pb_front_widget.show()">
+        <div class="content">
             <h3>1 Очередь</h3>
             <p>Свободно
                 <offers-count></offers-count>
                 квартир
             </p>
             <hr>
-            <p>Студий
+            <a onclick="pb_front_widget.show({url: 'plans?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Студий
                 <offer-data data-group="studio" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="studio" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
-            </p>
+            </a>
             <hr>
-            <p>1-комнатных
+            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:1'});">1-комнатных
                 <offer-data data-group="1" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="1" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
-            </p>
+            </a>
             <hr>
-            <p>2-комнатных
+            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:2'});">2-комнатных
                 <offer-data data-group="2" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="2" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
-            </p>
+            </a>
             <hr>
-            <p>3-комнатных
+            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:3'});">3-комнатных
                 <offer-data data-group="3" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="3" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
-            </p>
+            </a>
             <hr>
-            <p>4-комнатных
+            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">4-комнатных
                 <offer-data data-group="4" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="4" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
-            </p>
+            </a>
         </div>
     </div>
 </div>

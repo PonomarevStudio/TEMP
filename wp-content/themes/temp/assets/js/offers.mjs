@@ -64,7 +64,7 @@ class Offers {
     }
 }
 
-window.offers = new Offers({url: 'https://domtemp.life/new/api/offers.php'})
+window.offers = new Offers({url: 'https://domtemp.life/new/wp-content/themes/temp/data/offers.php'})
 
 window.customElements.define('offers-count', class OffersCount extends HTMLElement {
     async connectedCallback() {
