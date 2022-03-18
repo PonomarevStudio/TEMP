@@ -592,7 +592,6 @@
     position: absolute;
     left: var(--left);
     top: var(--top);
-    cursor: pointer;
     display: flex;
 }
 
@@ -672,6 +671,10 @@
 .overview .polygon .content a {
     display: inline-block;
     padding: 5px 0;
+}
+
+.overview .polygon .content a {
+    cursor: pointer;
 }
 
 .tabs {
