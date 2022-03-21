@@ -1356,7 +1356,7 @@ footer nav a:active {
 .plans-container article {
     display: none;
     padding: var(--horizontal-padding);
-    scroll-margin-top: calc(var(--header-height) + 91px);
+    scroll-margin-top: calc(var(--header-height) + 93px);
 }
 
 .plans-container article:target {
