@@ -5,6 +5,7 @@ add_theme_support( 'align-wide' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', 'script' );
 add_action( 'init', 'temp_register_menus' );
+add_action( 'wp_head', 'temp_no_js_class' );
 add_action( 'wp_enqueue_scripts', 'temp_register_styles' );
 add_action( 'wp_enqueue_scripts', 'temp_register_scripts' );
 add_action( 'customize_register', 'temp_customize_register' );
@@ -16,6 +17,12 @@ add_action( 'get_template_part_template-parts/hero.slider', 'temp_hero_slider_sc
 add_action( 'get_template_part_template-parts/plans.slider', 'temp_plans_offers_script' );
 add_action( 'get_template_part_template-parts/plans.slider', 'temp_plans_scroll_script' );
 add_filter( 'script_loader_tag', 'temp_add_async_attribute', 10, 2 );
+
+function temp_no_js_class() {
+	?>
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+	<?php
+}
 
 function temp_get_style_link( $path ) {
 	$url = get_stylesheet_directory_uri() . $path . '?ver=' . wp_get_theme()->get( 'Version' );

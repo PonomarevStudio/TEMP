@@ -113,11 +113,11 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
 
     scroll() {
         if (this.scrollLeft <= 0) {
-            if (!this.prevButton.classList.contains('hide')) this.prevButton.classList.toggle('hide', true)
-        } else if (this.prevButton.classList.contains('hide')) this.prevButton.classList.toggle('hide', false)
+            if (!this.prevButton.classList.contains('transparent')) this.prevButton.classList.toggle('transparent', true)
+        } else if (this.prevButton.classList.contains('transparent')) this.prevButton.classList.toggle('transparent', false)
         if (this.scrollWidth - this.clientWidth - this.scrollLeft <= 0) {
-            if (!this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', true)
-        } else if (this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', false)
+            if (!this.nextButton.classList.contains('transparent')) this.nextButton.classList.toggle('transparent', true)
+        } else if (this.nextButton.classList.contains('transparent')) this.nextButton.classList.toggle('transparent', false)
         clearTimeout(this.isScrolling);
         this.isScrolling = setTimeout(() => this.targetScroll = null, 66);
     }

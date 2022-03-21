@@ -1,7 +1,7 @@
 /*
 Theme Name: Temp
 Text Domain: temp
-Version: 1.1.5
+Version: 1.1.6
 Tested up to: 5.9
 Requires at least: 5.9
 Requires PHP: 8.0
@@ -92,6 +92,16 @@ body {
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+}
+
+img {
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+html.js img[loading="lazy"]:not(.ready),
+html.js img.loading {
+    opacity: 0;
 }
 
 input, button, textarea, select {
@@ -528,6 +538,9 @@ header .menu nav a:active {
 }
 
 .hero > picture {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
     filter: drop-shadow(-8px 0px 16px rgba(48, 75, 82, 0.15));
 }
 
@@ -539,16 +552,22 @@ header .menu nav a:active {
     clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+html.no-js .hero > picture > img,
+.hero > picture > img.ready {
+    opacity: 1;
+}
+
 .hero .navigation {
     user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    top: calc(var(--navigation-vertical-padding) + var(--header-height));
     z-index: 3;
     display: flex;
     position: absolute;
+    transition: opacity .3s;
     right: var(--horizontal-padding);
+    top: calc(var(--navigation-vertical-padding) + var(--header-height));
 }
 
 .hero .navigation button {
@@ -786,6 +805,10 @@ header .menu nav a:active {
 
 :root .hide {
     display: none;
+}
+
+:root .transparent {
+    opacity: 0;
 }
 
 :root .no-break {

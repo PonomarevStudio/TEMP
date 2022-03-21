@@ -8,11 +8,13 @@ const switcher = document.getElementById('plans-switcher'),
     updateSwitcher = (e, value = getHashValue()) => updateHash(null, isOption(value) ? (switcher.value = value) : firstSwitcherOption)
 
 window.addEventListener('load', () => {
-    preventScroll(true)
-    updateSwitcher()
-    preventScroll(false)
     setTimeout(() => {
-        switcher.addEventListener('change', updateHash)
-        window.addEventListener('hashchange', updateSwitcher)
-    }, 1)
+        preventScroll(true)
+        updateSwitcher()
+        setTimeout(() => {
+            preventScroll(false)
+            switcher.addEventListener('change', updateHash)
+            window.addEventListener('hashchange', updateSwitcher)
+        }, 100)
+    }, 100)
 })

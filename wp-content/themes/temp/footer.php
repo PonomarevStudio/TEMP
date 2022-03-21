@@ -1,11 +1,24 @@
 <?php get_template_part( 'template-parts/form' ); ?>
 <?php get_template_part( 'template-parts/footer' ); ?>
 <script>
-    const isStaticViewport = navigator.platform === 'iPhone' && navigator.userAgent.includes(" GSA/")
-    document.body.classList.toggle('static-viewport-height', isStaticViewport)
+    const isStaticViewport = navigator.platform === 'iPhone' && navigator.userAgent.includes(" GSA/");
+    document.body.classList.toggle('static-viewport-height', isStaticViewport);
     document.body.style.setProperty("--static-viewport-height", window.innerHeight + 'px');
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.toggle('loading', false)
+            img.classList.toggle('ready', true)
+        })
+        if (img.complete) {
+            img.classList.toggle('loading', false)
+            img.classList.toggle('ready', true)
+        }
+    });
     window.addEventListener('load', () => setTimeout(() =>
-        document.querySelectorAll('img[loading="lazy"]').forEach(img => img.removeAttribute('loading')), 1))
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            if (!img.complete) img.classList.toggle('loading', true)
+            img.removeAttribute('loading')
+        }), 1));
 </script>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 <?php wp_footer(); ?>

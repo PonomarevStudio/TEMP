@@ -358,7 +358,7 @@
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    transition: .1s transform;
+    transition: .1s transform, opacity .1s;
     background-position: center;
     background-repeat: no-repeat;
     left: var(--horizontal-padding);

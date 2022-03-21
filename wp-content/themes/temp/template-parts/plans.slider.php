@@ -49,7 +49,7 @@
             </p>
             <a href="<?php bloginfo( 'url' ); ?>/plans#4rooms">ознакомиться подробнее</a>
         </div>
-        <button class="scroll-button" data-scroll="prev"></button>
-        <button class="scroll-button" data-scroll="next"></button>
+        <button class="scroll-button transparent" data-scroll="prev"></button>
+        <button class="scroll-button transparent" data-scroll="next"></button>
     </drag-scroll>
 </section>

@@ -14,6 +14,8 @@ window.customElements.define('hero-slider', class HeroSlider extends HTMLElement
         this.imgMobile = this.querySelector('[data-slider="img_mobile"]')
         this.nextButton = this.querySelector('.navigation>button:last-of-type')
         this.prevButton = this.querySelector('.navigation>button:first-of-type')
+        this.querySelectorAll('.transparent').forEach(node =>
+            node.classList.toggle('transparent', false))
 
         await this.loadingChain.then(this.appendInitialSlide.bind(this))
 

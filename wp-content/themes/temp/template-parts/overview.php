@@ -1,6 +1,7 @@
 <p class="overview-legend" id="overview">Выберите свою квартиру на плане ЖК</p>
 <div class="overview">
-    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg" width="2048" height="1086">
+    <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg" width="2048" height="1086"
+         class="loading">
     <div class="polygon" tabindex="0">
         <div class="content">
             <h3>1 Очередь</h3>
