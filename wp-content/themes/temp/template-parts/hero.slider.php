@@ -5,6 +5,7 @@ $image        = get_post_custom_values( 'hero_image' )[0] ?? get_the_post_thumbn
 $mobile_image = get_post_custom_values( 'hero_image_mobile' )[0];
 ?>
 <hero-slider class="hero">
+    <div class="decoration"></div>
     <div class="content fixed-padding">
         <h1><?= $title ?></h1>
 		<?php if ( $description ): ?><p data-slider="text"><?= $description ?></p><?php endif; ?>
