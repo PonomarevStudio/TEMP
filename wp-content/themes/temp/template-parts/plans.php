@@ -20,7 +20,7 @@
                     <div class="title" style="--left-margin: -100">
                         <p>Площадь — 37,87 кв. м.</p>
                     </div>
-                    <img alt="Студия — 37,87 кв. м." src="/images/plans/plan.1.svg">
+                    <img alt="Студия — 37,87 кв. м." src="/images/plans/plan.1.svg" width="662" height="1443">
                 </div>
             </div>
             <div class="content">
@@ -41,16 +41,16 @@
                         <p>Вариант 1.</p>
                         <p>Площадь - 51,32 кв. м.</p>
                     </div>
-                    <img alt="1-комнатные квартира - 51,32 кв. м."
-                         src="/images/plans/plan.2.1.svg">
+                    <img alt="1-комнатные квартира - 51,32 кв. м." src="/images/plans/plan.2.1.svg" width="1440"
+                         height="951">
                 </div>
                 <div class="variant">
                     <div class="title">
                         <p>Вариант 2.</p>
                         <p>Площадь - 46,64 кв. м.</p>
                     </div>
-                    <img alt="1-комнатные квартира - 46,64 кв. м."
-                         src="/images/plans/plan.2.2.svg">
+                    <img alt="1-комнатные квартира - 46,64 кв. м." src="/images/plans/plan.2.2.svg" width="1119"
+                         height="1378">
                 </div>
             </div>
             <div class="content">
@@ -70,16 +70,16 @@
                         <p>Вариант 1.</p>
                         <p>Площадь — 75,21 кв. м.</p>
                     </div>
-                    <img alt="2-комнатные квартира — 75,21 кв. м."
-                         src="/images/plans/plan.3.1.jpg">
+                    <img alt="2-комнатные квартира — 75,21 кв. м." src="/images/plans/plan.3.1.jpg" width="1024"
+                         height="554">
                 </div>
                 <div class="variant">
                     <div class="title" style="--left-margin: -217">
                         <p>Вариант 2.</p>
                         <p>Площадь — 68,69 кв. м.</p>
                     </div>
-                    <img alt="2-комнатные квартира — 68,69 кв. м."
-                         src="/images/plans/plan.3.2.svg">
+                    <img alt="2-комнатные квартира — 68,69 кв. м." src="/images/plans/plan.3.2.svg" width="1241"
+                         height="987">
                 </div>
             </div>
             <div class="content" style="--left-margin: -217">
@@ -100,8 +100,8 @@
                     <div class="title">
                         <p>Площадь — 92,84 кв. м.</p>
                     </div>
-                    <img alt="3-комнатные квартира — 92,84 кв. м."
-                         src="/images/plans/plan.4.svg">
+                    <img alt="3-комнатные квартира — 92,84 кв. м." src="/images/plans/plan.4.svg" width="1415"
+                         height="1111">
                 </div>
             </div>
             <div class="content">
@@ -123,8 +123,8 @@
                     <div class="title">
                         <p>Площадь — 120,41 кв. м.</p>
                     </div>
-                    <img alt="4-комнатные квартира — 120,41 кв. м."
-                         src="/images/plans/plan.5.svg">
+                    <img alt="4-комнатные квартира — 120,41 кв. м." src="/images/plans/plan.5.svg" width="1351"
+                         height="2219">
                 </div>
             </div>
             <div class="content">
