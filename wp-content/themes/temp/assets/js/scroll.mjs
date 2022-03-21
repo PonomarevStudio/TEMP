@@ -6,6 +6,8 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
         this.speed = 1; //scroll-fast
         this.momentumID;
         this._scrollLeft;
+        this.isScrolling;
+        this.targetScroll;
         this.isDown = false;
         this.mediaQuery = "(min-width: 1024px)"
     }
@@ -100,11 +102,13 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
     }
 
     scrollToPrevNode() {
-        this.scrollTo({left: this.scrollLeft - this.getScrollWidth(), behavior: 'smooth'})
+        this.targetScroll = (this.targetScroll || this.scrollLeft) - this.getScrollWidth()
+        this.scrollTo({left: this.targetScroll, behavior: 'smooth'})
     }
 
     scrollToNextNode() {
-        this.scrollTo({left: this.scrollLeft + this.getScrollWidth(), behavior: 'smooth'})
+        this.targetScroll = (this.targetScroll || this.scrollLeft) + this.getScrollWidth()
+        this.scrollTo({left: this.targetScroll, behavior: 'smooth'})
     }
 
     scroll() {
@@ -114,6 +118,8 @@ window.customElements.define('drag-scroll', class DragScroll extends HTMLElement
         if (this.scrollWidth - this.clientWidth - this.scrollLeft <= 0) {
             if (!this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', true)
         } else if (this.nextButton.classList.contains('hide')) this.nextButton.classList.toggle('hide', false)
+        clearTimeout(this.isScrolling);
+        this.isScrolling = setTimeout(() => this.targetScroll = null, 66);
     }
 
     leaveEvent(e) {
