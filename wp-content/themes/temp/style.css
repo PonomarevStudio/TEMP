@@ -721,7 +721,7 @@ html.no-js .hero > picture > img,
     right: var(--horizontal-padding);
     /*bottom: min(var(--horizontal-padding), calc(var(--size) / 2));*/
     cursor: pointer;
-    bottom: calc(((100vh - var(--size) - var(--header-height)) / 2));
+    bottom: 70px;
     padding: 20px;
     font-family: Helvetica, sans-serif;
     color: var(--accent-color);

@@ -1370,6 +1370,8 @@ footer nav a:active {
 .plans-container article .variant img {
     margin: var(--horizontal-padding) 0;
     max-height: 50vh;
+    width: auto;
+    height: auto;
 }
 
 .plans-container article .content {
