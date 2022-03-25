@@ -80,6 +80,15 @@ function temp_register_menus() {
 		'header' => __( 'Верхнее меню' ),
 		'footer' => __( 'Нижнее меню' )
 	) );
+	if ( class_exists( 'MultiPostThumbnails' ) ) {
+		new MultiPostThumbnails(
+			array(
+				'label'     => 'Мобильное изображение',
+				'id'        => 'mobile-image',
+				'post_type' => 'page'
+			)
+		);
+	}
 }
 
 function temp_customize_register( $wp_customize ) {

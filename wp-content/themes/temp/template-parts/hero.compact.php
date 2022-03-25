@@ -2,7 +2,7 @@
 $title        = get_post_custom_values( 'hero_title' )[0] ?? get_the_title();
 $description  = get_post_custom_values( 'hero_description' )[0];
 $image        = get_post_custom_values( 'hero_image' )[0] ?? get_the_post_thumbnail_url( null, 'full' );
-$mobile_image = get_post_custom_values( 'hero_image_mobile' )[0] ?? get_the_post_thumbnail_url( null, 'thumbnail' )
+$mobile_image = get_post_custom_values( 'hero_image_mobile' )[0] ?? MultiPostThumbnails::get_post_thumbnail_url( 'page', 'mobile-image' );
 ?>
 <section class="hero compact">
     <div class="decoration"></div>
