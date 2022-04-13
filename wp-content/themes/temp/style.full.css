@@ -768,8 +768,9 @@
     }
 
     .overview > img {
+        width: 100%;
         height: initial;
-        object-fit: initial;
+        object-fit: contain;
     }
 
     .overview .polygon {
