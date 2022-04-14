@@ -471,6 +471,42 @@
     }
 }
 
+@media (min-width: 1921px) {
+    .plans .variants {
+        padding: 66px var(--horizontal-padding);
+    }
+
+    .plans .card {
+        width: 380px;
+        min-width: 380px;
+        margin-right: 26px;
+        padding: 20px 27px;
+    }
+
+    .plans .card h3,
+    .plans .card p {
+        font-size: 24px;
+    }
+
+    .plans .card h3 {
+        margin-bottom: 20px;
+    }
+
+    .plans .card img {
+        max-height: 200px;
+    }
+
+    .plans .card p {
+        margin-top: 20px;
+    }
+
+    .plans .card a {
+        font-size: 14px;
+        padding: 18px 0;
+        margin-top: 36px;
+    }
+}
+
 .banner {
     color: var(--accent-color);
     position: relative;
@@ -1677,5 +1713,19 @@ footer nav a:active {
     .steps .step p {
         font-size: 24rem;
         margin-top: 20rem;
+    }
+}
+
+@media (min-width: 1921px) {
+    .plans-container article.column .variant img {
+        max-height: initial;
+        max-width: 870rem;
+        width: 100%;
+        object-position: right;
+    }
+
+    .plans-container article.column .content,
+    .plans-container article.column .variant .title {
+        --left-margin: 0 !important;
     }
 }
