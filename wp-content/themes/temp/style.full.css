@@ -599,6 +599,7 @@
 }
 
 .overview {
+    --viewport-unit: calc(100vw / 1920 * (2048 / 1086));
     height: 100vw;
     user-select: none;
     position: relative;
@@ -613,11 +614,12 @@
 }
 
 .overview .polygon {
-    --x: 51.1;
-    --y: 52.9;
-    --viewport-unit: calc(100vw / 1920 * (2048 / 1086));
-    --height: calc(var(--viewport-unit) * 702);
-    --width: calc(var(--viewport-unit) * 642);
+    --x: 0;
+    --y: 0;
+    --w: 0;
+    --h: 0;
+    --height: calc(var(--viewport-unit) * var(--h));
+    --width: calc(var(--viewport-unit) * var(--w));
     --left: calc((var(--x) * 1%) - (var(--width) / 2));
     --top: calc((var(--y) * 1%) - (var(--height) / 2));
     outline: none;
@@ -662,6 +664,7 @@
     opacity: .3;
 }
 
+.overview .pin .content,
 .overview .polygon .content {
     --filter: blur(15px);
     z-index: 1;
@@ -681,6 +684,7 @@
     left: calc((var(--x) * -1vw) + (var(--width) / 2) + var(--horizontal-padding));
 }
 
+.overview .pin:focus .content,
 .overview .polygon:focus .content {
     opacity: 1;
     pointer-events: initial;
@@ -711,6 +715,28 @@
 
 .overview .polygon .content a {
     cursor: pointer;
+}
+
+.overview .pin {
+    --x: 0;
+    --y: 0;
+    --size: 80px;
+    --left: calc((var(--x) * 1%) - (var(--size) / 2));
+    --top: calc((var(--y) * 1%) - (var(--size) / 2));
+    width: var(--size);
+    height: var(--size);
+    left: var(--left);
+    top: var(--top);
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./assets/images/overview.pin.png");
+}
+
+.overview .pin .content {
+    left: calc((var(--x) * -1vw) + (var(--size) / 2) + var(--horizontal-padding));
 }
 
 .tabs {
@@ -770,6 +796,7 @@
         opacity: .3;
     }
 
+    .overview .pin:hover .content,
     .overview .polygon:hover .content {
         opacity: 1;
         pointer-events: initial;
@@ -800,6 +827,7 @@
     }
 
     .overview {
+        --viewport-unit: calc(100vw / 1920);
         height: initial;
     }
 
@@ -809,14 +837,11 @@
         object-fit: contain;
     }
 
-    .overview .polygon {
-        --viewport-unit: calc(100vw / 1920);
-    }
-
     .overview .polygon:after {
         --size: 121rem;
     }
 
+    .overview .pin .content,
     .overview .polygon .content {
         left: initial;
         width: auto;
