@@ -935,6 +935,10 @@
     margin-bottom: calc(var(--horizontal-padding) * 2);
 }
 
+.form img {
+    height: auto;
+}
+
 .form .content {
     padding: 0 var(--horizontal-padding);
 }
@@ -1323,6 +1327,22 @@ footer nav a:active {
 
 .documentation-text a {
     display: inline-block;
+}
+
+.documentation-text table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.documentation-text table img {
+    object-fit: contain;
+}
+
+.documentation-text table td:first-of-type {
+    min-width: 120px;
+    padding-right: 20px;
 }
 
 .qna {
