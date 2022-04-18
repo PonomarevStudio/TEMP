@@ -29,7 +29,7 @@
                 фитнеса, и палисадниками, которые станут приватным пространством для отдыха и встреч с друзьями.
             </div>
         </div>
-        <a onclick="pb_front_widget.show({url: 'plans?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Каталог
+        <a onclick="pb_front_widget.show({url: '#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Каталог
             квартир</a>
     </article>
     <article id="1rooms">
@@ -58,7 +58,7 @@
                 место для отдыха и приема гостей, а выделенная гардеробная позволит не перегружать комнаты шкафами.
             </div>
         </div>
-        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:1'});">Каталог
+        <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:1'});">Каталог
             квартир</a>
     </article>
     <article class="column" id="2rooms">
@@ -89,7 +89,7 @@
                 Увеличенная прихожая позволит собираться по делам с комфортом и хранить всю необходимую одежду.
             </div>
         </div>
-        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:2'});">Каталог
+        <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:2'});">Каталог
             квартир</a>
     </article>
     <article class="single" id="3rooms">
@@ -112,7 +112,7 @@
                 пространство комнат от шкафов.
             </div>
         </div>
-        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:3'});">Каталог
+        <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:3'});">Каталог
             квартир</a>
     </article>
     <article class="single" id="4rooms">
@@ -140,7 +140,7 @@
                 В выделенной гардеробной поместятся вещи всех членов семьи и их гостей.
             </div>
         </div>
-        <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">Каталог
+        <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">Каталог
             квартир</a>
     </article>
 </main>

@@ -46,33 +46,6 @@
             </a>
         </div>
     </div>
-    <div class="pin" tabindex="0" style="--x: 85;--y: 90;">
-        <div class="content"><h3>Медсанчасть 66</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 30;--y: 25;">
-        <div class="content"><h3>Детский сад</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 54;--y: 22;">
-        <div class="content"><h3>Детский сад</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 52;--y: 12;">
-        <div class="content"><h3>Детский сад</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 10;--y: 10;">
-        <div class="content"><h3>Детский сад</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 17;--y: 9;">
-        <div class="content"><h3>Детский сад</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 80;--y: 20;">
-        <div class="content"><h3>Торговый центр</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 84;--y: 15;">
-        <div class="content"><h3>Магазин</h3></div>
-    </div>
-    <div class="pin" tabindex="0" style="--x: 79;--y: 6;">
-        <div class="content"><h3>Аптека</h3></div>
-    </div>
 </div>
 <div class="tabs">
     <div class="tab" tabindex="0">

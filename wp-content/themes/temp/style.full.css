@@ -1537,6 +1537,15 @@ footer nav a:active {
     transform: scale(.95);
 }
 
+.infrastructure {
+    margin-bottom: 100px;
+}
+
+.infrastructure img {
+    width: 100%;
+    height: auto;
+}
+
 @media (min-width: 768px), (orientation: landscape) {
     .text {
         margin-top: 97rem;
@@ -1758,6 +1767,11 @@ footer nav a:active {
     .steps .step p {
         font-size: 24rem;
         margin-top: 20rem;
+    }
+
+    .infrastructure {
+        margin-top: -200rem;
+        margin-bottom: 350rem;
     }
 }
 
