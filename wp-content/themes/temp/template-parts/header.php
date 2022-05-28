@@ -47,5 +47,5 @@
     <a class="header-button call-phone-button" href="tel:+<?= preg_replace( '/\D+/', '', $phone ) ?>">
         <span class="hide-on-mobile-header"><?= $phone ?></span>
     </a>
-    <a class="open-widget-button hide-on-mobile-header" href="<?php bloginfo( 'url' ); ?>/overview">Выбрать<br>квартиру</a>
+    <a class="open-widget-button hide-on-mobile-header" href="<?php bloginfo( 'url' ); ?>/overview#overview">Выбрать<br>квартиру</a>
 </header>
