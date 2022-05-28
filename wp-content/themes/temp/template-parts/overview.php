@@ -10,35 +10,35 @@
                 квартир
             </p>
             <hr>
-            <a onclick="pb_front_widget.show({url: 'plans?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Студий
+            <a onclick="pb_front_widget.show({url: '#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Студий
                 <offer-data data-group="studio" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="studio" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:1'});">1-комнатных
+            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:1'});">1-комнатных
                 <offer-data data-group="1" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="1" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:2'});">2-комнатных
+            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:2'});">2-комнатных
                 <offer-data data-group="2" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="2" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.count:3'});">3-комнатных
+            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:3'});">3-комнатных
                 <offer-data data-group="3" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="3" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">4-комнатных
+            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">4-комнатных
                 <offer-data data-group="4" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="4" data-key="price" data-round="1000000"></offer-data>
