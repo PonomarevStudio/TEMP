@@ -699,6 +699,13 @@
 .overview .polygon .content h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview .polygon .content h3:after {
+    content: '2 квартал 2024 г.';
+    font-size: 10px;
 }
 
 .overview .polygon .content hr {
@@ -852,6 +859,10 @@
 
     .overview .polygon .content h3 {
         font-size: 32rem;
+    }
+
+    .overview .polygon .content h3:after {
+        font-size: 16rem;
     }
 
     .tabs {

@@ -3,42 +3,43 @@
     <img alt="Обзор ЖК" loading="eager" src="/new/wp-content/uploads/overview.jpg" width="2048" height="1086"
          class="loading">
     <div class="polygon" tabindex="0" style="--x: 51.1;--y: 52.9;--w:642;--h:702;">
-        <div class="content">
+        <div class="content"
+             onclick="pb_front_widget.show({url: '#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE'});">
             <h3>1 Очередь</h3>
             <p>Свободно
                 <offers-count></offers-count>
                 квартир
             </p>
             <hr>
-            <a onclick="pb_front_widget.show({url: '#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Студий
+            <a onclick="event.stopImmediatePropagation();pb_front_widget.show({url: '#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.roomType.isStudio:true'});">Студий
                 <offer-data data-group="studio" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="studio" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:1'});">1-комнатных
+            <a onclick="event.stopImmediatePropagation();pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:1'});">1-комнатных
                 <offer-data data-group="1" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="1" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:2'});">2-комнатных
+            <a onclick="event.stopImmediatePropagation();pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:2'});">2-комнатных
                 <offer-data data-group="2" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="2" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:3'});">3-комнатных
+            <a onclick="event.stopImmediatePropagation();pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.count:3'});">3-комнатных
                 <offer-data data-group="3" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="3" data-key="price" data-round="1000000"></offer-data>
                 млн.руб
             </a>
             <hr>
-            <a onclick="pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">4-комнатных
+            <a onclick="event.stopImmediatePropagation();pb_front_widget.show({url:'#/profitbase/house/97892/smallGrid?filter=property.status:AVAILABLE&filter=property.maxCount:4'});">4-комнатных
                 <offer-data data-group="4" data-key="count"></offer-data>
                 квартир от
                 <offer-data data-group="4" data-key="price" data-round="1000000"></offer-data>
