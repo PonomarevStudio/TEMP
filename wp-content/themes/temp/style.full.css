@@ -1715,8 +1715,10 @@ footer nav a:active {
         /*padding-left: 40rem;*/
     }
 
-    .plans-container article.column {
-
+    .plans-container article.column .wrapper > .content:first-child {
+        display: block;
+        position: initial;
+        margin-top: calc(var(--design-units) * 30);
     }
 
     .plans-container article.column .variant img {
