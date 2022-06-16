@@ -75,8 +75,8 @@
 
 @media (min-width: 768px), (orientation: landscape) {
     .cards {
-        padding: 100rem var(--horizontal-padding) 0;
-        margin-bottom: 465rem;
+        padding: calc(var(--design-units) * 100) var(--horizontal-padding) 0;
+        margin-bottom: calc(var(--design-units) * 465);
         flex-wrap: wrap;
         flex-direction: row;
         align-items: flex-start;
@@ -92,34 +92,34 @@
     }
 
     .cards .card h2 {
-        font-size: 60rem;
-        margin: 68rem 0 40rem;
+        font-size: calc(var(--design-units) * 60);
+        margin: calc(var(--design-units) * 68) 0 calc(var(--design-units) * 40);
     }
 
     .cards .card hr {
         --width: calc(100% + var(--horizontal-padding));
-        height: 3rem;
-        margin: 40rem 0;
+        height: calc(var(--design-units) * 3);
+        margin: calc(var(--design-units) * 40) 0;
         /*width: calc(100% + var(--horizontal-padding));*/
         margin-right: calc(var(--horizontal-padding) * -1);
     }
 
     .cards .card p {
-        font-size: 24rem;
-        margin: 40rem 0 0;
+        font-size: calc(var(--design-units) * 24);
+        margin: calc(var(--design-units) * 40) 0 0;
     }
 
     .cards .card:nth-child(4n+1),
     .cards .card:nth-child(4n+2) {
-        margin-top: 315rem;
+        margin-top: calc(var(--design-units) * 315);
     }
 
     .cards .card:nth-child(4n+1) {
-        --width: 750rem;
+        --width: calc(var(--design-units) * 750);
     }
 
     .cards .card:nth-child(4n+2) {
-        --width: calc(624rem + var(--horizontal-padding));
+        --width: calc((var(--design-units) * 624) + var(--horizontal-padding));
         margin-right: calc(var(--horizontal-padding) * -1);
     }
 
@@ -127,7 +127,7 @@
     .cards .card:nth-child(4n+4) {
         --width: 100vw;
         display: flex;
-        margin-top: 180rem;
+        margin-top: calc(var(--design-units) * 180);
         flex-direction: row;
         justify-content: space-between;
         margin-right: calc(var(--horizontal-padding) * -1);
@@ -144,7 +144,7 @@
     }
 
     .cards .card:nth-child(4n+2) img {
-        width: 624rem;
+        width: calc(var(--design-units) * 624);
     }
 
     .cards .card:nth-child(4n+3) img,
@@ -153,12 +153,12 @@
     }
 
     .cards .card:nth-child(4n+3) img {
-        width: 1080rem;
-        height: 600rem;
+        width: calc(var(--design-units) * 1080);
+        height: calc(var(--design-units) * 600);
     }
 
     .cards .card:nth-child(4n+4) img {
-        width: 950rem;
+        width: calc(var(--design-units) * 950);
     }
 
     .cards .card:nth-child(4n+1) div,
@@ -167,18 +167,18 @@
     }
 
     .cards .card:nth-child(4n+2) div {
-        margin-right: 163rem;
+        margin-right: calc(var(--design-units) * 163);
     }
 
     .cards .card:nth-child(4n+3) div {
-        margin-right: 105rem;
-        margin-top: 270rem;
+        margin-right: calc(var(--design-units) * 105);
+        margin-top: calc(var(--design-units) * 270);
     }
 
     .cards .card:nth-child(4n+4) div {
-        margin-top: 37rem;
-        margin-left: 198rem;
-        margin-right: 113rem;
+        margin-top: calc(var(--design-units) * 37);
+        margin-left: calc(var(--design-units) * 198);
+        margin-right: calc(var(--design-units) * 113);
     }
 
     .cards .card:nth-child(4n+1) h2,
@@ -198,24 +198,24 @@
     }
 
     .cards .card:nth-child(4n+2) hr {
-        --width: calc(100% + 163rem);
+        --width: calc(100% + (var(--design-units) * 163));
         margin-left: 0;
         margin-right: 0;
     }
 
     .cards .card:nth-child(4n+3) hr {
-        --width: calc(100% + 105rem);
+        --width: calc(100% + (var(--design-units) * 105));
         margin-right: 0;
     }
 
     .cards .card:nth-child(4n+3) hr,
     .cards .card:nth-child(4n+4) hr {
-        height: 2rem;
+        height: calc(var(--design-units) * 2);
     }
 
     .cards .card:nth-child(4n+4) hr {
-        --width: calc(100% + 198rem);
-        margin-left: calc(198rem * -1);
+        --width: calc(100% + (var(--design-units) * 198));
+        margin-left: calc((var(--design-units) * 198) * -1);
     }
 
     .cards .card:nth-child(1),
@@ -229,9 +229,9 @@
         right: 0;
         z-index: -1;
         content: '';
-        top: -270rem;
-        width: 739rem;
-        height: 436rem;
+        top: calc(var(--design-units) * -270);
+        width: calc(var(--design-units) * 739);
+        height: calc(var(--design-units) * 436);
         display: block;
         position: absolute;
         background-size: contain;
@@ -241,19 +241,19 @@
     }
 
     .cards .card:nth-child(4n+6):after {
-        top: -533rem;
-        width: 1627rem;
-        height: 436rem;
+        top: calc(var(--design-units) * -533);
+        width: calc(var(--design-units) * 1627);
+        height: calc(var(--design-units) * 436);
         background-image: url("./assets/images/cards.pattern.2.svg");
     }
 
     .cards .card:nth-child(4n+4):last-of-type:after {
         top: initial;
         right: initial;
-        left: 267rem;
-        bottom: -237rem;
-        width: 350rem;
-        height: 351rem;
+        left: calc(var(--design-units) * 267);
+        bottom: calc(var(--design-units) * -237);
+        width: calc(var(--design-units) * 350);
+        height: calc(var(--design-units) * 351);
         background-image: url("./assets/images/cards.pattern.3.svg");
     }
 }
@@ -394,7 +394,7 @@
 
 @media (min-width: 768px), (orientation: landscape) {
     .plans {
-        margin: 354rem 0;
+        margin: calc(var(--design-units) * 354) 0;
     }
 
     .plans .header {
@@ -403,19 +403,19 @@
     }
 
     .plans h2 {
-        font-size: 36rem;
+        font-size: calc(var(--design-units) * 36);
     }
 
     .plans hr {
         border: none;
-        height: 3rem;
-        margin-top: 33rem;
+        height: calc(var(--design-units) * 3);
+        margin-top: calc(var(--design-units) * 33);
         background-color: var(--header-color);
         margin-left: calc(var(--horizontal-padding) * -1);
     }
 
     .plans .variants {
-        padding: 66rem var(--horizontal-padding);
+        padding: calc(var(--design-units) * 66) var(--horizontal-padding);
         scroll-snap-type: none;
         cursor: grab;
     }
@@ -430,39 +430,39 @@
 
     .plans .card {
         -webkit-user-drag: none;
-        width: 380rem;
-        min-width: 380rem;
-        margin-right: 32rem;
-        padding: 20rem 27rem;
+        width: calc(var(--design-units) * 380);
+        min-width: calc(var(--design-units) * 380);
+        margin-right: calc(var(--design-units) * 32);
+        padding: calc(var(--design-units) * 20) calc(var(--design-units) * 27);
     }
 
     .plans .card h3,
     .plans .card p {
-        font-size: 24rem;
+        font-size: calc(var(--design-units) * 24);
     }
 
     .plans .card h3 {
-        margin-bottom: 20rem;
+        margin-bottom: calc(var(--design-units) * 20);
     }
 
     .plans .card img {
         pointer-events: none;
-        max-height: 200rem;
+        max-height: calc(var(--design-units) * 200);
     }
 
     .plans .card p {
-        margin-top: 20rem;
+        margin-top: calc(var(--design-units) * 20);
     }
 
     .plans .card a {
         pointer-events: initial;
-        font-size: 14rem;
-        padding: 18rem 0;
-        margin-top: 36rem;
+        font-size: calc(var(--design-units) * 14);
+        padding: calc(var(--design-units) * 18) 0;
+        margin-top: calc(var(--design-units) * 36);
     }
 
     .plans .variants .scroll-button {
-        --size: 100rem;
+        --size: calc(var(--design-units) * 100);
         left: calc(var(--size) / 3);
     }
 
@@ -559,33 +559,33 @@
 @media (min-width: 768px), (orientation: landscape) {
     .banner {
         display: flex;
-        margin: 0 0 532rem;
+        margin: 0 0 calc(var(--design-units) * 532);
         align-items: center;
         flex-direction: column;
-        padding: 85rem var(--horizontal-padding);
+        padding: calc(var(--design-units) * 85) var(--horizontal-padding);
     }
 
     .banner h2 {
-        font-size: 36rem;
+        font-size: calc(var(--design-units) * 36);
         text-align: center;
-        margin-bottom: 30rem;
+        margin-bottom: calc(var(--design-units) * 30);
     }
 
     .banner hr {
-        height: 3rem;
+        height: calc(var(--design-units) * 3);
     }
 
     .banner .row {
         display: flex;
         justify-content: center;
-        margin-top: 128rem;
+        margin-top: calc(var(--design-units) * 128);
     }
 
     .banner a {
-        width: 368rem;
-        margin: 0 30rem;
-        font-size: 24rem;
-        padding: 30rem 0;
+        width: calc(var(--design-units) * 368);
+        margin: 0 calc(var(--design-units) * 30);
+        font-size: calc(var(--design-units) * 24);
+        padding: calc(var(--design-units) * 30) 0;
         white-space: nowrap;
     }
 }
@@ -828,9 +828,9 @@
 @media (min-width: 768px), (orientation: landscape) {
 
     .overview-legend {
-        font-size: 40rem;
-        margin: 40rem 0;
-        scroll-margin-top: calc(var(--header-height) + 40rem - 1px);
+        font-size: calc(var(--design-units) * 40);
+        margin: calc(var(--design-units) * 40) 0;
+        scroll-margin-top: calc(var(--header-height) + (var(--design-units) * 40) - 1px);
     }
 
     .overview {
@@ -845,31 +845,31 @@
     }
 
     .overview .polygon:after {
-        --size: 121rem;
+        --size: calc(var(--design-units) * 121);
     }
 
     .overview .pin .content,
     .overview .polygon .content {
         left: initial;
         width: auto;
-        padding: 40rem;
-        border-radius: 40rem;
-        font-size: 20rem;
+        padding: calc(var(--design-units) * 40);
+        border-radius: calc(var(--design-units) * 40);
+        font-size: calc(var(--design-units) * 20);
     }
 
     .overview .polygon .content h3 {
-        font-size: 32rem;
+        font-size: calc(var(--design-units) * 32);
     }
 
     .overview .polygon .content h3:after {
-        font-size: 16rem;
+        font-size: calc(var(--design-units) * 16);
     }
 
     .tabs {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: 0 0 400rem;
+        margin: 0 0 calc(var(--design-units) * 400);
         overflow: initial;
         scroll-snap-type: initial;
     }
@@ -889,27 +889,27 @@
     }
 
     .tabs .tab .label {
-        height: 181rem;
-        padding: 36rem;
-        min-width: 300rem;
+        height: calc(var(--design-units) * 181);
+        padding: calc(var(--design-units) * 36);
+        min-width: calc(var(--design-units) * 300);
         position: relative;
-        padding-right: 15rem;
+        padding-right: calc(var(--design-units) * 15);
         background-color: var(--background-color);
     }
 
     .tabs .tab img {
-        --size: 100rem;
-        margin-right: 15rem;
+        --size: calc(var(--design-units) * 100);
+        margin-right: calc(var(--design-units) * 15);
         margin-bottom: 0;
     }
 
     .tabs .tab h2 {
-        font-size: 16rem;
+        font-size: calc(var(--design-units) * 16);
         width: 100%;
     }
 
     .tabs .tab h2 span {
-        font-size: 32rem;
+        font-size: calc(var(--design-units) * 32);
     }
 
     .tabs .tab .details {
@@ -920,8 +920,8 @@
         background: rgba(255, 255, 255, 0.72);
         backdrop-filter: blur(13px);
         -webkit-backdrop-filter: blur(13px);
-        padding: 36rem 75rem;
-        width: 606rem;
+        padding: calc(var(--design-units) * 36) calc(var(--design-units) * 75);
+        width: calc(var(--design-units) * 606);
     }
 
     .tabs .tab:last-of-type .details {
@@ -1086,17 +1086,17 @@
         padding-right: var(--horizontal-padding);
         width: 100%;
         display: flex;
-        margin-bottom: 350rem;
+        margin-bottom: calc(var(--design-units) * 350);
         justify-content: space-between;
     }
 
     .form:after {
         z-index: -1;
         content: '';
-        top: -309rem;
-        right: 650rem;
-        width: 350rem;
-        height: 351rem;
+        top: calc(var(--design-units) * -309);
+        right: calc(var(--design-units) * 650);
+        width: calc(var(--design-units) * 350);
+        height: calc(var(--design-units) * 351);
         display: block;
         position: absolute;
         background-size: contain;
@@ -1112,58 +1112,58 @@
 
     .form img {
         height: auto;
-        width: 1211rem;
+        width: calc(var(--design-units) * 1211);
         display: block;
         object-fit: cover;
         object-position: center;
     }
 
     .form .content {
-        width: 400rem;
+        width: calc(var(--design-units) * 400);
         display: flex;
-        min-width: 400rem;
+        min-width: calc(var(--design-units) * 400);
         flex-direction: column;
         justify-content: space-between;
     }
 
     .form h2 {
-        font-size: 28rem;
-        margin: 0 0 8rem;
+        font-size: calc(var(--design-units) * 28);
+        margin: 0 0 calc(var(--design-units) * 8);
     }
 
     .form hr {
-        height: max(1rem, 1px);
+        height: max(var(--design-units), 1px);
         margin-right: calc(var(--horizontal-padding) * -1);
     }
 
     .form p, .form input, .form textarea, .form label {
-        font-size: 20rem;
+        font-size: calc(var(--design-units) * 20);
     }
 
     .form input, .form textarea {
-        padding: 20rem 10rem;
+        padding: calc(var(--design-units) * 20) calc(var(--design-units) * 10);
     }
 
     .form textarea {
-        margin: 20rem 0;
+        margin: calc(var(--design-units) * 20) 0;
     }
 
     .form input[type="checkbox"], .form input[type="radio"] {
-        --size: 20rem;
+        --size: calc(var(--design-units) * 20);
         vertical-align: text-top;
     }
 
     .form input[type="checkbox"]:checked:before, .form input[type="radio"]:checked:before {
-        --size: 12rem;
+        --size: calc(var(--design-units) * 12);
     }
 
     .form .policy * {
-        font-size: 18rem;
+        font-size: calc(var(--design-units) * 18);
     }
 
     .form button, .form input[type="submit"] {
-        font-size: 24rem;
-        padding: 20rem;
+        font-size: calc(var(--design-units) * 24);
+        padding: calc(var(--design-units) * 20);
         margin-bottom: 0;
     }
 }
@@ -1242,7 +1242,7 @@ footer nav a:active {
 
 @media (min-width: 768px), (orientation: landscape) {
     footer {
-        padding: 95rem 312rem 37rem var(--horizontal-padding);
+        padding: calc(var(--design-units) * 95) calc(var(--design-units) * 312) calc(var(--design-units) * 37) var(--horizontal-padding);
         align-items: flex-start;
         position: relative;
     }
@@ -1250,10 +1250,10 @@ footer nav a:active {
     footer:after {
         z-index: -1;
         content: '';
-        top: -251rem;
+        top: calc(var(--design-units) * -251);
         left: 0;
         width: 100%;
-        height: 436.5rem;
+        height: calc(var(--design-units) * 436.5);
         display: block;
         position: absolute;
         background-size: contain;
@@ -1264,11 +1264,11 @@ footer nav a:active {
 
     footer .logo {
         display: block;
-        height: 33rem;
-        width: 132rem;
-        min-height: 33rem;
-        min-width: 132rem;
-        margin-right: 250rem;
+        height: calc(var(--design-units) * 33);
+        width: calc(var(--design-units) * 132);
+        min-height: calc(var(--design-units) * 33);
+        min-width: calc(var(--design-units) * 132);
+        margin-right: calc(var(--design-units) * 250);
     }
 
     footer .logo img {
@@ -1277,9 +1277,9 @@ footer nav a:active {
     }
 
     footer nav {
-        font-size: 20rem;
+        font-size: calc(var(--design-units) * 20);
         justify-content: space-between;
-        margin-bottom: 67rem;
+        margin-bottom: calc(var(--design-units) * 67);
     }
 
     footer nav a:first-child {
@@ -1559,31 +1559,31 @@ footer nav a:active {
 
 @media (min-width: 768px), (orientation: landscape) {
     .text {
-        margin-top: 97rem;
-        margin-bottom: 114rem;
-        font-size: 32rem;
+        margin-top: calc(var(--design-units) * 97);
+        margin-bottom: calc(var(--design-units) * 114);
+        font-size: calc(var(--design-units) * 32);
     }
 
     .documentation-text {
-        font-size: 24rem;
-        margin-top: 100rem;
-        margin-bottom: 180rem;
+        font-size: calc(var(--design-units) * 24);
+        margin-top: calc(var(--design-units) * 100);
+        margin-bottom: calc(var(--design-units) * 180);
     }
 
     .documentation-text a span {
-        font-size: 16rem;
+        font-size: calc(var(--design-units) * 16);
     }
 
     .qna {
-        font-size: 24rem;
-        margin: 100rem var(--horizontal-padding);
+        font-size: calc(var(--design-units) * 24);
+        margin: calc(var(--design-units) * 100) var(--horizontal-padding);
     }
 
     .qna details {
-        --horizontal-padding: 53rem;
-        --vertical-padding: 32rem;
-        --icon-padding: 35rem;
-        --icon-size: 37rem;
+        --horizontal-padding: calc(var(--design-units) * 53);
+        --vertical-padding: calc(var(--design-units) * 32);
+        --icon-padding: calc(var(--design-units) * 35);
+        --icon-size: calc(var(--design-units) * 37);
         border: 1px solid var(--second-color);
     }
 
@@ -1592,7 +1592,7 @@ footer nav a:active {
     }
 
     .qna details > summary {
-        font-size: 32rem;
+        font-size: calc(var(--design-units) * 32);
     }
 
     .qna details .content {
@@ -1601,14 +1601,14 @@ footer nav a:active {
 
     .plans-container {
         padding: 0;
-        margin-top: 100rem;
+        margin-top: calc(var(--design-units) * 100);
     }
 
     .plans-container article {
         display: block;
         padding: 0 var(--horizontal-padding);
-        scroll-margin-top: calc(var(--header-height) + 50rem);
-        margin-bottom: 182rem;
+        scroll-margin-top: calc(var(--header-height) + (var(--design-units) * 50));
+        margin-bottom: calc(var(--design-units) * 182);
     }
 
     .plans-container article:before {
@@ -1616,23 +1616,23 @@ footer nav a:active {
         font-family: var(--header-font);
         color: var(--header-color);
         text-transform: uppercase;
-        margin-bottom: 24rem;
+        margin-bottom: calc(var(--design-units) * 24);
         line-height: 125%;
-        font-size: 60rem;
+        font-size: calc(var(--design-units) * 60);
         display: block;
     }
 
     .plans-container article h2 {
         font-family: var(--text-font);
         text-transform: initial;
-        font-size: 36rem;
+        font-size: calc(var(--design-units) * 36);
     }
 
     .plans-container article .variants {
-        --gap: 150rem;
+        --gap: calc(var(--design-units) * 150);
         display: flex;
         flex-wrap: wrap;
-        margin-top: 65rem;
+        margin-top: calc(var(--design-units) * 65);
         column-gap: var(--gap);
     }
 
@@ -1641,27 +1641,27 @@ footer nav a:active {
     }
 
     .plans-container article .variants .variant:not(:last-of-type) {
-        margin-bottom: 200rem;
+        margin-bottom: calc(var(--design-units) * 200);
     }
 
     .plans-container article .variant .title {
-        font-size: 36rem;
+        font-size: calc(var(--design-units) * 36);
     }
 
     .plans-container article .variant img {
-        margin: 40rem 0;
+        margin: calc(var(--design-units) * 40) 0;
         max-height: unset;
     }
 
     .plans-container article .content {
-        font-size: 36rem;
-        max-width: 990rem;
+        font-size: calc(var(--design-units) * 36);
+        max-width: calc(var(--design-units) * 990);
     }
 
     .plans-container article a {
-        font-size: 20rem;
-        margin-top: 50rem;
-        padding: 20rem 26rem;
+        font-size: calc(var(--design-units) * 20);
+        margin-top: calc(var(--design-units) * 50);
+        padding: calc(var(--design-units) * 20) calc(var(--design-units) * 26);
         display: inline-block;
     }
 
@@ -1683,7 +1683,7 @@ footer nav a:active {
     .plans-container article.column .variants .variant {
         position: relative;
         max-width: 100%;
-        padding-right: 45rem;
+        padding-right: calc(var(--design-units) * 45);
         flex-direction: row-reverse;
     }
 
@@ -1691,15 +1691,15 @@ footer nav a:active {
     .plans-container article.column .variant .title {
         --left-margin: 0;
         position: absolute;
-        left: calc(100% + (var(--left-margin) * 1rem));
-        width: 408rem;
+        left: calc(100% + (var(--left-margin) * var(--design-units)));
+        width: calc(var(--design-units) * 408);
         width: max-content;
     }
 
     .plans-container article.single .variant img,
     .plans-container article.column .variant img {
-        max-height: 735rem;
-        max-width: 870rem;
+        max-height: calc(var(--design-units) * 735);
+        max-width: calc(var(--design-units) * 870);
         margin: 0;
     }
 
@@ -1711,7 +1711,7 @@ footer nav a:active {
         display: inline;
         max-width: initial;
         position: absolute;
-        margin-left: calc(var(--left-margin) * 1rem);
+        margin-left: calc(var(--left-margin) * var(--design-units));
         /*padding-left: 40rem;*/
     }
 
@@ -1720,31 +1720,31 @@ footer nav a:active {
     }
 
     .plans-container article.column .variant img {
-        max-height: 622rem;
-        max-width: 1005rem;
+        max-height: calc(var(--design-units) * 622);
+        max-width: calc(var(--design-units) * 1005);
     }
 
     .map {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 360rem;
+        margin-bottom: calc(var(--design-units) * 360);
     }
 
     .map h2 {
-        font-size: 60rem;
+        font-size: calc(var(--design-units) * 60);
     }
 
     .map hr {
-        height: 3rem;
-        margin-top: 40rem;
-        margin-bottom: 170rem;
+        height: calc(var(--design-units) * 3);
+        margin-top: calc(var(--design-units) * 40);
+        margin-bottom: calc(var(--design-units) * 170);
     }
 
     .steps {
         color: var(--accent-color);
         padding: 0 var(--horizontal-padding);
-        margin: 50rem 0 400rem;
+        margin: calc(var(--design-units) * 50) 0 calc(var(--design-units) * 400);
         overflow-x: initial;
         flex-direction: column;
         scroll-snap-type: none;
@@ -1757,39 +1757,39 @@ footer nav a:active {
     .steps .step {
         padding: 0;
         display: flex;
-        margin: 50rem 0;
+        margin: calc(var(--design-units) * 50) 0;
         align-items: flex-start;
     }
 
     .steps .step div {
-        max-width: 830rem;
+        max-width: calc(var(--design-units) * 830);
     }
 
     .steps .step img {
-        --size: 130rem;
-        margin-right: 116rem;
+        --size: calc(var(--design-units) * 130);
+        margin-right: calc(var(--design-units) * 116);
     }
 
     .steps .step h2 {
-        font-size: 60rem;
+        font-size: calc(var(--design-units) * 60);
         margin: 0;
     }
 
     .steps .step p {
-        font-size: 24rem;
-        margin-top: 20rem;
+        font-size: calc(var(--design-units) * 24);
+        margin-top: calc(var(--design-units) * 20);
     }
 
     .infrastructure {
-        margin-top: -200rem;
-        margin-bottom: 350rem;
+        margin-top: calc(var(--design-units) * -200);
+        margin-bottom: calc(var(--design-units) * 350);
     }
 }
 
 @media (min-width: 1921px) {
     .plans-container article.column .variant img {
         max-height: initial;
-        max-width: 870rem;
+        max-width: calc(var(--design-units) * 870);
         width: 100%;
         object-position: right;
     }
