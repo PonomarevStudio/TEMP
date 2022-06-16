@@ -1630,6 +1630,8 @@ footer nav a:active {
 
     .plans-container article .variants {
         --gap: calc(var(--design-units) * 150);
+        --complex-width: 100%;
+        --width-units: calc((100% - var(--gap)) / var(--complex-width));
         display: flex;
         flex-wrap: wrap;
         margin-top: calc(var(--design-units) * 65);
@@ -1637,7 +1639,9 @@ footer nav a:active {
     }
 
     .plans-container article .variants .variant {
-        max-width: calc((100% - var(--gap)) / 2);
+        --variant-base-width: 50%;
+        /*max-width: calc((100% - var(--gap)) / 2);*/
+        max-width: calc(var(--width-units) * var(--variant-base-width))
     }
 
     .plans-container article .variants .variant:not(:last-of-type) {

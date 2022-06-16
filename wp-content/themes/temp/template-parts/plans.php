@@ -35,8 +35,8 @@
     <article id="1rooms">
         <h2 class="hide-on-mobile">1-комнатные квартиры</h2>
         <div class="wrapper">
-            <div class="variants">
-                <div class="variant">
+            <div class="variants" style="--complex-width: calc(1440 + 1119)">
+                <div class="variant" style="--variant-base-width: 1440">
                     <div class="title">
                         <p>Вариант 1.</p>
                         <p>Площадь - 51,32 кв. м.</p>
@@ -44,7 +44,7 @@
                     <img alt="1-комнатные квартира - 51,32 кв. м." src="/images/plans/plan.2.1.svg" width="1440"
                          height="951">
                 </div>
-                <div class="variant">
+                <div class="variant" style="--variant-base-width: 1119">
                     <div class="title">
                         <p>Вариант 2.</p>
                         <p>Площадь - 46,64 кв. м.</p>
