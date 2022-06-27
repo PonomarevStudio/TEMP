@@ -477,6 +477,7 @@ header .menu nav a:active {
     --height: 100vh;
     --height: -moz-available;
     --height: -webkit-fill-available;
+    --height: 100svh;
     --content-vertical-padding: 10vh;
     --navigation-vertical-padding: var(--content-vertical-padding);
     color: var(--header-color);

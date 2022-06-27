@@ -1678,6 +1678,7 @@ footer nav a:active {
 
     .plans-container article.single .variants,
     .plans-container article.column .variants {
+        --max-width: 1;
         display: inline-block;
         max-width: 100%;
         float: left;
@@ -1685,6 +1686,7 @@ footer nav a:active {
 
     .plans-container article.single .variants .variant,
     .plans-container article.column .variants .variant {
+        --variant-base-width: 1;
         position: relative;
         max-width: 100%;
         padding-right: calc(var(--design-units) * 45);
@@ -1726,8 +1728,9 @@ footer nav a:active {
     }
 
     .plans-container article.column .variant img {
-        max-height: calc(var(--design-units) * 622);
-        max-width: calc(var(--design-units) * 1005);
+        --variant-scale: var(--variant-base-width) / var(--max-width);
+        max-height: calc((var(--design-units) * 622) * var(--variant-scale));
+        max-width: calc((var(--design-units) * 1005) * var(--variant-scale));
     }
 
     .map {

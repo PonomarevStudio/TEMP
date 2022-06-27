@@ -70,8 +70,8 @@
                 В гостевой — кухня с пространством для отдыха и дополнительный санузел для удобства.
                 Увеличенная прихожая позволит собираться по делам с комфортом и хранить всю необходимую одежду.
             </div>
-            <div class="variants">
-                <div class="variant">
+            <div class="variants" style="--max-width: 1241">
+                <div class="variant" style="--variant-base-width: 1024">
                     <div class="title">
                         <p>Вариант 1.</p>
                         <p>Площадь — 75,21 кв. м.</p>
@@ -79,8 +79,8 @@
                     <img alt="2-комнатные квартира — 75,21 кв. м." src="/images/plans/plan.3.1.jpg" width="1024"
                          height="554">
                 </div>
-                <div class="variant">
-                    <div class="title" style="--left-margin: -217">
+                <div class="variant" style="--variant-base-width: 1241">
+                    <div class="title" style="--left-margin: -40">
                         <p>Вариант 2.</p>
                         <p>Площадь — 68,69 кв. м.</p>
                     </div>
